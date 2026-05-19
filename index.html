@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="google-site-verification" content="UNyWJnQ1UTCsJA6m9wwTkT2qAYGUPtDY3u-AdzPB56U" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nova AI</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+background:white;
+color:black;
+}
+
+/* HEADER */
+
+header{
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:white;
+position:sticky;
+top:0;
+z-index:1000;
+border-bottom:1px solid #e5e7eb;
+}
+
+.logo{
+font-size:32px;
+font-weight:bold;
+color:#2563eb;
+}
+
+nav a{
+text-decoration:none;
+color:black;
+margin-left:20px;
+font-size:17px;
+cursor:pointer;
+}
+
+nav a:hover{
+color:#2563eb;
+}
+
+/* HOME */
+
+#homePage{
+width:100%;
+min-height:auto;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+padding:40px;
+text-align:center;
+background:white;
+}
+
+#homePage h1{
+font-size:70px;
+margin-bottom:20px;
+}
+
+#homePage span{
+color:#2563eb;
+}
+
+#homePage p{
+font-size:22px;
+margin-bottom:30px;
+color:#475569;
+max-width:800px;
+line-height:35px;
+}
+
+/* SEARCH */
+
+.search-box{
+width:100%;
+max-width:650px;
+background:#f1f5f9;
+padding:10px;
+border-radius:50px;
+display:flex;
+margin-bottom:25px;
+}
+
+.search-box input{
+width:100%;
+padding:15px;
+border:none;
+outline:none;
+font-size:18px;
+border-radius:50px;
+background:transparent;
+}
+
+.search-box button{
+padding:15px 25px;
+border:none;
+background:#2563eb;
+color:white;
+font-size:17px;
+font-weight:bold;
+border-radius:50px;
+cursor:pointer;
+}
+
+/* BUTTON */
+
+.ai-btn{
+padding:18px 35px;
+font-size:20px;
+border:none;
+border-radius:15px;
+background:#2564eb00;
+color:white;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+}
+
+.ai-btn:hover{
+transform:scale(1.05);
+}
+
+/* TOOLS PAGE */
+
+#toolsPage{
+display:none;
+padding:100px 8%;
+min-height:100vh;
+background:white;
+}
+
+#toolsPage h1{
+text-align:center;
+font-size:50px;
+margin-bottom:50px;
+}
+
+.tools-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.tool-card{
+background:#f8fafc;
+padding:25px;
+border-radius:20px;
+text-align:center;
+transition:0.4s;
+border:1px solid #e2e8f0;
+}
+
+.tool-card:hover{
+transform:translateY(-10px);
+}
+
+.tool-card i{
+font-size:45px;
+color:#2563eb;
+margin-bottom:20px;
+}
+
+.tool-card h2{
+margin-bottom:15px;
+}
+
+.tool-card p{
+color:#475569;
+margin-bottom:20px;
+line-height:28px;
+}
+
+.tool-card a{
+display:inline-block;
+padding:12px 20px;
+background:#2563eb;
+text-decoration:none;
+color:white;
+font-weight:bold;
+border-radius:12px;
+}
+
+/* PAGES */
+
+.page{
+display:none;
+padding:120px 8%;
+text-align:center;
+min-height:100vh;
+background:rgba(255, 255, 255, 0.445);
+}
+
+.page h1{
+font-size:55px;
+margin-bottom:30px;
+color:#2563eb;
+}
+
+.page p{
+font-size:22px;
+line-height:40px;
+max-width:900px;
+margin:auto;
+color:#4755696c;
+}
+
+/* FOOTER */
+
+footer{
+background:#f8fafc67;
+padding:35px;
+text-align:center;
+border-top:1px solid #e5e7eb8f;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+}
+
+nav{
+margin-top:15px;
+}
+
+nav a{
+display:inline-block;
+margin:10px;
+}
+
+#homePage h1{
+font-size:45px;
+}
+
+#homePage p{
+font-size:18px;
+line-height:30px;
+}
+
+.search-box{
+flex-direction:column;
+border-radius:20px;
+}
+
+.search-box button{
+width:100%;
+margin-top:0px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="logo">
+Nova AI
+</div>
+
+<nav>
+
+<a onclick="showHome()">
+Home
+</a>
+
+<a onclick="showAbout()">
+About
+</a>
+
+<a onclick="showContact()">
+Contact
+</a>
+
+<a onclick="showPrivacy()">
+Privacy
+</a>
+
+</nav>
+
+</header>
+
+<!-- HOME -->
+
+<section id="homePage">
+<!-- HERO IMAGE -->
+
+<div
+style="
+width:100%;
+max-width:1400px;
+height:420px;
+border-radius:30px;
+overflow:hidden;
+position:relative;
+margin-bottom:40px;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+">
+
+<img
+src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1400&auto=format&fit=crop"
+
+style="
+width:100%;
+height:100%;
+object-fit:cover;
+">
+
+<!-- OVERLAY -->
+
+<div
+style="
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.35);
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+padding:20px;
+text-align:center;
+">
+
+<h2
+style="
+color:#ffdf99;
+font-size:35px;
+margin-bottom:20px;
+letter-spacing:2px;
+text-shadow:0 0 15px rgba(0,0,0,0.5);
+">
+
+Make Your Life Easy
+
+</h2>
+
+<p
+style="
+color:white;
+font-size:22px;
+max-width:850px;
+line-height:1.7;
+text-shadow:0 0 10px rgba(0,0,0,0.5);
+">
+
+Explore AI tools, smartphones and modern technology with a premium digital experience.
+
+</p>
+
+</div>
+
+</div>
+<h1>
+Discover Best <span>AI Tools</span>
+</h1>
+
+<p>
+Find top AI websites, mobile phones,
+AI chatbots, image generators and more.
+</p>
+
+<!-- BUTTONS -->
+
+<div style="margin-bottom:30px;">
+<a href="online-tools.html">
+
+<button
+style="
+padding:18px 35px;
+border:none;
+border-radius:15px;
+background:#2563eb;
+color:white;
+font-size:20px;
+font-weight:bold;
+cursor:pointer;
+margin:10px;
+">
+
+Online Tools
+
+</button>
+
+</a>
+
+
+</button>
+
+</a>
+<button
+onclick="showTools()"
+style="
+padding:18px 35px;
+border:none;
+border-radius:15px;
+background:black;
+color:white;
+font-size:20px;
+font-weight:bold;
+cursor:pointer;
+margin:10px;
+">
+
+AI Tools
+
+</button>
+
+<a href="mobiles.html">
+
+<button
+style="
+padding:18px 35px;
+border:none;
+border-radius:15px;
+background:black;
+color:white;
+font-size:20px;
+font-weight:bold;
+cursor:pointer;
+margin:10px;
+">
+
+Mobiles
+
+</button>
+
+</a>
+</button>
+
+</div>
+
+</section>
+
+<!-- TOOLS -->
+
+<section id="toolsPage">
+
+<h1>
+Top AI Tools
+</h1>
+
+<div class="tools-grid" id="toolsGrid">
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="page" id="aboutPage">
+
+<h1>
+About Nova AI
+</h1>
+
+<p>
+Nova AI is a modern AI tools directory website.
+Users can discover useful AI websites
+for writing, coding, images and productivity.
+</p>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="page" id="contactPage">
+
+<h1>
+Contact Us
+</h1>
+
+<p>
+Thank you for visiting Nova AI.
+
+
+
+We continuously add new AI tools daily.
+</p>
+
+</section>
+
+<!-- PRIVACY -->
+
+<section class="page" id="privacyPage">
+
+<h1>
+Privacy Policy
+</h1>
+
+<p>
+Nova AI respects user privacy.
+We do not store personal information.
+This website only shares AI tools links.
+</p>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 Nova AI — All Rights Reserved
+</p>
+
+</footer>
+
+<script>
+
+/* AI TOOLS */
+
+let tools = [
+{
+name:"ElevenLabs",
+desc:"AI voice generator",
+icon:"fa-solid fa-microphone",
+link:"https://elevenlabs.io"
+},
+
+{
+name:"Codeium",
+desc:"AI coding assistant",
+icon:"fa-solid fa-code",
+link:"https://codeium.com"
+},
+
+{
+name:"Pika Labs",
+desc:"AI video generator",
+icon:"fa-solid fa-video",
+link:"https://pika.art"
+},
+{
+name:"ChatGPT",
+desc:"AI chatbot by OpenAI",
+icon:"fa-solid fa-robot",
+link:"https://chat.openai.com"
+},
+
+{
+name:"Gemini",
+desc:"Google AI assistant",
+icon:"fa-solid fa-brain",
+link:"https://gemini.google.com"
+},
+
+{
+name:"Claude",
+desc:"AI chatbot by Anthropic",
+icon:"fa-solid fa-comment",
+link:"https://claude.ai"
+},
+
+{
+name:"Canva AI",
+desc:"AI design platform",
+icon:"fa-solid fa-palette",
+link:"https://www.canva.com"
+},
+
+{
+name:"Leonardo AI",
+desc:"AI image generator",
+icon:"fa-solid fa-image",
+link:"https://leonardo.ai"
+},
+
+{
+name:"Midjourney",
+desc:"AI art generator",
+icon:"fa-solid fa-paintbrush",
+link:"https://www.midjourney.com"
+},
+
+{
+name:"Copy AI",
+desc:"AI writing assistant",
+icon:"fa-solid fa-pen",
+link:"https://www.copy.ai"
+},
+
+{
+name:"Poe AI",
+desc:"Multiple AI bots",
+icon:"fa-solid fa-message",
+link:"https://poe.com"
+},
+
+{
+name:"Grammarly",
+desc:"Grammar correction AI",
+icon:"fa-solid fa-spell-check",
+link:"https://www.grammarly.com"
+},
+
+{
+name:"Notion AI",
+desc:"AI productivity assistant",
+icon:"fa-solid fa-book",
+link:"https://www.notion.so"
+},
+
+{
+name:"Runway ML",
+desc:"AI video editing tool",
+icon:"fa-solid fa-video",
+link:"https://runwayml.com"
+},
+
+{
+name:"Synthesia",
+desc:"AI avatar video creator",
+icon:"fa-solid fa-user",
+link:"https://www.synthesia.io"
+},
+
+{
+name:"Jasper AI",
+desc:"AI content writing tool",
+icon:"fa-solid fa-file",
+link:"https://www.jasper.ai"
+},
+
+{
+name:"DeepL",
+desc:"AI language translator",
+icon:"fa-solid fa-language",
+link:"https://www.deepl.com"
+},
+
+{
+name:"Perplexity AI",
+desc:"AI search engine",
+icon:"fa-solid fa-magnifying-glass",
+link:"https://www.perplexity.ai"
+}
+
+];
+
+/* HIDE ALL */
+
+function hideAllPages(){
+
+document.getElementById("homePage")
+.style.display = "none";
+
+document.getElementById("toolsPage")
+.style.display = "none";
+
+document.getElementById("aboutPage")
+.style.display = "none";
+
+document.getElementById("contactPage")
+.style.display = "none";
+
+document.getElementById("privacyPage")
+.style.display = "none";
+
+}
+
+/* HOME */
+
+function showHome(){
+
+hideAllPages();
+
+document.getElementById("homePage")
+.style.display = "flex";
+
+}
+
+/* SHOW TOOLS */
+
+function showTools(){
+
+hideAllPages();
+
+document.getElementById("toolsPage")
+.style.display = "block";
+
+loadTools(tools);
+
+}
+
+/* ABOUT */
+
+function showAbout(){
+
+hideAllPages();
+
+document.getElementById("aboutPage")
+.style.display = "block";
+
+}
+
+/* CONTACT */
+
+function showContact(){
+
+hideAllPages();
+
+document.getElementById("contactPage")
+.style.display = "block";
+
+}
+
+/* PRIVACY */
+
+function showPrivacy(){
+
+hideAllPages();
+
+document.getElementById("privacyPage")
+.style.display = "block";
+
+}
+
+/* LOAD TOOLS */
+
+function loadTools(items){
+
+let grid =
+document.getElementById("toolsGrid");
+
+grid.innerHTML = "";
+
+if(items.length === 0){
+
+grid.innerHTML = `
+<h2 style="text-align:center;width:100%;">
+No AI tool found
+</h2>
+`;
+
+return;
+
+}
+
+items.forEach(tool => {
+
+grid.innerHTML += `
+
+<div class="tool-card">
+
+<i class="${tool.icon}"></i>
+
+<h2>${tool.name}</h2>
+
+<p>${tool.desc}</p>
+
+<a href="${tool.link}"
+target="_blank">
+Open Tool
+</a>
+
+</div>
+
+`;
+
+});
+
+}
+
+/* SEARCH */
+
+function searchTools(){
+
+let input =
+document.getElementById("searchInput")
+.value.toLowerCase()
+.trim();
+
+let filtered =
+tools.filter(tool =>
+
+tool.name.toLowerCase().includes(input)
+
+||
+
+tool.desc.toLowerCase().includes(input)
+
+);
+
+hideAllPages();
+
+document.getElementById("toolsPage")
+.style.display = "block";
+
+loadTools(filtered);
+
+}
+
+</script>
+<!-- ABOUT WEBSITE SECTION -->
+
+<section
+style="
+padding:25px 15px;
+background:#f5f5f5;
+margin-top:10px;
+">
+
+<h1
+style="
+text-align:center;
+font-size:34px;
+margin-bottom:10px;
+">
+Explore AI Tools & Smartphones
+</h1>
+
+<p
+style="
+max-width:1000px;
+margin:auto;
+text-align:center;
+font-size:18px;
+line-height:1.6;
+color:#444;
+margin-bottom:50px;
+">
+
+Welcome to our modern technology platform where you can explore powerful AI tools and discover the latest smartphones from top brands around the world. Our website helps users find useful artificial intelligence tools, trending mobile phones, smart features, and modern digital solutions in one place. From advanced AI generators to premium flagship smartphones, everything is designed with a clean interface and smooth user experience.
+
+</p>
+
+<!-- IMAGE GRID -->
+
+<div
+style="
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+max-width:1200px;
+margin:auto;
+">
+
+<!-- IMAGE 1 -->
+
+<div
+style="
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+">
+
+<img
+src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop"
+style="
+width:100%;
+height:180px;
+object-fit:cover;
+">
+
+<div style="padding:20px;">
+
+<h2 style="margin-bottom:10px;">
+AI Technology
+</h2>
+
+<p style="color:#555;font-size:18px;line-height:1.6;">
+Discover modern artificial intelligence tools for content creation, productivity and smart digital solutions.
+</p>
+
+</div>
+</div>
+
+<!-- IMAGE 2 -->
+
+<div
+style="
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+">
+
+<img
+src="https://images.unsplash.com/photo-1674027444485-cec3da58eef4?q=80&w=1200&auto=format&fit=crop"
+style="
+width:100%;
+height:260px;
+object-fit:cover;
+">
+
+<div style="padding:20px;">
+
+<h2 style="margin-bottom:10px;">
+Smart AI Solutions
+</h2>
+
+<p style="color:#555;font-size:18px;line-height:1.6;">
+Use powerful AI tools to improve creativity, automate tasks and explore future technology innovations.
+</p>
+
+</div>
+</div>
+
+<!-- IMAGE 3 -->
+
+<div
+style="
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+">
+
+<img
+src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1200&auto=format&fit=crop"
+style="
+width:100%;
+height:260px;
+object-fit:cover;
+">
+
+<div style="padding:20px;">
+
+<h2 style="margin-bottom:10px;">
+Latest Smartphones
+</h2>
+
+<p style="color:#555;font-size:18px;line-height:1.6;">
+Explore premium smartphones with powerful cameras, gaming performance and stylish modern designs.
+</p>
+
+</div>
+</div>
+
+<!-- IMAGE 4 -->
+
+<div
+style="
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+">
+
+<img
+src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?q=80&w=1200&auto=format&fit=crop"
+style="
+width:100%;
+height:260px;
+object-fit:cover;
+">
+
+<div style="padding:20px;">
+
+<h2 style="margin-bottom:10px;">
+Mobile Innovation
+</h2>
+
+<p style="color:#555;font-size:18px;line-height:1.6;">
+Find trending mobile technology, flagship devices and advanced smartphone experiences in one place.
+</p>
+
+</div>
+</div>
+
+</div>
+
+</section>
+
+</body>
+</html>

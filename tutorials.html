@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AI Tutorials Hub</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#050505;
+font-family:Arial,sans-serif;
+color:white;
+}
+
+/* NAVBAR */
+
+.topnav{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:12px;
+padding:20px;
+background:#0f0f0f;
+position:sticky;
+top:0;
+z-index:999;
+border-bottom:1px solid #222;
+}
+
+.topnav button{
+padding:12px 22px;
+border:none;
+border-radius:30px;
+background:linear-gradient(135deg,#111,#222);
+color:white;
+font-size:15px;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+}
+
+.topnav button:hover{
+transform:scale(1.06);
+background:linear-gradient(135deg,#ff6b00,#ff9500);
+}
+
+/* HERO */
+
+.hero{
+text-align:center;
+padding:80px 20px 50px;
+}
+
+.hero h1{
+font-size:60px;
+margin-bottom:20px;
+}
+
+.hero p{
+max-width:900px;
+margin:auto;
+font-size:20px;
+line-height:1.8;
+color:#aaa;
+}
+
+/* STATS */
+
+.stats{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:25px;
+padding:30px 20px;
+}
+
+.stat-box{
+background:#111;
+padding:25px;
+border-radius:20px;
+width:230px;
+text-align:center;
+transition:0.3s;
+}
+
+.stat-box:hover{
+transform:translateY(-5px);
+background:#191919;
+}
+
+.stat-box h2{
+font-size:38px;
+margin-bottom:10px;
+color:#ff9500;
+}
+
+.stat-box p{
+color:#aaa;
+}
+
+/* VIDEO GRID */
+
+.video-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:25px;
+padding:50px;
+}
+
+/* CARD */
+
+.video-card{
+background:#111;
+padding:25px;
+border-radius:22px;
+transition:0.3s;
+border:1px solid #1e1e1e;
+}
+
+.video-card:hover{
+transform:translateY(-6px);
+background:#191919;
+}
+
+.level{
+display:inline-block;
+padding:8px 16px;
+border-radius:30px;
+background:#ff6b00;
+font-size:13px;
+font-weight:bold;
+margin-bottom:18px;
+}
+
+.video-card h3{
+font-size:24px;
+margin-bottom:15px;
+line-height:1.5;
+}
+
+.video-card p{
+color:#aaa;
+line-height:1.8;
+font-size:15px;
+}
+
+/* BUTTON */
+
+.watch-btn{
+display:inline-block;
+margin-top:20px;
+padding:14px 24px;
+border-radius:30px;
+background:linear-gradient(135deg,#ff6b00,#ff9500);
+color:white;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
+
+.watch-btn:hover{
+transform:scale(1.05);
+}
+
+/* FOOTER */
+
+.footer{
+text-align:center;
+padding:50px 20px;
+color:#777;
+border-top:1px solid #222;
+margin-top:50px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:38px;
+}
+
+.hero p{
+font-size:17px;
+}
+
+.video-grid{
+padding:20px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<div class="topnav">
+
+<button onclick="window.location.href='index.html'">Home</button>
+
+<button onclick="showCategory('chatgpt')">ChatGPT</button>
+
+<button onclick="showCategory('image')">Image AI</button>
+
+<button onclick="showCategory('video')">Video AI</button>
+
+<button onclick="showCategory('voice')">Voice AI</button>
+
+<button onclick="showCategory('automation')">Automation</button>
+
+<button onclick="showCategory('business')">Business AI</button>
+
+<button onclick="showCategory('coding')">Coding AI</button>
+
+</div>
+
+<!-- HERO -->
+
+<div class="hero">
+
+<h1>Master Artificial Intelligence</h1>
+
+<p>
+Learn ChatGPT, Canva, Gemini, Leonardo AI,
+Runway, Midjourney, AI Coding, AI Business,
+Voice AI and modern AI tools through powerful
+free video tutorials in 2026.
+</p>
+
+</div>
+
+<!-- STATS -->
+
+<div class="stats">
+
+<div class="stat-box">
+<h2>300+</h2>
+<p>AI Tutorials</p>
+</div>
+
+<div class="stat-box">
+<h2>150h+</h2>
+<p>Free AI Learning</p>
+</div>
+
+<div class="stat-box">
+<h2>40+</h2>
+<p>AI Categories</p>
+</div>
+
+</div>
+
+<!-- VIDEOS -->
+
+<div class="video-grid">
+
+<!-- CHATGPT -->
+
+<div class="video-card chatgpt">
+
+<div class="level">Beginner</div>
+
+<h3>ChatGPT Full Course 2026</h3>
+
+<p>
+Learn prompts, automation, AI productivity,
+content creation and business workflows.
+</p>
+
+<a href="https://www.youtube.com/results?search_query=chatgpt+tutorial+2026"
+target="_blank"
+class="watch-btn">
+
+Watch Tutorial
+
+</a>
+
+</div>
+
+<!-- IMAGE AI -->
+
+<div class="video-card image">
+
+<div class="level">Intermediate</div>
+
+<h3>Leonardo AI Masterclass</h3>
+
+<p>
+Generate realistic AI art, cinematic scenes
+and modern ultra HD visuals using Leonardo AI.
+</p>
+
+<a href="https://www.youtube.com/results?search_query=leonardo+ai+tutorial"
+target="_blank"
+class="watch-btn">
+
+Watch Tutorial
+
+</a>
+
+</div>
+
+<!-- VIDEO AI -->
+
+<div class="video-card video">
+
+<div class="level">Advanced</div>
+
+<h3>Runway AI Video Editing</h3>
+
+<p>
+Create cinematic AI movies, animations and
+professional video effects using Runway AI.
+</p>
+
+<a href="https://www.youtube.com/results?search_query=runway+ai+tutorial"
+target="_blank"
+class="watch-btn">
+
+Watch Tutorial
+
+</a>
+
+</div>
+
+<!-- VOICE AI -->
+
+<div class="video-card voice">
+
+<div class="level">Intermediate</div>
+
+<h3>ElevenLabs Voice AI</h3>
+
+<p>
+Master realistic AI voice cloning, dubbing
+and speech generation using ElevenLabs AI.
+</p>
+
+<a href="https://www.youtube.com/results?search_query=elevenlabs+tutorial"
+target="_blank"
+class="watch-btn">
+
+Watch Tutorial
+
+</a>
+
+</div>
+
+<!-- AUTOMATION -->
+
+<div class="video-card automation">
+
+<div class="level">Advanced</div>
+
+<h3>Zapier AI Automation</h3>
+
+<p>
+Automate apps, websites and online business
+workflows using modern AI automation systems.
+</p>
+
+<a href="https://www.youtube.com/results?search_query=zapier+automation+tutorial"
+target="_blank"
+class="watch-btn">
+
+Watch Tutorial
+
+</a>
+
+</div>
+
+<!-- BUSINESS -->
+
+<div class="video-card business">
+
+<div class="level">Beginner</div>
+
+<h3>AI Business Ideas 2026</h3>
+
+<p>
+Learn how creators and freelancers make money
+using powerful AI tools and automation.
+</p>
+
+<a href="https://www.youtube.com/results?search_query=ai+business+ideas+2026"
+target="_blank"
+class="watch-btn">
+
+Watch Tutorial
+
+</a>
+
+</div>
+
+<!-- CODING -->
+
+<div class="video-card coding">
+
+<div class="level">Advanced</div>
+
+<h3>AI Coding Tutorial</h3>
+
+<p>
+Build websites, apps and automation tools
+using AI coding assistants and workflows.
+</p>
+
+<a href="https://www.youtube.com/results?search_query=ai+coding+tutorial"
+target="_blank"
+class="watch-btn">
+
+Watch Tutorial
+
+</a>
+
+</div>
+
+<!-- GEMINI -->
+
+<div class="video-card business">
+
+<div class="level">Beginner</div>
+
+<h3>Google Gemini Full Guide</h3>
+
+<p>
+Use Gemini AI for research, productivity,
+documents and powerful AI workflows.
+</p>
+
+<a href="https://www.youtube.com/results?search_query=google+gemini+tutorial"
+target="_blank"
+class="watch-btn">
+
+Watch Tutorial
+
+</a>
+
+</div>
+
+<!-- MIDJOURNEY -->
+
+<div class="video-card image">
+
+<div class="level">Advanced</div>
+
+<h3>Midjourney AI Art Creation</h3>
+
+<p>
+Create next generation AI art and realistic
+digital visuals with Midjourney prompts.
+</p>
+
+<a href="https://www.youtube.com/results?search_query=midjourney+tutorial"
+target="_blank"
+class="watch-btn">
+
+Watch Tutorial
+
+</a>
+
+</div>
+
+<!-- CANVA -->
+
+<div class="video-card image">
+
+<div class="level">Beginner</div>
+
+<h3>Canva AI Design Masterclass</h3>
+
+<p>
+Design thumbnails, logos, presentations,
+posts and branding using Canva AI.
+</p>
+
+<a href="https://www.youtube.com/results?search_query=canva+ai+tutorial"
+target="_blank"
+class="watch-btn">
+
+Watch Tutorial
+
+</a>
+
+</div>
+
+<!-- SUNO -->
+
+<div class="video-card voice">
+
+<div class="level">Intermediate</div>
+
+<h3>Suno AI Music Generator</h3>
+
+<p>
+Create AI songs, beats and music generation
+workflows using modern AI audio tools.
+</p>
+
+<a href="https://www.youtube.com/results?search_query=suno+ai+tutorial"
+target="_blank"
+class="watch-btn">
+
+Watch Tutorial
+
+</a>
+
+</div>
+
+<!-- FOOTER -->
+
+</div>
+
+<div class="footer">
+
+Nova AI Hub © 2026 • Modern AI Tutorials Platform
+
+</div>
+
+<script>
+
+function showCategory(category){
+
+let cards =
+document.querySelectorAll('.video-card');
+
+cards.forEach(card=>{
+
+if(category === 'all'){
+card.style.display='block';
+}
+else if(card.classList.contains(category)){
+card.style.display='block';
+}
+else{
+card.style.display='none';
+}
+
+});
+
+}
+
+</script>
+
+</body>
+</html>

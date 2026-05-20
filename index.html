@@ -305,7 +305,20 @@ font-size:38px;
 }
 
 }
+.watch-btn{
+display:inline-block;
+margin-top:20px;
+padding:14px 24px;
+border-radius:14px;
+background:linear-gradient(135deg,#ff6b00,#ff2d55);
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
 
+.watch-btn:hover{
+transform:scale(1.05);
+}
 </style>
 </head>
 
@@ -379,10 +392,10 @@ AI Tools
 <button onclick="showArticles()">
 Articles
 </button>
-
-
+<button onclick="openTutorials()">
+AI Tutorials
+</button>
 </div>
-
 </section>
 
 <!-- AI CATEGORIES -->
@@ -690,38 +703,73 @@ let input =
 document.getElementById("searchInput")
 .value.toLowerCase();
 
-if(input.includes("chatgpt")){
+hideAll();
 
-window.open("https://chat.openai.com");
+if(
+input.includes("chatgpt") ||
+input.includes("gemini") ||
+input.includes("claude") ||
+input.includes("canva") ||
+input.includes("leonardo") ||
+input.includes("midjourney")
+){
 
-}
-
-else if(input.includes("canva")){
-
-window.open("https://www.canva.com");
-
-}
-
-else if(input.includes("qr")){
-
-window.open("https://www.qr-code-generator.com");
+document.getElementById("aiCategoriesPage")
+.style.display="block";
 
 }
 
-else if(input.includes("video")){
+else if(
+input.includes("qr") ||
+input.includes("pdf") ||
+input.includes("resume") ||
+input.includes("video") ||
+input.includes("logo") ||
+input.includes("voice")
+){
 
-window.open("https://runwayml.com");
+document.getElementById("aiToolsPage")
+.style.display="block";
+
+}
+
+else if(
+input.includes("future") ||
+input.includes("business") ||
+input.includes("marketing") ||
+input.includes("education") ||
+input.includes("creator")
+){
+
+document.getElementById("articlesPage")
+.style.display="block";
+
+}
+
+else if(
+input.includes("tutorial") ||
+input.includes("course") ||
+input.includes("learn")
+){
+
+window.location.href="tutorials.html";
 
 }
 
 else{
 
-alert("No result found");
+showHome();
+
+alert("No matching result found");
 
 }
 
 }
+function openTutorials(){
 
+window.location.href = "tutorials.html";
+
+}
 </script>
 
 </body>

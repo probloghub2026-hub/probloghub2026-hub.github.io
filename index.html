@@ -1,18 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0T5LZNXR0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-H0T5LZNXR0');
-</script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1975629677209831"
-     crossorigin="anonymous"></script>
-    <meta name="google-site-verification" content="UNyWJnQ1UTCsJA6m9wwTkT2qAYGUPtDY3u-AdzPB56U" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -27,12 +16,13 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial;
+font-family:Arial, sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-background:white;
-color:black;
+background:#f8f5ef;
+color:#111;
 }
 
 /* HEADER */
@@ -47,200 +37,242 @@ background:white;
 position:sticky;
 top:0;
 z-index:1000;
-border-bottom:1px solid #e5e7eb;
+box-shadow:0 2px 15px rgba(0,0,0,0.06);
 }
 
 .logo{
 font-size:32px;
 font-weight:bold;
-color:#2563eb;
+color:#111;
+}
+
+.logo span{
+color:#ff6b00;
 }
 
 nav a{
 text-decoration:none;
-color:black;
-margin-left:20px;
+color:#111;
+margin-left:25px;
 font-size:17px;
-cursor:pointer;
-}
-
-nav a:hover{
-color:#2563eb;
-}
-
-/* HOME */
-
-#homePage{
-width:100%;
-min-height:auto;
-display:flex;
-justify-content:center;
-align-items:center;
-flex-direction:column;
-padding:40px;
-text-align:center;
-background:white;
-}
-
-#homePage h1{
-font-size:70px;
-margin-bottom:20px;
-}
-
-#homePage span{
-color:#2563eb;
-}
-
-#homePage p{
-font-size:22px;
-margin-bottom:30px;
-color:#475569;
-max-width:800px;
-line-height:35px;
-}
-
-/* SEARCH */
-
-.search-box{
-width:100%;
-max-width:650px;
-background:#f1f5f9;
-padding:10px;
-border-radius:50px;
-display:flex;
-margin-bottom:25px;
-}
-
-.search-box input{
-width:100%;
-padding:15px;
-border:none;
-outline:none;
-font-size:18px;
-border-radius:50px;
-background:transparent;
-}
-
-.search-box button{
-padding:15px 25px;
-border:none;
-background:#2563eb;
-color:white;
-font-size:17px;
-font-weight:bold;
-border-radius:50px;
-cursor:pointer;
-}
-
-/* BUTTON */
-
-.ai-btn{
-padding:18px 35px;
-font-size:20px;
-border:none;
-border-radius:15px;
-background:#2564eb00;
-color:white;
 font-weight:bold;
 cursor:pointer;
 transition:0.3s;
 }
 
-.ai-btn:hover{
-transform:scale(1.05);
+nav a:hover{
+color:#ff6b00;
 }
 
-/* TOOLS PAGE */
+/* HERO */
 
-#toolsPage{
-display:none;
-padding:100px 8%;
-min-height:100vh;
-background:white;
-}
-
-#toolsPage h1{
+.hero{
+width:100%;
+padding:70px 8%;
 text-align:center;
-font-size:50px;
-margin-bottom:50px;
 }
 
-.tools-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
+.hero-box{
+width:100%;
+height:450px;
+border-radius:35px;
+overflow:hidden;
+position:relative;
+box-shadow:0 10px 35px rgba(0,0,0,0.15);
 }
 
-.tool-card{
-background:#f8fafc;
-padding:25px;
-border-radius:20px;
-text-align:center;
-transition:0.4s;
-border:1px solid #e2e8f0;
+.hero-box img{
+width:100%;
+height:100%;
+object-fit:cover;
 }
 
-.tool-card:hover{
-transform:translateY(-10px);
+.overlay{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.45);
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+padding:20px;
 }
 
-.tool-card i{
-font-size:45px;
-color:#2563eb;
-margin-bottom:20px;
-}
-
-.tool-card h2{
-margin-bottom:15px;
-}
-
-.tool-card p{
-color:#475569;
-margin-bottom:20px;
-line-height:28px;
-}
-
-.tool-card a{
-display:inline-block;
-padding:12px 20px;
-background:#2563eb;
-text-decoration:none;
+.overlay h1{
+font-size:70px;
 color:white;
+margin-bottom:20px;
+}
+
+.overlay p{
+font-size:22px;
+color:white;
+max-width:900px;
+line-height:1.8;
+}
+
+/* SEARCH */
+
+.search-area{
+margin-top:50px;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.search-area input{
+width:700px;
+max-width:95%;
+padding:20px;
+border:none;
+border-radius:15px;
+font-size:18px;
+background:white;
+box-shadow:0 4px 15px rgba(0,0,0,0.08);
+outline:none;
+}
+
+.search-area button{
+padding:20px 35px;
+border:none;
+border-radius:15px;
+background:#111;
+color:white;
+font-size:18px;
 font-weight:bold;
-border-radius:12px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.search-area button:hover{
+background:#ff6b00;
+}
+
+/* BUTTONS */
+
+.main-buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:45px;
+}
+
+.main-buttons button{
+padding:18px 35px;
+border:none;
+border-radius:16px;
+background:white;
+font-size:20px;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.main-buttons button:hover{
+transform:translateY(-5px);
+background:#111;
+color:white;
 }
 
 /* PAGES */
 
 .page{
 display:none;
-padding:120px 8%;
-text-align:center;
+padding:70px 8%;
 min-height:100vh;
-background:rgba(255, 255, 255, 0.445);
 }
 
-.page h1{
+.page h2{
 font-size:55px;
-margin-bottom:30px;
-color:#2563eb;
+margin-bottom:40px;
+text-align:center;
 }
 
-.page p{
-font-size:22px;
-line-height:40px;
-max-width:900px;
-margin:auto;
-color:#4755696c;
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+/* CARD */
+
+.card{
+background:white;
+padding:25px;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,0.06);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card h3{
+font-size:24px;
+margin-bottom:15px;
+}
+
+.card p{
+font-size:16px;
+line-height:1.7;
+color:#555;
+margin-bottom:20px;
+}
+
+.card a{
+display:inline-block;
+padding:12px 20px;
+background:#111;
+color:white;
+text-decoration:none;
+border-radius:12px;
+font-weight:bold;
+transition:0.3s;
+}
+
+.card a:hover{
+background:#ff6b00;
+}
+
+/* ARTICLE */
+
+.article{
+background:white;
+padding:30px;
+border-radius:20px;
+margin-bottom:25px;
+box-shadow:0 5px 20px rgba(0,0,0,0.06);
+}
+
+.article h3{
+font-size:30px;
+margin-bottom:15px;
+}
+
+.article p{
+line-height:1.9;
+font-size:17px;
+color:#555;
 }
 
 /* FOOTER */
 
 footer{
-background:#f8fafc67;
-padding:35px;
+background:white;
+padding:30px;
 text-align:center;
-border-top:1px solid #e5e7eb8f;
+margin-top:50px;
+font-weight:bold;
 }
 
 /* MOBILE */
@@ -260,40 +292,20 @@ display:inline-block;
 margin:10px;
 }
 
-#homePage h1{
-font-size:45px;
+.overlay h1{
+font-size:42px;
 }
 
-#homePage p{
+.overlay p{
 font-size:18px;
-line-height:30px;
 }
 
-.search-box{
-flex-direction:column;
-border-radius:20px;
-}
-
-.search-box button{
-width:100%;
-margin-top:0px;
+.page h2{
+font-size:38px;
 }
 
 }
-.nav-btn{
-    padding:10px 20px;
-    background:#111;
-    color:white;
-    text-decoration:none;
-    border-radius:10px;
-    margin:5px;
-    display:inline-block;
-    transition:0.3s;
-}
 
-.nav-btn:hover{
-    background:#ff3c00;
-}
 </style>
 </head>
 
@@ -304,26 +316,15 @@ margin-top:0px;
 <header>
 
 <div class="logo">
-Nova AI
+Nova <span>AI</span>
 </div>
 
 <nav>
 
-<a onclick="showHome()">
-Home
-</a>
-
-<a onclick="showAbout()">
-About
-</a>
-
-<a onclick="showContact()">
-Contact
-</a>
-
-<a onclick="showPrivacy()">
-Privacy
-</a>
+<a onclick="showHome()">Home</a>
+<a onclick="showAbout()">About</a>
+<a onclick="showContact()">Contact</a>
+<a onclick="showPrivacy()">Privacy</a>
 
 </nav>
 
@@ -331,173 +332,269 @@ Privacy
 
 <!-- HOME -->
 
-<section id="homePage">
-<!-- HERO IMAGE -->
+<section id="homePage" class="hero">
 
-<div
-style="
-width:100%;
-max-width:1400px;
-height:420px;
-border-radius:30px;
-overflow:hidden;
-position:relative;
-margin-bottom:40px;
-box-shadow:0 10px 30px rgba(0,0,0,0.2);
-">
+<div class="hero-box">
 
-<img
-src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1400&auto=format&fit=crop"
+<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1400&auto=format&fit=crop">
 
-style="
-width:100%;
-height:100%;
-object-fit:cover;
-">
+<div class="overlay">
 
-<!-- OVERLAY -->
-
-<div
-style="
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.35);
-display:flex;
-justify-content:center;
-align-items:center;
-flex-direction:column;
-padding:20px;
-text-align:center;
-">
-
-<h2
-style="
-color:#ffdf99;
-font-size:35px;
-margin-bottom:20px;
-letter-spacing:2px;
-text-shadow:0 0 15px rgba(0,0,0,0.5);
-">
-
+<h1>
 Make Your Life Easy
+</h1>
 
-</h2>
-
-<p
-style="
-color:white;
-font-size:22px;
-max-width:850px;
-line-height:1.7;
-text-shadow:0 0 10px rgba(0,0,0,0.5);
-">
-
-Explore AI tools, smartphones and modern technology with a premium digital experience.
-
+<p>
+Discover The Future Of Artificial Intelligence, modern digital tools and the smartest AI innovations changing the world in 2026.
 </p>
 
 </div>
 
 </div>
-</section>
-<div style="
-text-align:center;
-margin-top:40px;
-margin-bottom:40px;
-">
 
-<button
-onclick="window.location.href='aitools.html'"
-style="
-padding:18px 35px;
-border:none;
-border-radius:15px;
-background:black;
-color:white;
-font-size:20px;
-font-weight:bold;
-cursor:pointer;
-margin:10px;
-">
+<div class="search-area">
 
-AI Tools
+<input
+type="text"
+id="searchInput"
+placeholder="Search ChatGPT, Canva, QR Code, AI Video..."
+>
 
-</button>
-
-<button
-onclick="window.location.href='jobs.html'"
-style="
-padding:18px 35px;
-border:none;
-border-radius:15px;
-background:black;
-color:white;
-font-size:20px;
-font-weight:bold;
-cursor:pointer;
-margin:10px;
-">
-
-Jobs
-
-</button>
-
-<button
-onclick="window.location.href='mobiles.html'"
-style="
-padding:18px 35px;
-border:none;
-border-radius:15px;
-background:black;
-color:white;
-font-size:20px;
-font-weight:bold;
-cursor:pointer;
-margin:10px;
-">
-
-Mobiles
-
-</button>
-
-<button
-onclick="window.location.href='movies.html'"
-style="
-padding:18px 35px;
-border:none;
-border-radius:15px;
-background:black;
-color:white;
-font-size:20px;
-font-weight:bold;
-cursor:pointer;
-margin:10px;
-">
-
-Movies
-
+<button onclick="searchWebsite()">
+Search
 </button>
 
 </div>
+
+<div class="main-buttons">
+
+<button onclick="showAICategories()">
+AI Categories
+</button>
+
+<button onclick="showAITools()">
+AI Tools
+</button>
+
+<button onclick="showArticles()">
+Articles
+</button>
+
+</div>
+
+</section>
+
+<!-- AI CATEGORIES -->
+
+<section class="page" id="aiCategoriesPage">
+
+<h2>AI Categories</h2>
+
+<div class="grid">
+
+<div class="card"><h3>ChatGPT</h3><p>Smart AI assistant for writing and productivity.</p><a href="https://chat.openai.com" target="_blank">Open AI</a></div>
+
+<div class="card"><h3>Gemini</h3><p>Google AI assistant for research and creativity.</p><a href="https://gemini.google.com" target="_blank">Open AI</a></div>
+
+<div class="card"><h3>Claude</h3><p>Advanced AI for natural conversations and coding.</p><a href="https://claude.ai" target="_blank">Open AI</a></div>
+
+<div class="card"><h3>Canva AI</h3><p>Create modern designs using artificial intelligence.</p><a href="https://www.canva.com" target="_blank">Open AI</a></div>
+
+<div class="card"><h3>Leonardo AI</h3><p>Generate realistic AI art and creative images.</p><a href="https://leonardo.ai" target="_blank">Open AI</a></div>
+
+<div class="card"><h3>Midjourney</h3><p>Create cinematic AI images from prompts.</p><a href="https://www.midjourney.com" target="_blank">Open AI</a></div>
+
+<div class="card"><h3>Perplexity</h3><p>AI search engine with smart answers.</p><a href="https://www.perplexity.ai" target="_blank">Open AI</a></div>
+
+<div class="card"><h3>Runway ML</h3><p>AI video generation and editing platform.</p><a href="https://runwayml.com" target="_blank">Open AI</a></div>
+
+<div class="card"><h3>HeyGen</h3><p>Create AI avatars and talking videos online.</p><a href="https://www.heygen.com" target="_blank">Open AI</a></div>
+
+<div class="card"><h3>Sora AI</h3><p>AI text to realistic video generator.</p><a href="https://openai.com/sora" target="_blank">Open AI</a></div>
+
+<div class="card"><h3>DeepSeek</h3><p>Powerful AI chatbot and coding assistant.</p><a href="https://www.deepseek.com" target="_blank">Open AI</a></div>
+
+<div class="card"><h3>Copilot</h3><p>Microsoft AI productivity and coding assistant.</p><a href="https://copilot.microsoft.com" target="_blank">Open AI</a></div>
+
+<div class="card"><h3>Notion AI</h3><p>AI writing and organization workspace.</p><a href="https://www.notion.so/product/ai" target="_blank">Open AI</a></div>
+
+<div class="card"><h3>ElevenLabs</h3><p>Realistic AI voice generation technology.</p><a href="https://elevenlabs.io" target="_blank">Open AI</a></div>
+
+<div class="card"><h3>CapCut AI</h3><p>Modern AI video editing platform.</p><a href="https://www.capcut.com" target="_blank">Open AI</a></div>
+
+<div class="card"><h3>Firefly</h3><p>Adobe AI image and graphics generator.</p><a href="https://firefly.adobe.com" target="_blank">Open AI</a></div>
+
+<div class="card"><h3>Grammarly AI</h3><p>Improve writing using smart AI correction.</p><a href="https://www.grammarly.com" target="_blank">Open AI</a></div>
+
+<div class="card"><h3>QuillBot</h3><p>Rewrite and improve text instantly.</p><a href="https://quillbot.com" target="_blank">Open AI</a></div>
+
+<div class="card"><h3>Character AI</h3><p>Talk with intelligent AI characters online.</p><a href="https://character.ai" target="_blank">Open AI</a></div>
+
+<div class="card"><h3>Replit AI</h3><p>AI coding and app development assistant.</p><a href="https://replit.com" target="_blank">Open AI</a></div>
+
+</div>
+
+</section>
+
+<!-- AI TOOLS -->
+
+<section class="page" id="aiToolsPage">
+
+<h2>AI Tools</h2>
+
+<div class="grid">
+
+<div class="card"><h3>QR Code Generator</h3><p>Create custom QR codes online instantly.</p><a href="https://www.qr-code-generator.com" target="_blank">Use Tool</a></div>
+
+<div class="card"><h3>Background Remover</h3><p>Remove image backgrounds automatically.</p><a href="https://www.remove.bg" target="_blank">Use Tool</a></div>
+
+<div class="card"><h3>AI Image Generator</h3><p>Create AI artwork and realistic images.</p><a href="https://www.bing.com/images/create" target="_blank">Use Tool</a></div>
+
+<div class="card"><h3>Resume Builder</h3><p>Create professional resumes online.</p><a href="https://www.canva.com/resumes" target="_blank">Use Tool</a></div>
+
+<div class="card"><h3>Text To Speech</h3><p>Convert text into realistic AI voices.</p><a href="https://ttsmp3.com" target="_blank">Use Tool</a></div>
+
+<div class="card"><h3>PDF Editor</h3><p>Edit and manage PDF files online.</p><a href="https://www.ilovepdf.com" target="_blank">Use Tool</a></div>
+
+<div class="card"><h3>Password Generator</h3><p>Create secure passwords instantly.</p><a href="https://passwordsgenerator.net" target="_blank">Use Tool</a></div>
+
+<div class="card"><h3>Currency Converter</h3><p>Convert world currencies in real-time.</p><a href="https://www.xe.com/currencyconverter" target="_blank">Use Tool</a></div>
+
+<div class="card"><h3>AI Video Generator</h3><p>Create cinematic AI videos online.</p><a href="https://pika.art" target="_blank">Use Tool</a></div>
+
+<div class="card"><h3>Voice Cloner</h3><p>Create realistic cloned AI voices.</p><a href="https://elevenlabs.io" target="_blank">Use Tool</a></div>
+
+<div class="card"><h3>AI Logo Maker</h3><p>Generate logos using AI technology.</p><a href="https://looka.com" target="_blank">Use Tool</a></div>
+
+<div class="card"><h3>Image Upscaler</h3><p>Increase image quality using AI.</p><a href="https://letsenhance.io" target="_blank">Use Tool</a></div>
+
+<div class="card"><h3>AI Story Writer</h3><p>Write stories using artificial intelligence.</p><a href="https://sudowrite.com" target="_blank">Use Tool</a></div>
+
+<div class="card"><h3>AI Music Generator</h3><p>Create songs and music with AI.</p><a href="https://suno.ai" target="_blank">Use Tool</a></div>
+
+<div class="card"><h3>AI Presentation Maker</h3><p>Create modern presentations instantly.</p><a href="https://gamma.app" target="_blank">Use Tool</a></div>
+
+<div class="card"><h3>AI Website Builder</h3><p>Build websites using AI automation.</p><a href="https://framer.com" target="_blank">Use Tool</a></div>
+
+<div class="card"><h3>Face Swap Tool</h3><p>Swap faces in photos using AI.</p><a href="https://faceswapper.ai" target="_blank">Use Tool</a></div>
+
+<div class="card"><h3>AI Subtitle Generator</h3><p>Create subtitles automatically for videos.</p><a href="https://veed.io" target="_blank">Use Tool</a></div>
+
+<div class="card"><h3>Chat PDF</h3><p>Ask questions from PDF documents.</p><a href="https://www.chatpdf.com" target="_blank">Use Tool</a></div>
+
+<div class="card"><h3>AI Email Writer</h3><p>Generate professional emails instantly.</p><a href="https://writesonic.com" target="_blank">Use Tool</a></div>
+
+</div>
+
+</section>
+
+<!-- ARTICLES -->
+
+<section class="page" id="articlesPage">
+
+<h2>Articles</h2>
+
+<div class="article">
+<h3>The Future Of AI In Daily Life</h3>
+<p>
+Artificial intelligence is changing the modern world rapidly. From smartphones to business automation, AI tools are helping people save time, increase creativity and improve productivity. In 2026, millions of users rely on AI every day for writing, designing, video creation and education. The future of AI will become even more powerful with smart assistants and advanced digital experiences.
+</p>
+</div>
+
+<div class="article">
+<h3>Best AI Tools For Students</h3>
+<p>
+Students around the world now use AI for homework, research and presentations. Tools like ChatGPT, Gemini and Notion AI help students understand difficult concepts quickly. AI can summarize long notes, generate ideas and improve writing quality. Smart learning platforms are becoming essential for modern education systems.
+</p>
+</div>
+
+<div class="article">
+<h3>How AI Is Transforming Business</h3>
+<p>
+Businesses are using AI to automate tasks, improve customer service and increase profits. AI chatbots answer customers instantly while marketing AI tools create ads and content automatically. Companies that adopt AI technologies early are growing faster and becoming more competitive in the digital economy.
+</p>
+</div>
+
+<div class="article">
+<h3>Why AI Video Tools Are Trending</h3>
+<p>
+AI video generators are becoming extremely popular because they allow creators to make professional videos in minutes. Platforms like Runway ML and Pika AI can create cinematic scenes using only text prompts. This technology helps content creators save money and produce high-quality videos quickly.
+</p>
+</div>
+
+<div class="article">
+<h3>The Rise Of AI Image Generation</h3>
+<p>
+AI image generation has become one of the biggest internet trends. Millions of people create artwork, wallpapers and realistic images using tools like Midjourney and Leonardo AI. Artists and businesses now use AI-generated visuals for branding, advertising and social media content.
+</p>
+</div>
+
+<div class="article">
+<h3>How AI Helps Content Creators</h3>
+<p>
+Content creators use AI for thumbnails, scripts, editing and social media captions. AI tools reduce workload and improve content quality. Modern creators can now generate ideas instantly and publish content faster than ever before using artificial intelligence.
+</p>
+</div>
+
+<div class="article">
+<h3>Best AI Productivity Platforms</h3>
+<p>
+AI productivity platforms help users organize work, manage tasks and automate workflows. Notion AI, ClickUp AI and Copilot are examples of modern systems helping teams work more efficiently. AI productivity is becoming an essential part of modern offices worldwide.
+</p>
+</div>
+
+<div class="article">
+<h3>AI And The Future Of Jobs</h3>
+<p>
+Artificial intelligence is changing the job market significantly. While some traditional jobs are evolving, new AI-related careers are being created every year. Skills like prompt engineering, AI automation and digital creativity are becoming valuable in the future economy.
+</p>
+</div>
+
+<div class="article">
+<h3>How AI Improves Digital Marketing</h3>
+<p>
+AI tools help businesses analyze customer behavior and create better marketing campaigns. AI can generate social media posts, email campaigns and advertisements automatically. This allows brands to reach more people with less effort and higher efficiency.
+</p>
+</div>
+
+<div class="article">
+<h3>The Importance Of AI In Education</h3>
+<p>
+Education systems worldwide are integrating AI tools into classrooms and online learning. Students now learn faster with personalized recommendations and intelligent tutoring systems. AI is helping make education more accessible and interactive for everyone.
+</p>
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="page" id="aboutPage">
+
+<h2>About Nova AI</h2>
+
+<div class="article">
+
+<p>
+Nova AI is a modern platform built for discovering the best artificial intelligence tools, trending AI websites and powerful digital innovations. Our goal is to help users explore modern AI technology easily through a clean and professional experience.
+</p>
+
+</div>
+
+</section>
 
 <!-- CONTACT -->
 
 <section class="page" id="contactPage">
 
-<h1>
-Contact Us
-</h1>
+<h2>Contact Us</h2>
+
+<div class="article">
 
 <p>
-Thank you for visiting Nova AI.
-
-
-
-We continuously add new AI tools daily.
+Thank you for visiting Nova AI. We continuously improve our platform by adding new AI categories, tools and modern digital resources. Stay connected for future updates and innovations.
 </p>
+
+</div>
 
 </section>
 
@@ -505,357 +602,126 @@ We continuously add new AI tools daily.
 
 <section class="page" id="privacyPage">
 
-<h1>
-Privacy Policy
-</h1>
+<h2>Privacy Policy</h2>
+
+<div class="article">
 
 <p>
-Nova AI respects user privacy.
-We do not store personal information.
-This website only shares AI tools links.
+Nova AI respects user privacy and does not collect sensitive personal information. Our website provides access to useful AI resources and external platforms while maintaining a safe browsing experience.
 </p>
+
+</div>
 
 </section>
 
 <!-- FOOTER -->
 
 <footer>
-
-<p>
 © 2026 Nova AI — All Rights Reserved
-</p>
-
 </footer>
 
 <script>
 
+function hideAll(){
 
-
-/* HIDE ALL */
-
-function hideAllPages(){
-
-document.getElementById("homePage")
-.style.display = "none";
-
-document.getElementById("toolsPage")
-.style.display = "none";
-
-document.getElementById("aboutPage")
-.style.display = "none";
-
-document.getElementById("contactPage")
-.style.display = "none";
-
-document.getElementById("privacyPage")
-.style.display = "none";
+document.getElementById("homePage").style.display="none";
+document.getElementById("aiCategoriesPage").style.display="none";
+document.getElementById("aiToolsPage").style.display="none";
+document.getElementById("articlesPage").style.display="none";
+document.getElementById("aboutPage").style.display="none";
+document.getElementById("contactPage").style.display="none";
+document.getElementById("privacyPage").style.display="none";
 
 }
-
-/* HOME */
 
 function showHome(){
 
-hideAllPages();
-
-document.getElementById("homePage")
-.style.display = "flex";
+hideAll();
+document.getElementById("homePage").style.display="block";
 
 }
 
-/* SHOW TOOLS */
+function showAICategories(){
 
-function showTools(){
-
-hideAllPages();
-
-document.getElementById("toolsPage")
-.style.display = "block";
-
-loadTools(tools);
+hideAll();
+document.getElementById("aiCategoriesPage").style.display="block";
 
 }
 
-/* ABOUT */
+function showAITools(){
+
+hideAll();
+document.getElementById("aiToolsPage").style.display="block";
+
+}
+
+function showArticles(){
+
+hideAll();
+document.getElementById("articlesPage").style.display="block";
+
+}
 
 function showAbout(){
 
-hideAllPages();
-
-document.getElementById("aboutPage")
-.style.display = "block";
+hideAll();
+document.getElementById("aboutPage").style.display="block";
 
 }
-
-/* CONTACT */
 
 function showContact(){
 
-hideAllPages();
-
-document.getElementById("contactPage")
-.style.display = "block";
+hideAll();
+document.getElementById("contactPage").style.display="block";
 
 }
-
-/* PRIVACY */
 
 function showPrivacy(){
 
-hideAllPages();
-
-document.getElementById("privacyPage")
-.style.display = "block";
+hideAll();
+document.getElementById("privacyPage").style.display="block";
 
 }
 
-/* LOAD TOOLS */
-
-function loadTools(items){
-
-let grid =
-document.getElementById("toolsGrid");
-
-grid.innerHTML = "";
-
-if(items.length === 0){
-
-grid.innerHTML = `
-<h2 style="text-align:center;width:100%;">
-No AI tool found
-</h2>
-`;
-
-return;
-
-}
-
-items.forEach(tool => {
-
-grid.innerHTML += `
-
-<div class="tool-card">
-
-<i class="${tool.icon}"></i>
-
-<h2>${tool.name}</h2>
-
-<p>${tool.desc}</p>
-
-<a href="${tool.link}"
-target="_blank">
-Open Tool
-</a>
-
-</div>
-
-`;
-
-});
-
-}
-
-/* SEARCH */
-
-function searchTools(){
+function searchWebsite(){
 
 let input =
 document.getElementById("searchInput")
-.value.toLowerCase()
-.trim();
+.value.toLowerCase();
 
-let filtered =
-tools.filter(tool =>
+if(input.includes("chatgpt")){
 
-tool.name.toLowerCase().includes(input)
+window.open("https://chat.openai.com");
 
-||
+}
 
-tool.desc.toLowerCase().includes(input)
+else if(input.includes("canva")){
 
-);
+window.open("https://www.canva.com");
 
-hideAllPages();
+}
 
-document.getElementById("toolsPage")
-.style.display = "block";
+else if(input.includes("qr")){
 
-loadTools(filtered);
+window.open("https://www.qr-code-generator.com");
+
+}
+
+else if(input.includes("video")){
+
+window.open("https://runwayml.com");
+
+}
+
+else{
+
+alert("No result found");
+
+}
 
 }
 
 </script>
-<!-- ABOUT WEBSITE SECTION -->
-
-<section
-style="
-padding:25px 15px;
-background:#f5f5f5;
-margin-top:10px;
-">
-
-<h1
-style="
-text-align:center;
-font-size:34px;
-margin-bottom:10px;
-">
-Explore AI Tools & Smartphones
-</h1>
-
-<p
-style="
-max-width:1000px;
-margin:auto;
-text-align:center;
-font-size:18px;
-line-height:1.6;
-color:#444;
-margin-bottom:50px;
-">
-
-Welcome to our modern technology platform where you can explore powerful AI tools and discover the latest smartphones from top brands around the world. Our website helps users find useful artificial intelligence tools, trending mobile phones, smart features, and modern digital solutions in one place. From advanced AI generators to premium flagship smartphones, everything is designed with a clean interface and smooth user experience.
-
-</p>
-
-<!-- IMAGE GRID -->
-
-<div
-style="
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-max-width:1200px;
-margin:auto;
-">
-
-<!-- IMAGE 1 -->
-
-<div
-style="
-background:white;
-border-radius:20px;
-overflow:hidden;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-">
-
-<img
-src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop"
-style="
-width:100%;
-height:180px;
-object-fit:cover;
-">
-
-<div style="padding:20px;">
-
-<h2 style="margin-bottom:10px;">
-AI Technology
-</h2>
-
-<p style="color:#555;font-size:18px;line-height:1.6;">
-Discover modern artificial intelligence tools for content creation, productivity and smart digital solutions.
-</p>
-
-</div>
-</div>
-
-<!-- IMAGE 2 -->
-
-<div
-style="
-background:white;
-border-radius:20px;
-overflow:hidden;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-">
-
-<img
-src="https://images.unsplash.com/photo-1674027444485-cec3da58eef4?q=80&w=1200&auto=format&fit=crop"
-style="
-width:100%;
-height:260px;
-object-fit:cover;
-">
-
-<div style="padding:20px;">
-
-<h2 style="margin-bottom:10px;">
-Smart AI Solutions
-</h2>
-
-<p style="color:#555;font-size:18px;line-height:1.6;">
-Use powerful AI tools to improve creativity, automate tasks and explore future technology innovations.
-</p>
-
-</div>
-</div>
-
-<!-- IMAGE 3 -->
-
-<div
-style="
-background:white;
-border-radius:20px;
-overflow:hidden;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-">
-
-<img
-src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1200&auto=format&fit=crop"
-style="
-width:100%;
-height:260px;
-object-fit:cover;
-">
-
-<div style="padding:20px;">
-
-<h2 style="margin-bottom:10px;">
-Latest Smartphones
-</h2>
-
-<p style="color:#555;font-size:18px;line-height:1.6;">
-Explore premium smartphones with powerful cameras, gaming performance and stylish modern designs.
-</p>
-
-</div>
-</div>
-
-<!-- IMAGE 4 -->
-
-<div
-style="
-background:white;
-border-radius:20px;
-overflow:hidden;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-">
-
-<img
-src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?q=80&w=1200&auto=format&fit=crop"
-style="
-width:100%;
-height:260px;
-object-fit:cover;
-">
-
-<div style="padding:20px;">
-
-<h2 style="margin-bottom:10px;">
-Mobile Innovation
-</h2>
-
-<p style="color:#555;font-size:18px;line-height:1.6;">
-Find trending mobile technology, flagship devices and advanced smartphone experiences in one place.
-</p>
-
-</div>
-</div>
-
-</div>
-
-</section>
 
 </body>
 </html>

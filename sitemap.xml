@@ -32,4 +32,10 @@
 <priority>0.8</priority>
 </url>
 
+<url>
+<loc>https://probloghub2026-hub.github.io/detail.html</loc>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+
 </urlset>

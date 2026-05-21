@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Business Detail</title>
+
+<style>
+body{
+font-family:Arial;
+background:#0b1220;
+color:white;
+padding:40px;
+}
+
+.box{
+max-width:850px;
+margin:auto;
+background:#111827;
+padding:30px;
+border-radius:20px;
+border:1px solid #1f2937;
+}
+
+h1{color:#ff6b00}
+
+p{
+line-height:1.9;
+color:#cbd5e1;
+font-size:16px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="box">
+<h1 id="title"></h1>
+<p id="desc"></p>
+</div>
+
+<script>
+
+const data = {
+
+1:{
+title:"AI YouTube Automation",
+desc:`AI YouTube Automation is one of the most powerful online business models in 2026. It allows you to create faceless YouTube channels using AI tools for script writing, voice generation, and video editing. You do not need to show your face or record videos manually.
+
+You can scale multiple channels and target different niches like finance, tech, motivation, and education. Revenue comes from YouTube AdSense, affiliate marketing, sponsorships, and digital product sales. With consistency, this model can generate full-time passive income.`
+},
+
+2:{
+title:"AI SEO Agency",
+desc:`An AI SEO Agency helps businesses rank their websites on Google using artificial intelligence. You use AI tools for keyword research, content creation, competitor analysis, and backlink strategies.
+
+Clients pay monthly retainers because SEO is a long-term service. As rankings improve, businesses gain more traffic and sales. This is a high-demand digital service in 2026.`
+},
+
+3:{
+title:"AI Graphic Design Business",
+desc:`This business involves creating logos, thumbnails, posters, and branding materials using AI tools like Midjourney and Canva AI.
+
+You can sell designs on Fiverr, Upwork, or directly to clients worldwide. Since everything is digital, there is no inventory cost and profit margins are very high.`
+},
+
+4:{
+title:"AI Automation Agency",
+desc:`AI Automation Agencies help businesses automate repetitive tasks like email replies, customer support, lead generation, and marketing workflows.
+
+Using tools like Zapier, Make.com, and ChatGPT APIs, you reduce manual workload for companies. Businesses pay high monthly fees for saving time and improving efficiency.`
+},
+
+5:{
+title:"AI Freelancing Services",
+desc:`AI Freelancing allows you to offer services like content writing, coding, design, and marketing using AI tools.
+
+You can work on platforms like Fiverr and Upwork and deliver work faster with AI assistance. This increases productivity and income potential significantly.`
+}
+
+};
+
+let id = new URLSearchParams(window.location.search).get("id");
+
+document.getElementById("title").innerText = data[id].title;
+document.getElementById("desc").innerText = data[id].desc;
+
+</script>
+
+</body>
+</html>

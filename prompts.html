@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AI Prompts Library | NOVA AI STUDIO</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f5f5f5;
+color:#111;
+}
+
+/* HEADER */
+
+header{
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:white;
+box-shadow:0 2px 15px rgba(0,0,0,0.08);
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+font-size:34px;
+font-weight:bold;
+}
+
+.logo span{
+color:#ff6b00;
+}
+
+.home-btn{
+padding:12px 22px;
+background:#111;
+color:white;
+text-decoration:none;
+border-radius:12px;
+font-weight:bold;
+transition:0.3s;
+}
+
+.home-btn:hover{
+background:#ff6b00;
+}
+
+/* HERO */
+
+.hero{
+padding:80px 8% 50px;
+text-align:center;
+}
+
+.hero h1{
+font-size:65px;
+margin-bottom:25px;
+}
+
+.hero p{
+max-width:950px;
+margin:auto;
+font-size:21px;
+line-height:1.8;
+color:#555;
+}
+
+/* STATS */
+
+.stats{
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+padding:20px 8% 60px;
+}
+
+.stat-box{
+background:white;
+padding:25px 35px;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+text-align:center;
+min-width:220px;
+}
+
+.stat-box h2{
+font-size:38px;
+margin-bottom:10px;
+color:#ff6b00;
+}
+
+.stat-box p{
+font-weight:bold;
+color:#555;
+}
+
+/* FILTER */
+
+.filter-bar{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+padding:0 8% 50px;
+}
+
+.filter-btn{
+padding:12px 22px;
+border:none;
+border-radius:30px;
+background:white;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.filter-btn:hover{
+background:#111;
+color:white;
+}
+
+/* GRID */
+
+.prompts-grid{
+padding:40px 8% 90px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+gap:35px;
+align-items:stretch;
+}
+
+/* CARD */
+
+.prompt-card{
+background:white;
+padding:35px;
+border-radius:28px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+transition:0.35s;
+position:relative;
+overflow:hidden;
+border:1px solid rgba(0,0,0,0.05);
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+min-height:420px;
+}
+.prompt-card::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:5px;
+background:linear-gradient(90deg,#ff6b00,#ff2d55);
+}
+
+.prompt-card:hover{
+transform:translateY(-10px) scale(1.02);
+box-shadow:0 20px 45px rgba(0,0,0,0.12);
+}
+.prompt-card:hover{
+transform:translateY(-8px);
+}
+
+.prompt-top{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:25px;
+}
+
+.prompt-category{
+padding:8px 15px;
+background:#111;
+color:white;
+border-radius:30px;
+font-size:14px;
+font-weight:bold;
+}
+
+.prompt-icon{
+font-size:28px;
+color:#ff6b00;
+}
+
+.prompt-card h3{
+font-size:28px;
+margin-bottom:20px;
+}
+
+.prompt-text{
+font-size:17px;
+line-height:1.9;
+color:#555;
+margin-bottom:30px;
+}
+
+/* BUTTONS */
+
+.prompt-buttons{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+margin-top:auto;
+}
+
+.copy-btn{
+padding:14px 24px;
+border:none;
+border-radius:14px;
+background:#111;
+color:white;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+}
+
+.copy-btn:hover{
+background:#ff6b00;
+}
+
+.use-btn{
+padding:14px 24px;
+border-radius:14px;
+background:#ff6b00;
+color:white;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
+
+.use-btn:hover{
+background:#111;
+}
+
+/* FOOTER */
+
+footer{
+background:white;
+padding:35px;
+text-align:center;
+font-weight:bold;
+box-shadow:0 -2px 15px rgba(0,0,0,0.05);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:42px;
+}
+
+.hero p{
+font-size:17px;
+}
+
+.prompt-card h3{
+font-size:24px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="logo">
+NOVA <span>AI</span>
+</div>
+
+<a href="index.html" class="home-btn">
+Home
+</a>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<h1>
+Professional AI Prompts Library
+</h1>
+
+<p>
+Discover premium AI prompts for ChatGPT, AI image generation, YouTube automation, business ideas, coding, marketing and modern digital creativity. Copy powerful prompts instantly and use them with your favorite AI tools in 2026.
+</p>
+
+</section>
+
+<!-- STATS -->
+
+<section class="stats">
+
+<div class="stat-box">
+<h2>50+</h2>
+<p>Professional Prompts</p>
+</div>
+
+<div class="stat-box">
+<h2>10+</h2>
+<p>AI Categories</p>
+</div>
+
+<div class="stat-box">
+<h2>2026</h2>
+<p>Modern AI Workflows</p>
+</div>
+
+</section>
+
+<!-- FILTERS -->
+
+<section class="filter-bar">
+
+<button class="filter-btn">ChatGPT</button>
+<button class="filter-btn">YouTube</button>
+<button class="filter-btn">Image AI</button>
+<button class="filter-btn">Business</button>
+<button class="filter-btn">Coding</button>
+<button class="filter-btn">Marketing</button>
+<button class="filter-btn">Instagram</button>
+<button class="filter-btn">TikTok</button>
+<button class="filter-btn">Freelancing</button>
+<button class="filter-btn">SEO</button>
+<button class="filter-btn">Blogging</button>
+<button class="filter-btn">Email Writing</button>
+<button class="filter-btn">Copywriting</button>
+<button class="filter-btn">Midjourney</button>
+<button class="filter-btn">Sora AI</button>
+<button class="filter-btn">Automation</button>
+</section>
+
+<!-- PROMPTS -->
+
+<section class="prompts-grid">
+
+<!-- CARD 1 -->
+
+<div class="prompt-card">
+
+<div class="prompt-top">
+
+<div class="prompt-category">
+ChatGPT
+</div>
+
+<div class="prompt-icon">
+<i class="fa-solid fa-robot"></i>
+</div>
+
+</div>
+
+<h3>
+SEO Article Prompt
+</h3>
+
+<p class="prompt-text" id="prompt1">
+
+Act as a professional SEO writer and create a detailed long-form article about the future of artificial intelligence in 2026. Include engaging headlines, introduction, trending AI tools, future business opportunities, AI risks, advantages and a strong conclusion. Optimize the article for Google ranking using modern SEO formatting and high readability.
+
+</p>
+
+<div class="prompt-buttons">
+
+<button class="copy-btn"
+onclick="copyPrompt('prompt1')">
+Copy Prompt
+</button>
+
+<a href="https://chat.openai.com"
+target="_blank"
+class="use-btn">
+Use Prompt
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 2 -->
+
+<div class="prompt-card">
+
+<div class="prompt-top">
+
+<div class="prompt-category">
+YouTube
+</div>
+
+<div class="prompt-icon">
+<i class="fa-brands fa-youtube"></i>
+</div>
+
+</div>
+
+<h3>
+Viral Video Script
+</h3>
+
+<p class="prompt-text" id="prompt2">
+
+Write a viral YouTube video script about the top AI tools changing the internet in 2026. Include a strong emotional hook in the first 10 seconds, cinematic storytelling, audience retention techniques, powerful call-to-action and engaging ending. Make the tone exciting, modern and optimized for millions of views.
+
+</p>
+
+<div class="prompt-buttons">
+
+<button class="copy-btn"
+onclick="copyPrompt('prompt2')">
+Copy Prompt
+</button>
+
+<a href="https://chat.openai.com"
+target="_blank"
+class="use-btn">
+Use Prompt
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 3 -->
+
+<div class="prompt-card">
+
+<div class="prompt-top">
+
+<div class="prompt-category">
+Image AI
+</div>
+
+<div class="prompt-icon">
+<i class="fa-solid fa-image"></i>
+</div>
+
+</div>
+
+<h3>
+AI Image Prompt
+</h3>
+
+<p class="prompt-text" id="prompt3">
+
+Ultra realistic futuristic cyberpunk city at night with flying cars, glowing neon lights, cinematic atmosphere, dramatic lighting, volumetric fog, rain reflections, realistic textures, ultra HD 8k details and movie-quality visuals with orange and blue neon colors.
+
+</p>
+
+<div class="prompt-buttons">
+
+<button class="copy-btn"
+onclick="copyPrompt('prompt3')">
+Copy Prompt
+</button>
+
+<a href="https://leonardo.ai"
+target="_blank"
+class="use-btn">
+Use Prompt
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 4 -->
+
+<div class="prompt-card">
+
+<div class="prompt-top">
+
+<div class="prompt-category">
+Business
+</div>
+
+<div class="prompt-icon">
+<i class="fa-solid fa-money-bill-trend-up"></i>
+</div>
+
+</div>
+
+<h3>
+AI Business Ideas
+</h3>
+
+<p class="prompt-text" id="prompt4">
+
+Generate 20 profitable AI business ideas for beginners with low investment and high growth potential. Include realistic income potential, startup difficulty, business model explanation and modern AI tools required for each business idea.
+
+</p>
+
+<div class="prompt-buttons">
+
+<button class="copy-btn"
+onclick="copyPrompt('prompt4')">
+Copy Prompt
+</button>
+
+<a href="https://gemini.google.com"
+target="_blank"
+class="use-btn">
+Use Prompt
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 5 -->
+
+<div class="prompt-card">
+
+<div class="prompt-top">
+
+<div class="prompt-category">
+Coding
+</div>
+
+<div class="prompt-icon">
+<i class="fa-solid fa-code"></i>
+</div>
+
+</div>
+
+<h3>
+Website Builder Prompt
+</h3>
+
+<p class="prompt-text" id="prompt5">
+
+Build a professional responsive AI tools website using HTML, CSS and JavaScript with dark mode, modern animations, mobile responsive layout, SEO optimization, AI tools pages, tutorials section and futuristic user interface design.
+
+</p>
+
+<div class="prompt-buttons">
+
+<button class="copy-btn"
+onclick="copyPrompt('prompt5')">
+Copy Prompt
+</button>
+
+<a href="https://chat.openai.com"
+target="_blank"
+class="use-btn">
+Use Prompt
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 6 -->
+
+<div class="prompt-card">
+
+<div class="prompt-top">
+
+<div class="prompt-category">
+Marketing
+</div>
+
+<div class="prompt-icon">
+<i class="fa-solid fa-bullhorn"></i>
+</div>
+
+</div>
+
+<h3>
+Digital Marketing Prompt
+</h3>
+
+<p class="prompt-text" id="prompt6">
+
+Create a complete digital marketing strategy for an AI startup in 2026 including SEO, YouTube marketing, TikTok strategy, Instagram reels, paid ads, content marketing, branding ideas and audience growth techniques.
+
+</p>
+
+<div class="prompt-buttons">
+
+<button class="copy-btn"
+onclick="copyPrompt('prompt6')">
+Copy Prompt
+</button>
+
+<a href="https://claude.ai"
+target="_blank"
+class="use-btn">
+Use Prompt
+</a>
+
+</div>
+
+</div>
+<!-- CARD 7 -->
+
+<div class="prompt-card">
+
+<div class="prompt-top">
+
+<div class="prompt-category">
+Instagram
+</div>
+
+<div class="prompt-icon">
+<i class="fa-brands fa-instagram"></i>
+</div>
+
+</div>
+
+<h3>
+Instagram Reel Prompt
+</h3>
+
+<p class="prompt-text" id="prompt7">
+
+Create a viral Instagram Reel script about AI tools in 2026 with emotional hooks, engaging captions, trending hashtags and audience retention techniques.
+
+</p>
+
+<div class="prompt-buttons">
+
+<button class="copy-btn"
+onclick="copyPrompt('prompt7')">
+Copy Prompt
+</button>
+
+<a href="https://chat.openai.com"
+target="_blank"
+class="use-btn">
+Use Prompt
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 8 -->
+
+<div class="prompt-card">
+
+<div class="prompt-top">
+
+<div class="prompt-category">
+SEO
+</div>
+
+<div class="prompt-icon">
+<i class="fa-solid fa-chart-line"></i>
+</div>
+
+</div>
+
+<h3>
+SEO Blog Prompt
+</h3>
+
+<p class="prompt-text" id="prompt8">
+
+Write a fully SEO optimized blog post with keywords, headings, meta description, FAQ schema and high readability for Google ranking.
+
+</p>
+
+<div class="prompt-buttons">
+
+<button class="copy-btn"
+onclick="copyPrompt('prompt8')">
+Copy Prompt
+</button>
+
+<a href="https://chat.openai.com"
+target="_blank"
+class="use-btn">
+Use Prompt
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 9 -->
+
+<div class="prompt-card">
+
+<div class="prompt-top">
+
+<div class="prompt-category">
+Coding
+</div>
+
+<div class="prompt-icon">
+<i class="fa-solid fa-laptop-code"></i>
+</div>
+
+</div>
+
+<h3>
+AI App Builder
+</h3>
+
+<p class="prompt-text" id="prompt9">
+
+Build a futuristic AI web application with dark mode, glassmorphism UI, animations, responsive design and premium user experience.
+
+</p>
+
+<div class="prompt-buttons">
+
+<button class="copy-btn"
+onclick="copyPrompt('prompt9')">
+Copy Prompt
+</button>
+
+<a href="https://chat.openai.com"
+target="_blank"
+class="use-btn">
+Use Prompt
+</a>
+
+</div>
+
+</div>
+<!-- CARD 10 -->
+
+<div class="prompt-card">
+
+<div class="prompt-top">
+
+<div class="prompt-category">
+TikTok
+</div>
+
+<div class="prompt-icon">
+<i class="fa-brands fa-tiktok"></i>
+</div>
+
+</div>
+
+<h3>
+TikTok Viral Prompt
+</h3>
+
+<p class="prompt-text" id="prompt10">
+
+Create a viral TikTok content strategy about futuristic AI tools and trending technology in 2026. Include emotional hooks, fast-paced storytelling, engaging captions, viral hashtags, audience retention techniques and a strong call-to-action optimized for millions of views and maximum social media engagement.
+
+</p>
+
+<div class="prompt-buttons">
+
+<button class="copy-btn"
+onclick="copyPrompt('prompt10')">
+Copy Prompt
+</button>
+
+<a href="https://chat.openai.com"
+target="_blank"
+class="use-btn">
+Use Prompt
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 11 -->
+
+<div class="prompt-card">
+
+<div class="prompt-top">
+
+<div class="prompt-category">
+Freelancing
+</div>
+
+<div class="prompt-icon">
+<i class="fa-solid fa-briefcase"></i>
+</div>
+
+</div>
+
+<h3>
+Freelancing Gig Prompt
+</h3>
+
+<p class="prompt-text" id="prompt11">
+
+Act as a professional freelancer and create a high-converting Fiverr and Upwork gig description for AI content creation services. Include SEO optimization, client attraction techniques, professional communication style, pricing ideas, gig packages and strategies to increase sales and client trust.
+
+</p>
+
+<div class="prompt-buttons">
+
+<button class="copy-btn"
+onclick="copyPrompt('prompt11')">
+Copy Prompt
+</button>
+
+<a href="https://chat.openai.com"
+target="_blank"
+class="use-btn">
+Use Prompt
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 12 -->
+
+<div class="prompt-card">
+
+<div class="prompt-top">
+
+<div class="prompt-category">
+Blogging
+</div>
+
+<div class="prompt-icon">
+<i class="fa-solid fa-pen"></i>
+</div>
+
+</div>
+
+<h3>
+Professional Blogging Prompt
+</h3>
+
+<p class="prompt-text" id="prompt12">
+
+Write a professional long-form blog post about the future of artificial intelligence and modern online businesses in 2026. Include SEO headings, engaging storytelling, readability optimization, keyword placement, FAQ section, monetization strategies and a conclusion optimized for Google ranking.
+
+</p>
+
+<div class="prompt-buttons">
+
+<button class="copy-btn"
+onclick="copyPrompt('prompt12')">
+Copy Prompt
+</button>
+
+<a href="https://chat.openai.com"
+target="_blank"
+class="use-btn">
+Use Prompt
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 13 -->
+
+<div class="prompt-card">
+
+<div class="prompt-top">
+
+<div class="prompt-category">
+Email Writing
+</div>
+
+<div class="prompt-icon">
+<i class="fa-solid fa-envelope"></i>
+</div>
+
+</div>
+
+<h3>
+Professional Email Prompt
+</h3>
+
+<p class="prompt-text" id="prompt13">
+
+Write a professional business email for clients interested in AI services and digital marketing solutions. Make the email polite, modern, highly persuasive and optimized for conversions while maintaining professional communication standards and strong customer trust.
+
+</p>
+
+<div class="prompt-buttons">
+
+<button class="copy-btn"
+onclick="copyPrompt('prompt13')">
+Copy Prompt
+</button>
+
+<a href="https://chat.openai.com"
+target="_blank"
+class="use-btn">
+Use Prompt
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 14 -->
+
+<div class="prompt-card">
+
+<div class="prompt-top">
+
+<div class="prompt-category">
+Copywriting
+</div>
+
+<div class="prompt-icon">
+<i class="fa-solid fa-rectangle-ad"></i>
+</div>
+
+</div>
+
+<h3>
+Sales Copy Prompt
+</h3>
+
+<p class="prompt-text" id="prompt14">
+
+Create a high-converting sales copy for a futuristic AI software product in 2026. Include emotional marketing triggers, persuasive headlines, modern advertising structure, customer pain points, strong calls-to-action and conversion-focused writing optimized for landing pages and paid advertisements.
+
+</p>
+
+<div class="prompt-buttons">
+
+<button class="copy-btn"
+onclick="copyPrompt('prompt14')">
+Copy Prompt
+</button>
+
+<a href="https://claude.ai"
+target="_blank"
+class="use-btn">
+Use Prompt
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 15 -->
+
+<div class="prompt-card">
+
+<div class="prompt-top">
+
+<div class="prompt-category">
+Midjourney
+</div>
+
+<div class="prompt-icon">
+<i class="fa-solid fa-palette"></i>
+</div>
+
+</div>
+
+<h3>
+Midjourney Art Prompt
+</h3>
+
+<p class="prompt-text" id="prompt15">
+
+Create an ultra realistic futuristic sci-fi world with cinematic lighting, massive neon cities, flying vehicles, glowing reflections, dramatic atmosphere, volumetric fog, movie-quality textures, ultra detailed environments and 8k cyberpunk visuals optimized for Midjourney AI image generation.
+
+</p>
+
+<div class="prompt-buttons">
+
+<button class="copy-btn"
+onclick="copyPrompt('prompt15')">
+Copy Prompt
+</button>
+
+<a href="https://www.midjourney.com"
+target="_blank"
+class="use-btn">
+Use Prompt
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 16 -->
+
+<div class="prompt-card">
+
+<div class="prompt-top">
+
+<div class="prompt-category">
+Sora AI
+</div>
+
+<div class="prompt-icon">
+<i class="fa-solid fa-video"></i>
+</div>
+
+</div>
+
+<h3>
+Sora AI Video Prompt
+</h3>
+
+<p class="prompt-text" id="prompt16">
+
+Generate a cinematic AI video scene showing futuristic robots and humans working together in a modern smart city. Include realistic lighting, smooth camera movement, emotional atmosphere, cinematic storytelling and ultra realistic visual quality optimized for Sora AI video generation.
+
+</p>
+
+<div class="prompt-buttons">
+
+<button class="copy-btn"
+onclick="copyPrompt('prompt16')">
+Copy Prompt
+</button>
+
+<a href="https://openai.com/sora"
+target="_blank"
+class="use-btn">
+Use Prompt
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 17 -->
+
+<div class="prompt-card">
+
+<div class="prompt-top">
+
+<div class="prompt-category">
+Automation
+</div>
+
+<div class="prompt-icon">
+<i class="fa-solid fa-gears"></i>
+</div>
+
+</div>
+
+<h3>
+AI Automation Prompt
+</h3>
+
+<p class="prompt-text" id="prompt17">
+
+Create a complete AI automation workflow for a digital business using ChatGPT, Zapier, Notion AI and marketing tools. Include automation strategies for content creation, email marketing, customer support, lead generation and social media management to improve productivity and online growth.
+
+</p>
+
+<div class="prompt-buttons">
+
+<button class="copy-btn"
+onclick="copyPrompt('prompt17')">
+Copy Prompt
+</button>
+
+<a href="https://chat.openai.com"
+target="_blank"
+class="use-btn">
+Use Prompt
+</a>
+
+</div>
+
+</div>
+</section>
+<!-- FOOTER -->
+
+<footer>
+
+NOVA AI STUDIO © 2026 • Professional AI Prompt Library
+
+</footer>
+
+<!-- SCRIPT -->
+
+<script>
+
+function copyPrompt(id){
+
+let text =
+document.getElementById(id).innerText;
+
+navigator.clipboard.writeText(text);
+
+alert("Prompt Copied Successfully");
+
+}
+
+</script>
+
+</body>
+</html>

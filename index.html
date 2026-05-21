@@ -318,7 +318,7 @@ display:inline-block;
 margin-top:20px;
 padding:14px 24px;
 border-radius:14px;
-background:linear-gradient(135deg,#ff6b00,#ff2d55);
+background:linear-gradient(135deg,#a59a93,#ff2d55);
 color:white;
 text-decoration:none;
 font-weight:bold;
@@ -326,6 +326,22 @@ font-weight:bold;
 
 .watch-btn:hover{
 transform:scale(1.05);
+}
+
+
+.ai-btn{
+padding:12px 22px;
+background:#928686;
+color:white;
+text-decoration:none;
+border-radius:12px;
+font-weight:bold;
+display:inline-block;
+transition:0.3s;
+}
+
+.ai-btn:hover{
+background:#111;
 }
 </style>
 </head>
@@ -388,7 +404,10 @@ Search
 </div>
 
 <div class="main-buttons">
-
+    
+<button onclick="window.location.href='courses.html'">
+Free AI Courses
+</button>
 <button onclick="showAICategories()">
 AI Categories
 </button>
@@ -403,6 +422,12 @@ Articles
 <button onclick="openTutorials()">
 AI Tutorials
 </button>
+<button onclick="window.location.href='prompts.html'">
+AI Prompts
+</button>
+<a href="business.html" class="ai-btn">
+AI Business
+</a>
 </div>
 </section>
 
@@ -505,7 +530,35 @@ AI Tutorials
 <div class="card"><h3>Chat PDF</h3><p>Ask questions from PDF documents.</p><a href="https://www.chatpdf.com" target="_blank">Use Tool</a></div>
 
 <div class="card"><h3>AI Email Writer</h3><p>Generate professional emails instantly.</p><a href="https://writesonic.com" target="_blank">Use Tool</a></div>
+<div class="card">
+<h3>Free AI Video Generator</h3>
+<p>Create professional AI videos, animations and cinematic scenes instantly online.</p>
+<a href="https://pika.art" target="_blank">Use Tool</a>
+</div>
 
+<div class="card">
+<h3>Free AI Image Generator</h3>
+<p>Generate realistic AI art, wallpapers and creative digital images easily.</p>
+<a href="https://www.bing.com/images/create" target="_blank">Use Tool</a>
+</div>
+
+<div class="card">
+<h3>Free AI Voice Cloner</h3>
+<p>Clone voices and create realistic AI speech with advanced voice technology.</p>
+<a href="https://elevenlabs.io" target="_blank">Use Tool</a>
+</div>
+
+<div class="card">
+<h3>Free AI Resume Builder</h3>
+<p>Create modern professional resumes and CV designs using AI tools.</p>
+<a href="https://www.canva.com/resumes" target="_blank">Use Tool</a>
+</div>
+
+<div class="card">
+<h3>Free AI Website Builder</h3>
+<p>Build modern websites and landing pages automatically with AI.</p>
+<a href="https://framer.com" target="_blank">Use Tool</a>
+</div>
 </div>
 
 </section>
@@ -778,7 +831,13 @@ function openTutorials(){
 window.location.href = "tutorials.html";
 
 }
+function toggleDarkMode(){
+
+document.body.classList.toggle("dark-mode");
+
+}
 </script>
+
 <!-- AI DESCRIPTION SECTION -->
 
 <section style="
@@ -812,5 +871,6 @@ We continuously update our platform with trending AI categories, useful online t
 </p>
 
 </section>
+
 </body>
 </html>

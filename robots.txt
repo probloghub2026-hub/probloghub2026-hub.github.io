@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://probloghub2026-hub.github.io/sitemap.xml

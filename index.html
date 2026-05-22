@@ -120,7 +120,19 @@ transition:0.7s;
 .hero-box:hover img{
 transform:scale(1.05);
 }
+.hero-box{
+border:1px solid rgba(255,255,255,0.1);
+}
 
+.hero-box::after{
+content:"";
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+height:160px;
+background:linear-gradient(to top,rgba(0,0,0,0.55),transparent);
+}
 .overlay{
 position:absolute;
 top:0;
@@ -188,7 +200,38 @@ cursor:pointer;
 transition:0.3s;
 box-shadow:0 8px 20px rgba(255,107,0,0.25);
 }
+.search-area{
+margin-top:70px;
+}
 
+.search-area input{
+width:520px;
+height:62px;
+border-radius:18px;
+font-size:17px;
+padding-left:22px;
+background:white;
+border:1px solid rgba(0,0,0,0.08);
+box-shadow:0 8px 25px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.search-area input:focus{
+transform:translateY(-2px);
+box-shadow:0 12px 30px rgba(255,107,0,0.18);
+}
+
+.search-area button{
+height:62px;
+padding:0 30px;
+border-radius:18px;
+background:linear-gradient(135deg,#ff6b00,#ff2d55);
+box-shadow:0 8px 25px rgba(255,107,0,0.25);
+}
+
+.search-area button:hover{
+transform:translateY(-3px);
+}
 .search-area button:hover{
 transform:translateY(-4px);
 }
@@ -223,7 +266,29 @@ transform:translateY(-5px);
 background:#111;
 color:white;
 }
+.main-buttons button{
+background:rgba(255,255,255,0.95);
+backdrop-filter:blur(10px);
+border:1px solid rgba(0,0,0,0.05);
+}
 
+.main-buttons button:hover{
+background:linear-gradient(135deg,#111,#2b2b2b);
+color:white;
+box-shadow:0 12px 25px rgba(0,0,0,0.18);
+}
+
+.ai-btn{
+background:linear-gradient(135deg,#ff6b00,#ff2d55);
+padding:18px 35px;
+border-radius:16px;
+font-size:20px;
+box-shadow:0 8px 25px rgba(255,107,0,0.25);
+}
+
+.ai-btn:hover{
+transform:translateY(-5px);
+}
 /* PAGES */
 
 .page{
@@ -1000,7 +1065,9 @@ NOVA <span>AI STUDIO</span>
 
 <div class="hero-box">
 
-<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1400&auto=format&fit=crop">
+<img 
+src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1400&auto=format&fit=crop"
+alt="Nova AI Studio Modern Artificial Intelligence Platform">
 
 <div class="overlay">
 

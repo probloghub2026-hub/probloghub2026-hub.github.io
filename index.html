@@ -34,23 +34,29 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#f8f5ef;
+background:
+radial-gradient(circle at top left,#ff6b0015,transparent 25%),
+radial-gradient(circle at bottom right,#00d4ff10,transparent 25%),
+#f5f7fb;
 color:#111;
+overflow-x:hidden;
 }
 
 /* HEADER */
 
 header{
 width:100%;
-padding:20px 8%;
+padding:18px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:white;
+background:rgba(255,255,255,0.7);
+backdrop-filter:blur(14px);
 position:sticky;
 top:0;
 z-index:1000;
-box-shadow:0 2px 15px rgba(0,0,0,0.06);
+border-bottom:1px solid rgba(0,0,0,0.05);
+box-shadow:0 8px 30px rgba(0,0,0,0.05);
 }
 
 .logo{
@@ -92,12 +98,20 @@ border-radius:35px;
 overflow:hidden;
 position:relative;
 box-shadow:0 10px 35px rgba(0,0,0,0.15);
+.hero-box{
+border:1px solid rgba(255,255,255,0.3);
+}
 }
 
 .hero-box img{
 width:100%;
 height:100%;
 object-fit:cover;
+transition:0.7s;
+}
+
+.hero-box:hover img{
+transform:scale(1.05);
 }
 
 .overlay{
@@ -130,7 +144,7 @@ line-height:1.8;
 /* SEARCH */
 
 .search-area{
-margin-top:50px;
+margin-top:70px;
 display:flex;
 justify-content:center;
 align-items:center;
@@ -139,29 +153,38 @@ flex-wrap:wrap;
 }
 
 .search-area input{
-width:700px;
-max-width:95%;
-padding:20px;
+width:520px;
+max-width:92%;
+padding:18px 22px;
 border:none;
-border-radius:15px;
-font-size:18px;
+border-radius:18px;
+font-size:17px;
 background:white;
-box-shadow:0 4px 15px rgba(0,0,0,0.08);
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
 outline:none;
-}
-
-.search-area button{
-padding:20px 35px;
-border:none;
-border-radius:15px;
-background:#111;
-color:white;
-font-size:18px;
-font-weight:bold;
-cursor:pointer;
 transition:0.3s;
 }
 
+.search-area input:focus{
+transform:translateY(-2px);
+box-shadow:0 14px 40px rgba(255,107,0,0.18);
+}
+.search-area button{
+padding:18px 28px;
+border:none;
+border-radius:18px;
+background:linear-gradient(135deg,#ff6b00,#ff2d55);
+color:white;
+font-size:17px;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+box-shadow:0 8px 20px rgba(255,107,0,0.25);
+}
+
+.search-area button:hover{
+transform:translateY(-4px);
+}
 .search-area button:hover{
 background:#ff6b00;
 }
@@ -228,8 +251,14 @@ transition:0.3s;
 
 .card:hover{
 transform:translateY(-8px);
-}
 
+}
+.card:hover{
+transform:translateY(-10px);
+box-shadow:
+0 15px 40px rgba(255,107,0,0.15),
+0 5px 15px rgba(0,0,0,0.08);
+}
 .card h3{
 font-size:24px;
 margin-bottom:15px;
@@ -348,13 +377,596 @@ transition:0.3s;
 .ai-btn:hover{
 background:#111;
 }
+/* PREMIUM HOME PAGE */
+
+.premium-home{
+position:relative;
+width:100%;
+min-height:100vh;
+overflow:hidden;
+background:#0f172a;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:100px 8%;
+}
+
+.premium-bg{
+position:absolute;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle at top left,#ff6b0030,transparent 35%),
+radial-gradient(circle at bottom right,#00d4ff25,transparent 35%),
+linear-gradient(135deg,#0f172a,#020617);
+z-index:1;
+}
+
+.premium-content{
+position:relative;
+z-index:2;
+text-align:center;
+max-width:1200px;
+}
+
+.top-badge{
+display:inline-block;
+padding:12px 22px;
+border-radius:50px;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,0.12);
+color:white;
+font-weight:bold;
+margin-bottom:35px;
+font-size:15px;
+}
+
+.premium-content h1{
+font-size:88px;
+line-height:1.1;
+font-weight:900;
+color:white;
+margin-bottom:30px;
+}
+
+.premium-content h1 span{
+background:linear-gradient(90deg,#ff6b00,#ff2d55,#00d4ff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.premium-content p{
+font-size:23px;
+line-height:2;
+max-width:950px;
+margin:auto;
+color:#d1d5db;
+margin-bottom:45px;
+}
+
+.hero-buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-bottom:45px;
+}
+
+.hero-buttons button{
+padding:18px 35px;
+border:none;
+border-radius:18px;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+transition:0.4s;
+background:white;
+color:#111;
+}
+
+.hero-buttons button:hover{
+transform:translateY(-6px);
+}
+
+.news-btn{
+background:linear-gradient(135deg,#ff6b00,#ff2d55) !important;
+color:white !important;
+}
+
+.search-box{
+width:100%;
+max-width:850px;
+margin:auto;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,0.1);
+padding:12px;
+border-radius:24px;
+display:flex;
+align-items:center;
+margin-bottom:60px;
+}
+
+.search-box input{
+flex:1;
+background:none;
+border:none;
+outline:none;
+padding:20px;
+font-size:18px;
+color:white;
+}
+
+.search-box input::placeholder{
+color:#cbd5e1;
+}
+
+.search-box button{
+width:70px;
+height:70px;
+border:none;
+border-radius:18px;
+background:linear-gradient(135deg,#ff6b00,#ff2d55);
+color:white;
+font-size:22px;
+cursor:pointer;
+}
+
+.stats-box{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:25px;
+margin-top:30px;
+}
+
+.stat-card{
+padding:35px;
+border-radius:28px;
+background:rgba(255,255,255,0.07);
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,0.08);
+transition:0.4s;
+}
+
+.stat-card:hover{
+transform:translateY(-10px);
+}
+
+.stat-card h2{
+font-size:48px;
+color:white;
+margin-bottom:10px;
+}
+
+.stat-card p{
+font-size:18px;
+color:#d1d5db;
+margin:0;
+}
+
+.floating{
+position:absolute;
+border-radius:50%;
+filter:blur(80px);
+opacity:0.4;
+animation:float 8s infinite ease-in-out;
+}
+
+.floating1{
+width:250px;
+height:250px;
+background:#ff6b00;
+top:10%;
+left:5%;
+}
+
+.floating2{
+width:300px;
+height:300px;
+background:#00d4ff;
+bottom:10%;
+right:5%;
+}
+
+.floating3{
+width:180px;
+height:180px;
+background:#ff2d55;
+top:50%;
+left:50%;
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-25px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+@media(max-width:768px){
+
+.premium-content h1{
+font-size:48px;
+}
+
+.premium-content p{
+font-size:18px;
+}
+
+.search-box{
+flex-direction:column;
+gap:15px;
+}
+
+.search-box button{
+width:100%;
+}
+
+}
+.premium-stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+padding:20px 8% 80px;
+}
+
+.premium-card{
+background:rgba(255,255,255,0.7);
+backdrop-filter:blur(12px);
+padding:40px 30px;
+border-radius:28px;
+text-align:center;
+box-shadow:0 10px 40px rgba(0,0,0,0.06);
+transition:0.4s;
+border:1px solid rgba(255,255,255,0.4);
+}
+
+.premium-card:hover{
+transform:translateY(-10px);
+}
+
+.premium-card h2{
+font-size:52px;
+background:linear-gradient(135deg,#ff6b00,#ff2d55);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+margin-bottom:12px;
+}
+
+.premium-card p{
+font-size:18px;
+font-weight:bold;
+color:#555;
+}
+.main-buttons button,
+.ai-btn{
+position:relative;
+overflow:hidden;
+}
+
+.main-buttons button::before,
+.ai-btn::before{
+content:"";
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,0.5),
+transparent
+);
+transition:0.7s;
+}
+
+.main-buttons button:hover::before,
+.ai-btn:hover::before{
+left:100%;
+}
+.ai-ball{
+position:fixed;
+border-radius:50%;
+filter:blur(90px);
+opacity:0.18;
+z-index:-1;
+animation:floatBall 10s infinite ease-in-out;
+}
+
+.ai-ball1{
+width:300px;
+height:300px;
+background:#ff6b00;
+top:10%;
+left:-100px;
+}
+
+.ai-ball2{
+width:250px;
+height:250px;
+background:#00d4ff;
+bottom:10%;
+right:-80px;
+}
+
+.ai-ball3{
+width:220px;
+height:220px;
+background:#ff2d55;
+top:50%;
+left:45%;
+}
+
+@keyframes floatBall{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-30px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+::-webkit-scrollbar{
+width:10px;
+}
+
+::-webkit-scrollbar-track{
+background:#f1f1f1;
+}
+
+::-webkit-scrollbar-thumb{
+background:linear-gradient(#ff6b00,#ff2d55);
+border-radius:20px;
+}
+.overlay h1{
+animation:fadeUp 1.2s ease;
+}
+
+.overlay p{
+animation:fadeUp 1.8s ease;
+}
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+.top-line{
+background:linear-gradient(90deg,#ff6b00,#ff2d55);
+color:white;
+text-align:center;
+padding:12px;
+font-size:15px;
+font-weight:bold;
+}
+/* PREMIUM FEATURES */
+
+.premium-features{
+padding:110px 8%;
+background:#ffffff;
+text-align:center;
+}
+
+.premium-features h2{
+font-size:60px;
+margin-bottom:20px;
+color:#111827;
+}
+
+.feature-subtitle{
+max-width:900px;
+margin:auto;
+font-size:21px;
+line-height:1.9;
+color:#6b7280;
+margin-bottom:70px;
+}
+
+.feature-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
+
+.feature-card{
+background:white;
+padding:45px 30px;
+border-radius:30px;
+box-shadow:0 10px 40px rgba(0,0,0,0.07);
+transition:0.4s;
+border:1px solid #f1f1f1;
+}
+
+.feature-card:hover{
+transform:translateY(-12px);
+box-shadow:0 20px 50px rgba(0,0,0,0.12);
+}
+
+.feature-card i{
+font-size:55px;
+margin-bottom:25px;
+background:linear-gradient(135deg,#ff6b00,#ff2d55);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.feature-card h3{
+font-size:28px;
+margin-bottom:18px;
+}
+
+.feature-card p{
+font-size:17px;
+line-height:1.9;
+color:#666;
+}
+
+
+
+@media(max-width:768px){
+
+.premium-features h2,
+.trending-section h2{
+font-size:40px;
+}
+
+.feature-subtitle{
+font-size:18px;
+}
+
+}
+
+
+/* LOGO SLIDER */
+
+.logo-slider{
+padding:50px 0;
+background:#0f172a;
+overflow:hidden;
+}
+
+.logo-track{
+display:flex;
+width:max-content;
+animation:scrollLogo 25s linear infinite;
+}
+
+.logo-item{
+padding:18px 40px;
+margin:0 15px;
+background:rgba(255,255,255,0.08);
+border:1px solid rgba(255,255,255,0.1);
+border-radius:18px;
+color:white;
+font-size:24px;
+font-weight:bold;
+backdrop-filter:blur(10px);
+}
+
+@keyframes scrollLogo{
+
+0%{
+transform:translateX(0);
+}
+
+100%{
+transform:translateX(-50%);
+}
+
+}
+
+/* PREMIUM CTA */
+
+.premium-cta{
+position:relative;
+padding:120px 8%;
+background:#020617;
+text-align:center;
+overflow:hidden;
+}
+
+.cta-glow{
+position:absolute;
+width:500px;
+height:500px;
+background:linear-gradient(135deg,#ff6b00,#ff2d55);
+filter:blur(140px);
+opacity:0.2;
+top:-100px;
+left:50%;
+transform:translateX(-50%);
+}
+
+.premium-cta h2{
+position:relative;
+font-size:72px;
+color:white;
+margin-bottom:25px;
+z-index:2;
+}
+
+.premium-cta p{
+position:relative;
+font-size:22px;
+line-height:2;
+color:#cbd5e1;
+max-width:900px;
+margin:auto;
+margin-bottom:45px;
+z-index:2;
+}
+
+.premium-cta button{
+position:relative;
+padding:20px 45px;
+border:none;
+border-radius:18px;
+font-size:20px;
+font-weight:bold;
+cursor:pointer;
+background:linear-gradient(135deg,#ff6b00,#ff2d55);
+color:white;
+transition:0.4s;
+z-index:2;
+}
+
+.premium-cta button:hover{
+transform:scale(1.08);
+}
+
+@media(max-width:768px){
+
+.premium-cta h2{
+font-size:42px;
+}
+
+.premium-cta p{
+font-size:18px;
+}
+
+.logo-item{
+font-size:18px;
+padding:15px 28px;
+}
+
+}
+
 </style>
 </head>
 
 <body>
-
+<div class="ai-ball ai-ball1"></div>
+<div class="ai-ball ai-ball2"></div>
+<div class="ai-ball ai-ball3"></div>
 <!-- HEADER -->
-
+<div class="top-line">
+🚀 Explore 500+ AI Tools & Modern Digital Technologies
+</div>
 <header>
 
 <div class="logo">
@@ -409,7 +1021,13 @@ Search
 </div>
 
 <div class="main-buttons">
-    
+    <button onclick="openBlog()">
+Blog Posts
+</button>
+
+<button onclick="openNews()">
+AI News
+</button>
 <button onclick="window.location.href='courses.html'">
 Free AI Courses
 </button>
@@ -435,7 +1053,29 @@ AI Business
 </a>
 </div>
 </section>
+<section class="premium-stats">
 
+<div class="premium-card">
+<h2>500+</h2>
+<p>AI Tools</p>
+</div>
+
+<div class="premium-card">
+<h2>50K+</h2>
+<p>Monthly Visitors</p>
+</div>
+
+<div class="premium-card">
+<h2>100+</h2>
+<p>AI Articles</p>
+</div>
+
+<div class="premium-card">
+<h2>24/7</h2>
+<p>AI Updates</p>
+</div>
+
+</section>
 <!-- AI CATEGORIES -->
 
 <section class="page" id="aiCategoriesPage">
@@ -693,6 +1333,56 @@ Nova AI respects user privacy and does not collect sensitive personal informatio
 </div>
 
 </section>
+<!-- PREMIUM FEATURES SECTION -->
+
+<section class="premium-features">
+
+<h2>
+Why People Love NOVA AI
+</h2>
+
+<p class="feature-subtitle">
+Explore futuristic AI tools, modern digital experiences and premium smart technology designed for creators, students and businesses.
+</p>
+
+<div class="feature-grid">
+
+<div class="feature-card">
+<i class="fa-solid fa-brain"></i>
+<h3>Smart AI Tools</h3>
+<p>
+Access the world's most advanced AI platforms for productivity, creativity and automation.
+</p>
+</div>
+
+<div class="feature-card">
+<i class="fa-solid fa-bolt"></i>
+<h3>Fast Experience</h3>
+<p>
+Ultra smooth browsing experience optimized for modern users and high-speed performance.
+</p>
+</div>
+
+<div class="feature-card">
+<i class="fa-solid fa-wand-magic-sparkles"></i>
+<h3>Creative AI</h3>
+<p>
+Generate images, videos, designs and futuristic digital content instantly using AI.
+</p>
+</div>
+
+<div class="feature-card">
+<i class="fa-solid fa-shield-halved"></i>
+<h3>Safe Platform</h3>
+<p>
+Modern secure experience with trusted AI resources and reliable technology tools.
+</p>
+</div>
+
+</div>
+
+</section>
+
 
 <!-- FOOTER -->
 
@@ -841,8 +1531,66 @@ function toggleDarkMode(){
 document.body.classList.toggle("dark-mode");
 
 }
+function openBuilder(){
+window.location.href = "builder.html";
+}
+function openBlog(){
+window.location.href = "blog.html";
+}
+
+function openNews(){
+window.location.href = "news.html";
+}
 </script>
 
+
+<!-- AI LOGO SLIDER -->
+
+<section class="logo-slider">
+
+<div class="logo-track">
+
+<div class="logo-item">ChatGPT</div>
+<div class="logo-item">Gemini</div>
+<div class="logo-item">Claude</div>
+<div class="logo-item">Runway</div>
+<div class="logo-item">Canva AI</div>
+<div class="logo-item">Leonardo</div>
+<div class="logo-item">Pika AI</div>
+<div class="logo-item">Sora AI</div>
+
+<div class="logo-item">ChatGPT</div>
+<div class="logo-item">Gemini</div>
+<div class="logo-item">Claude</div>
+<div class="logo-item">Runway</div>
+<div class="logo-item">Canva AI</div>
+<div class="logo-item">Leonardo</div>
+<div class="logo-item">Pika AI</div>
+<div class="logo-item">Sora AI</div>
+
+</div>
+
+</section>
+
+<!-- PREMIUM CTA -->
+
+<section class="premium-cta">
+
+<div class="cta-glow"></div>
+
+<h2>
+Build The Future With AI
+</h2>
+
+<p>
+Discover futuristic AI tools, smart automation and powerful digital systems changing the online world in 2026.
+</p>
+
+<button onclick="showAITools()">
+Explore AI Tools
+</button>
+
+</section>
 <!-- AI DESCRIPTION SECTION -->
 
 <section style="

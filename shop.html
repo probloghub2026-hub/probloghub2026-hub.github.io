@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>NOVA BAKE STORE</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+    margin:0;
+    font-family:Poppins;
+    background:#f6f6f6;
+}
+
+/* HEADER */
+header{
+    padding:15px 8%;
+    background:white;
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:800;
+    color:#ff9800;
+}
+
+/* SEARCH */
+.search-box{
+    flex:1;
+}
+
+.search-box input{
+    width:100%;
+    padding:10px;
+    border:1px solid #ddd;
+    border-radius:8px;
+}
+
+/* CATEGORY */
+.categories{
+    display:flex;
+    gap:10px;
+    padding:10px 8%;
+    background:white;
+}
+
+.cat{
+    padding:8px 15px;
+    background:#eee;
+    border-radius:20px;
+    cursor:pointer;
+    font-size:13px;
+}
+
+.cat.active{
+    background:#ff9800;
+    color:white;
+}
+
+/* GRID */
+.container{
+    padding:30px 8%;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:20px;
+    align-items:start;
+}
+
+/* CARD */
+.card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+}
+
+/* IMAGE (ONLY ONE RULE – VERY IMPORTANT) */
+.card img{
+    width:100%;
+    height:160px;
+    object-fit:cover;
+    object-position:center;
+    display:block;
+}
+
+/* INFO */
+.info{
+    padding:12px;
+}
+
+.title{
+    font-size:13px;
+    font-weight:600;
+    height:40px;
+    overflow:hidden;
+}
+
+.price{
+    display:flex;
+    gap:10px;
+    margin-top:5px;
+}
+
+.new{
+    color:#0a9b4a;
+    font-weight:700;
+}
+
+.old{
+    text-decoration:line-through;
+    color:#888;
+    font-size:12px;
+}
+
+.btn{
+    display:block;
+    text-align:center;
+    margin-top:10px;
+    background:#ff9800;
+    color:white;
+    padding:10px;
+    border-radius:8px;
+    text-decoration:none;
+    font-size:13px;
+}
+
+/* BADGE */
+.badge{
+    position:absolute;
+    top:10px;
+    left:10px;
+    background:red;
+    color:white;
+    font-size:11px;
+    padding:5px 8px;
+    border-radius:5px;
+}
+
+/* HIDE */
+.hide{
+    display:none !important;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">NOVA BAKE STORE</div>
+
+    <div class="search-box">
+        <input type="text" id="searchInput" onkeyup="searchProducts()" placeholder="Search products...">
+    </div>
+</header>
+
+<!-- CATEGORY -->
+<div class="categories">
+
+    <div class="cat active" onclick="filter('all', this)">All</div>
+    <div class="cat" onclick="filter('chocolate', this)">Chocolate</div>
+    <div class="cat" onclick="filter('biscuits', this)">Biscuits</div>
+
+</div>
+
+<!-- PRODUCTS -->
+<div class="container">
+<div class="grid">
+
+    <!-- CHOCOLATE -->
+    <div class="card chocolate">
+        <div class="badge">45% OFF</div>
+        <img src="https://bakehouse.pk/cdn/shop/files/fondant-deal_jpg.jpg?v=1776695976&width=823">
+        <div class="info">
+            <div class="title">Fondant Buy 1KG Get 1KG</div>
+            <div class="price"><div class="new">Rs.999</div><div class="old">1840</div></div>
+            <a class="btn" href="#">Buy Now</a>
+        </div>
+    </div>
+
+    <div class="card chocolate">
+        <div class="badge">37% OFF</div>
+        <img src="https://bakehouse.pk/cdn/shop/files/choco-cream-post-1_jpg.jpg?v=1776860072&width=823">
+        <div class="info">
+            <div class="title">Choco Cream Spread</div>
+            <div class="price"><div class="new">Rs.1499</div><div class="old">2400</div></div>
+            <a class="btn" href="#">Buy Now</a>
+        </div>
+    </div>
+
+    <div class="card chocolate">
+        <div class="badge">18% OFF</div>
+        <img src="https://bakehouse.pk/cdn/shop/files/Premium_Chocolate_Deal-change_jpg.jpg?v=1776696953&width=823">
+        <div class="info">
+            <div class="title">Premium Chocolate 1KG</div>
+            <div class="price"><div class="new">Rs.1599</div><div class="old">1960</div></div>
+            <a class="btn" href="#">Buy Now</a>
+        </div>
+    </div>
+
+    <div class="card chocolate">
+        <div class="badge">26% OFF</div>
+        <img src="https://bakehouse.pk/cdn/shop/files/zvjykW.jpg?v=1751096602&width=823">
+        <div class="info">
+            <div class="title">Choco Gift Pack 9 Pcs</div>
+            <div class="price"><div class="new">Rs.1099</div><div class="old">1500</div></div>
+            <a class="btn" href="#">Buy Now</a>
+        </div>
+    </div>
+
+    <div class="card chocolate">
+        <div class="badge">40% OFF</div>
+        <img src="https://bakehouse.pk/cdn/shop/files/Choco_Nut.jpg?v=1771335655&width=823">
+        <div class="info">
+            <div class="title">Choco Nuts Spread</div>
+            <div class="price"><div class="new">Rs.1599</div><div class="old">2700</div></div>
+            <a class="btn" href="#">Buy Now</a>
+        </div>
+    </div>
+
+    <div class="card chocolate">
+        <div class="badge">16% OFF</div>
+        <img src="https://bakehouse.pk/cdn/shop/files/lotusdeal.jpg?v=1759590020&width=823">
+        <div class="info">
+            <div class="title">Lotus Biscoff Pack</div>
+            <div class="price"><div class="new">Rs.2999</div><div class="old">3600</div></div>
+            <a class="btn" href="#">Buy Now</a>
+        </div>
+    </div>
+
+    <!-- BISCUITS (FIXED) -->
+    <div class="card biscuits">
+        <div class="badge">NEW</div>
+
+        <img src="https://media.naheed.pk/catalog/product/cache/57044254b6ba66615c533891fd7cf70f/1/3/1343810-1.jpg">
+
+        <div class="info">
+            <div class="title">
+                Flair Kunafa Pistachio Chocolate Brownie Bar 50g
+            </div>
+
+            <div class="price">
+                <div class="new">Rs.480</div>
+                <div class="old">Rs.0</div>
+            </div>
+
+            <a class="btn"
+               href="https://www.naheed.pk/flair-kunafa-pistachio-chocolate-brownie-bar-50gm"
+               target="_blank">
+               Buy Now
+            </a>
+        </div>
+    </div>
+
+</div>
+</div>
+
+<script>
+
+/* SEARCH */
+function searchProducts(){
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    let cards = document.querySelectorAll(".card");
+
+    cards.forEach(card => {
+        let title = card.querySelector(".title").innerText.toLowerCase();
+
+        if(title.includes(input)){
+            card.classList.remove("hide");
+        }else{
+            card.classList.add("hide");
+        }
+    });
+}
+
+
+</script>
+
+</body>
+</html>

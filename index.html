@@ -73,10 +73,8 @@ scroll-behavior:smooth;
 
 body{
 background:
-radial-gradient(circle at top left,#ff6b0015,transparent 25%),
-radial-gradient(circle at bottom right,#00d4ff10,transparent 25%),
-#f5f7fb;
-color:#111;
+linear-gradient(135deg,#020617,#0f172a,#111827);
+color:white;
 overflow-x:hidden;
 }
 
@@ -278,6 +276,28 @@ justify-content:center;
 gap:20px;
 flex-wrap:wrap;
 margin-top:45px;
+padding:0 10px;
+}
+
+.main-buttons button{
+padding:16px 24px;
+border:none;
+border-radius:16px;
+background:white;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.main-buttons::-webkit-scrollbar{
+display:none;
+}
+
+.main-buttons button{
+flex:0 0 auto;
+white-space:nowrap;
 }
 
 .main-buttons button{
@@ -345,13 +365,14 @@ gap:25px;
 /* CARD */
 
 .card{
-background:white;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,0.1);
 padding:25px;
-border-radius:20px;
-box-shadow:0 5px 20px rgba(0,0,0,0.06);
-transition:0.3s;
+border-radius:24px;
+box-shadow:0 8px 30px rgba(0,0,0,0.25);
+transition:0.4s;
 }
-
 .card:hover{
 transform:translateY(-8px);
 
@@ -392,11 +413,13 @@ background:#ff6b00;
 /* ARTICLE */
 
 .article{
-background:white;
-padding:30px;
-border-radius:20px;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(12px);
+padding:35px;
+border-radius:24px;
 margin-bottom:25px;
-box-shadow:0 5px 20px rgba(0,0,0,0.06);
+border:1px solid rgba(255,255,255,0.08);
+box-shadow:0 8px 30px rgba(0,0,0,0.18);
 }
 
 .article h3{
@@ -1182,6 +1205,28 @@ padding:15px 28px;
     }
 
 }
+.ai-search-box{
+margin-bottom:35px;
+display:flex;
+justify-content:center;
+}
+
+.ai-search-box input{
+width:500px;
+max-width:95%;
+padding:18px 22px;
+border:none;
+outline:none;
+border-radius:16px;
+font-size:17px;
+background:white;
+color:#111;
+box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
+
+.ai-search-box input:focus{
+box-shadow:0 10px 30px rgba(255,107,0,0.25);
+}
 </style>
 </head>
 
@@ -1332,7 +1377,9 @@ AI Prompts
 <section class="page" id="aiCategoriesPage">
 
 <h2>AI Categories</h2>
-
+<div class="ai-search-box">
+<input type="text" id="aiSearchInput" placeholder="Search AI tools like ChatGPT, Gemini, Canva AI..." onkeyup="searchAICards()">
+</div>
 <div class="grid">
 
 <div class="card"><h3>ChatGPT</h3><p>Smart AI assistant for writing and productivity.</p><a href="https://chat.openai.com" target="_blank">Open AI</a></div>
@@ -1374,6 +1421,33 @@ AI Prompts
 <div class="card"><h3>Character AI</h3><p>Talk with intelligent AI characters online.</p><a href="https://character.ai" target="_blank">Open AI</a></div>
 
 <div class="card"><h3>Replit AI</h3><p>AI coding and app development assistant.</p><a href="https://replit.com" target="_blank">Open AI</a></div>
+<div class="card"><h3>Jasper AI</h3><p>AI content writing and marketing assistant for businesses.</p><a href="https://www.jasper.ai" target="_blank">Open AI</a></div>
+
+<div class="card"><h3>Pika AI</h3><p>Create cinematic AI videos and animations instantly.</p><a href="https://pika.art" target="_blank">Open AI</a></div>
+
+<div class="card"><h3>Gamma AI</h3><p>Create beautiful AI presentations and documents easily.</p><a href="https://gamma.app" target="_blank">Open AI</a></div>
+
+<div class="card"><h3>Kaiber AI</h3><p>Generate artistic AI videos and visual effects online.</p><a href="https://kaiber.ai" target="_blank">Open AI</a></div>
+
+<div class="card"><h3>Suno AI</h3><p>Create realistic AI music and songs from text prompts.</p><a href="https://suno.ai" target="_blank">Open AI</a></div>
+
+<div class="card"><h3>Cursor AI</h3><p>Modern AI coding editor for developers and programmers.</p><a href="https://cursor.com" target="_blank">Open AI</a></div>
+<div class="card"><h3>Grok AI</h3><p>Smart conversational AI assistant for questions, ideas and research.</p><a href="https://grok.x.ai" target="_blank">Open AI</a></div>
+
+<div class="card"><h3>Adobe Express AI</h3><p>Create graphics, thumbnails and social media content using AI.</p><a href="https://www.adobe.com/express" target="_blank">Open AI</a></div>
+
+<div class="card"><h3>InVideo AI</h3><p>Create professional AI videos from simple text prompts instantly.</p><a href="https://invideo.io" target="_blank">Open AI</a></div>
+
+<div class="card"><h3>Writesonic</h3><p>Generate articles, ads and marketing content using AI tools.</p><a href="https://writesonic.com" target="_blank">Open AI</a></div>
+
+<div class="card"><h3>Beautiful AI</h3><p>Create premium presentations automatically with smart AI design.</p><a href="https://www.beautiful.ai" target="_blank">Open AI</a></div>
+
+<div class="card"><h3>Synthesia AI</h3><p>Create realistic talking avatar videos using artificial intelligence.</p><a href="https://www.synthesia.io" target="_blank">Open AI</a></div>
+
+<div class="card"><h3>Luma AI</h3><p>Create realistic 3D visuals, scenes and AI-generated videos.</p><a href="https://lumalabs.ai" target="_blank">Open AI</a></div>
+
+<div class="card"><h3>Otter AI</h3><p>AI meeting notes, voice transcription and smart summaries.</p><a href="https://otter.ai" target="_blank">Open AI</a></div>
+
 
 </div>
 
@@ -1384,6 +1458,10 @@ AI Prompts
 <section class="page" id="aiToolsPage">
 
 <h2>AI Tools</h2>
+<div class="ai-search-box">
+<input type="text" id="toolSearchInput" placeholder="Search AI tools like Video Generator, PDF, Logo Maker..." onkeyup="searchAITools()">
+</div>
+
 
 <div class="grid">
 
@@ -1449,7 +1527,25 @@ AI Prompts
 <p>Create modern professional resumes and CV designs using AI tools.</p>
 <a href="https://www.canva.com/resumes" target="_blank">Use Tool</a>
 </div>
+<div class="card"><h3>AI Thumbnail Maker</h3><p>Create YouTube thumbnails instantly using AI design tools.</p><a href="https://www.canva.com" target="_blank">Use Tool</a></div>
 
+<div class="card"><h3>AI Code Generator</h3><p>Generate coding projects and programming solutions with AI.</p><a href="https://replit.com" target="_blank">Use Tool</a></div>
+
+<div class="card"><h3>AI Chatbot Builder</h3><p>Create intelligent AI chatbots for websites and businesses.</p><a href="https://www.chatbase.co" target="_blank">Use Tool</a></div>
+
+<div class="card"><h3>AI Photo Enhancer</h3><p>Improve photo quality and resolution automatically using AI.</p><a href="https://letsenhance.io" target="_blank">Use Tool</a></div>
+
+<div class="card"><h3>AI Animation Generator</h3><p>Create animated videos and motion graphics with AI.</p><a href="https://www.animaker.com" target="_blank">Use Tool</a></div>
+
+<div class="card"><h3>AI Script Writer</h3><p>Generate movie scripts, stories and video content ideas instantly.</p><a href="https://sudowrite.com" target="_blank">Use Tool</a></div>
+
+<div class="card"><h3>AI Voice Generator</h3><p>Create realistic voices and narrations using AI technology.</p><a href="https://elevenlabs.io" target="_blank">Use Tool</a></div>
+
+<div class="card"><h3>AI Business Name Generator</h3><p>Generate unique business and brand names instantly.</p><a href="https://namelix.com" target="_blank">Use Tool</a></div>
+
+<div class="card"><h3>AI SEO Writer</h3><p>Create SEO optimized articles and blog content automatically.</p><a href="https://writesonic.com" target="_blank">Use Tool</a></div>
+
+<div class="card"><h3>AI Avatar Creator</h3><p>Create futuristic AI avatars and profile pictures online.</p><a href="https://www.d-id.com" target="_blank">Use Tool</a></div>
 <div class="card">
 <h3>Free AI Website Builder</h3>
 <p>Build modern websites and landing pages automatically with AI.</p>
@@ -1894,6 +1990,58 @@ function toggleMenu(){
     }
 
 }
+function searchAICards(){
+
+let input =
+document.getElementById("aiSearchInput")
+.value.toLowerCase();
+
+let cards =
+document.querySelectorAll("#aiCategoriesPage .card");
+
+cards.forEach(function(card){
+
+let text =
+card.innerText.toLowerCase();
+
+if(text.includes(input)){
+card.style.display = "block";
+}
+
+else{
+card.style.display = "none";
+}
+
+});
+
+}
+function searchAITools(){
+
+let input =
+document.getElementById("toolSearchInput")
+.value.toLowerCase();
+
+let cards =
+document.querySelectorAll("#aiToolsPage .card");
+
+cards.forEach(function(card){
+
+let text =
+card.innerText.toLowerCase();
+
+if(text.includes(input)){
+card.style.display = "block";
+}
+
+else{
+card.style.display = "none";
+}
+
+});
+
+}
+
+
 
 
 

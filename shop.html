@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>NOVA BAKE STORE</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<title>NOVA BAKE STORE | Premium Chocolates & Biscuits</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -15,166 +16,238 @@
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
-    font-family:Poppins;
-    background:#f6f6f6;
+    font-family:'Poppins',sans-serif;
+    background:#f5f6fa;
+    color:#222;
 }
 
 /* HEADER */
+
 header{
-    padding:15px 8%;
-    background:white;
-    display:flex;
-    align-items:center;
-    gap:15px;
     position:sticky;
     top:0;
     z-index:1000;
-    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+    background:#ffffffee;
+    backdrop-filter:blur(10px);
+    padding:15px 6%;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    box-shadow:0 4px 20px rgba(0,0,0,0.06);
 }
 
 .logo{
-    font-size:22px;
+    font-size:28px;
     font-weight:800;
-    color:#ff9800;
+    color:#ff7300;
     white-space:nowrap;
 }
 
-/* SHOP BUTTON */
+/* BUTTONS */
+
+.home-btn,
 .shop-btn{
-    background:#ff9800;
-    color:white;
     border:none;
-    padding:10px 18px;
-    border-radius:8px;
+    padding:12px 18px;
+    border-radius:12px;
     cursor:pointer;
     font-family:Poppins;
     font-weight:600;
+    color:white;
     transition:0.3s;
 }
 
+.home-btn{
+    background:#1f1f1f;
+}
+
+.shop-btn{
+    background:linear-gradient(135deg,#ff9800,#ff5500);
+}
+
+.home-btn:hover,
 .shop-btn:hover{
-    background:#e68900;
-    transform:scale(1.05);
+    transform:translateY(-2px);
 }
 
 /* SEARCH */
+
 .search-box{
     flex:1;
 }
 
 .search-box input{
     width:100%;
-    padding:11px;
+    padding:13px 16px;
+    border-radius:14px;
     border:1px solid #ddd;
-    border-radius:8px;
-    font-family:Poppins;
     outline:none;
-}
-
-/* CATEGORY */
-.categories{
-    display:flex;
-    gap:10px;
-    padding:15px 8%;
-    background:white;
-    overflow:auto;
-}
-
-.cat{
-    padding:8px 15px;
-    background:#eee;
-    border-radius:20px;
-    cursor:pointer;
-    font-size:13px;
-    white-space:nowrap;
+    font-size:14px;
+    font-family:Poppins;
     transition:0.3s;
 }
 
+.search-box input:focus{
+    border-color:#ff7300;
+    box-shadow:0 0 0 4px rgba(255,115,0,0.12);
+}
+
+/* HERO */
+
+.hero{
+    padding:70px 6%;
+    background:
+    linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
+    url('https://images.unsplash.com/photo-1549007994-cb92caebd54b?q=80&w=1600&auto=format&fit=crop');
+    background-size:cover;
+    background-position:center;
+    color:white;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:52px;
+    font-weight:800;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:18px;
+    max-width:750px;
+    margin:auto;
+    opacity:0.95;
+    line-height:1.8;
+}
+
+/* CATEGORY */
+
+.categories{
+    padding:25px 6%;
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.cat{
+    background:white;
+    padding:11px 20px;
+    border-radius:50px;
+    cursor:pointer;
+    font-weight:600;
+    transition:0.3s;
+    box-shadow:0 4px 15px rgba(0,0,0,0.05);
+}
+
 .cat:hover{
-    background:#ff9800;
+    background:#ff7300;
     color:white;
 }
 
 .cat.active{
-    background:#ff9800;
+    background:#ff7300;
     color:white;
 }
 
-/* GRID */
+/* PRODUCTS */
+
 .container{
-    padding:30px 8%;
+    padding:10px 6% 70px;
 }
 
 .grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-    gap:20px;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:28px;
 }
 
 /* CARD */
+
 .card{
     background:white;
-    border-radius:15px;
+    border-radius:24px;
     overflow:hidden;
     position:relative;
-    transition:0.3s;
-    box-shadow:0 5px 15px rgba(0,0,0,0.06);
+    transition:0.35s;
+    box-shadow:0 8px 25px rgba(0,0,0,0.07);
 }
 
 .card:hover{
-    transform:translateY(-5px);
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.13);
 }
 
-/* IMAGE */
 .card img{
     width:100%;
-    height:190px;
+    height:250px;
     object-fit:cover;
     display:block;
 }
 
+/* BADGE */
+
+.badge{
+    position:absolute;
+    top:15px;
+    left:15px;
+    background:#ff2d55;
+    color:white;
+    padding:7px 12px;
+    border-radius:10px;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:0.5px;
+}
+
 /* INFO */
+
 .info{
-    padding:14px;
+    padding:20px;
 }
 
 .title{
-    font-size:14px;
-    font-weight:600;
-    min-height:42px;
+    font-size:15px;
+    font-weight:700;
+    line-height:1.6;
+    min-height:72px;
 }
 
 .price{
     display:flex;
     align-items:center;
     gap:10px;
-    margin-top:8px;
+    margin-top:12px;
+    flex-wrap:wrap;
 }
 
 .new{
-    color:#0a9b4a;
+    color:#08a34a;
+    font-size:21px;
     font-weight:700;
 }
 
 .old{
     text-decoration:line-through;
     color:#888;
-    font-size:12px;
+    font-size:13px;
 }
 
 /* BUTTON */
+
 .btn{
     display:block;
     text-align:center;
-    margin-top:12px;
-    background:linear-gradient(45deg,#ff9800,#ff6f00);
-    color:white;
-    padding:11px;
-    border-radius:8px;
+    margin-top:18px;
+    padding:13px;
+    border-radius:14px;
     text-decoration:none;
-    font-size:13px;
-    font-weight:600;
+    background:linear-gradient(135deg,#ff9800,#ff5500);
+    color:white;
+    font-weight:700;
     transition:0.3s;
 }
 
@@ -182,26 +255,29 @@ header{
     transform:scale(1.03);
 }
 
-/* BADGE */
-.badge{
-    position:absolute;
-    top:10px;
-    left:10px;
-    background:red;
-    color:white;
-    font-size:11px;
-    padding:5px 8px;
-    border-radius:5px;
-    font-weight:600;
-}
-
 /* HIDE */
+
 .hide{
     display:none !important;
 }
 
+/* FOOTER */
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:35px 20px;
+}
+
+footer h3{
+    margin-bottom:10px;
+    font-size:24px;
+}
+
 /* MOBILE */
-@media(max-width:700px){
+
+@media(max-width:768px){
 
     header{
         flex-wrap:wrap;
@@ -210,535 +286,662 @@ header{
     .logo{
         width:100%;
         text-align:center;
+        font-size:24px;
     }
 
+    .home-btn,
     .shop-btn{
-        width:100%;
+        width:48%;
     }
 
     .search-box{
         width:100%;
     }
 
-}
-/* HOME BUTTON */
-.home-btn{
-    background:#222;
-    color:white;
-    border:none;
-    padding:10px 18px;
-    border-radius:8px;
-    cursor:pointer;
-    font-family:Poppins;
-    font-weight:600;
-    transition:0.3s;
+    .hero{
+        padding:55px 20px;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
 }
 
-.home-btn:hover{
-    background:#000;
-    transform:scale(1.05);
-}
 </style>
 </head>
 
 <body>
 
 <!-- HEADER -->
+
 <header>
-<!-- HOME BUTTON -->
+
 <button class="home-btn" onclick="goHome()">
-    Home
+Home
 </button>
-    <div class="logo">
-        NOVA BAKE STORE
-    </div>
 
-    <button class="shop-btn" onclick="openShop()">
-        Shope
-    </button>
+<div class="logo">
+NOVA BAKE STORE
+</div>
 
-    <div class="search-box">
-        <input type="text"
-               id="searchInput"
-               onkeyup="searchProducts()"
-               placeholder="Search products...">
-    </div>
+<button class="shop-btn" onclick="openShop()">
+Shop
+</button>
+
+<div class="search-box">
+
+<input
+type="text"
+id="searchInput"
+onkeyup="searchProducts()"
+placeholder="Search chocolates, cookies, brownies...">
+
+</div>
 
 </header>
 
-<!-- CATEGORY -->
+<!-- HERO -->
+
+<section class="hero">
+
+<h1>
+Premium Chocolate Store
+</h1>
+
+<p>
+Buy premium chocolates, cookies, brownies, wafers and bakery products online with modern shopping experience.
+</p>
+
+</section>
+
+<!-- CATEGORIES -->
+
 <div class="categories">
 
-    <div class="cat active" onclick="filterProducts('all', this)">
-        All
-    </div>
+<div class="cat active" onclick="filterProducts('all', this)">
+All
+</div>
 
-    <div class="cat" onclick="filterProducts('chocolate', this)">
-        Chocolate
-    </div>
+<div class="cat" onclick="filterProducts('chocolate', this)">
+Chocolate
+</div>
 
-    <div class="cat" onclick="filterProducts('biscuits', this)">
-        Biscuits
-    </div>
+<div class="cat" onclick="filterProducts('biscuits', this)">
+Biscuits
+</div>
 
 </div>
 
 <!-- PRODUCTS -->
+
 <div class="container" id="shopSection">
 
 <div class="grid">
 
-    <!-- PRODUCT 1 -->
-    <div class="card chocolate">
 
-        <div class="badge">45% OFF</div>
 
-        <img src="https://bakehouse.pk/cdn/shop/files/fondant-deal_jpg.jpg?v=1776695976&width=823">
-
-        <div class="info">
-
-            <div class="title">
-                Fondant Buy 1KG Get 1KG
-            </div>
-
-            <div class="price">
-                <div class="new">Rs.999</div>
-                <div class="old">Rs.1840</div>
-            </div>
-
-            <a class="btn"
-            href="https://bakehouse.pk/products/dhamaka-offer-milkyz-food-fondastic-fondant-buy-1kg-get-1kg-deal"
-            target="_blank">
-            Buy Now
-            </a>
-
-        </div>
-    </div>
-
-    <!-- PRODUCT -->
-<div class="card chocolate">
-
-    <div class="badge">37% OFF</div>
-
-    <img src="https://bakehouse.pk/cdn/shop/files/choco-cream-post-1_jpg.jpg?v=1776860072&width=823">
-
-    <div class="info">
-
-        <div class="title">
-            Milkyz Food Choco Cream Chocolate Milk Spread 1KG Bucket
-        </div>
-
-        <div class="price">
-            <div class="new">Rs.1499</div>
-            <div class="old">Rs.2400</div>
-        </div>
-
-        <a class="btn"
-        href="https://bakehouse.pk/products/choco-cream-chocolate-milk-spread-1kg-bucket"
-        target="_blank">
-        Buy Now
-        </a>
-
-    </div>
-
-</div>
-
-    <!-- PRODUCT -->
-<div class="card chocolate">
-
-    <div class="badge">18% OFF</div>
-
-    <img src="https://bakehouse.pk/cdn/shop/files/Premium_Chocolate_Deal-change_jpg.jpg?v=1776696953&width=823">
-
-    <div class="info">
-
-        <div class="title">
-            Special Offer Milkyz Food Premium Compound Chocolate 1KG Pack
-        </div>
-
-        <div class="price">
-            <div class="new">Rs.1599</div>
-            <div class="old">Rs.1960</div>
-        </div>
-
-        <a class="btn"
-        href="https://bakehouse.pk/products/special-offer-milkyz-food-premium-compound-chocolate-1kg-pack-free-delivery-all-over-pakistan"
-        target="_blank">
-        Buy Now
-        </a>
-
-    </div>
-
-</div>
-
-    <!-- PRODUCT -->
-<div class="card chocolate">
-
-    <div class="badge">26% OFF</div>
-
-    <img src="https://bakehouse.pk/cdn/shop/files/zvjykW.jpg?v=1751096602&width=823">
-
-    <div class="info">
-
-        <div class="title">
-            Special Choco Gift Pack 9Pcs Deal Free Delivery All Pakistan
-        </div>
-
-        <div class="price">
-            <div class="new">Rs.1099</div>
-            <div class="old">Rs.1500</div>
-        </div>
-
-        <a class="btn"
-        href="https://bakehouse.pk/products/choco-eidi-pack"
-        target="_blank">
-        Buy Now
-        </a>
-
-    </div>
-
-</div>
-
-    <!-- PRODUCT -->
-<div class="card chocolate">
-
-    <div class="badge">40% OFF</div>
-
-    <img src="https://bakehouse.pk/cdn/shop/files/Choco_Nut.jpg?v=1771335655&width=823">
-
-    <div class="info">
-
-        <div class="title">
-            Milkyz Food Choco Nuts Real 13% Hazelnut Spread With Cocoa 900g Bucket
-        </div>
-
-        <div class="price">
-            <div class="new">Rs.1599</div>
-            <div class="old">Rs.2700</div>
-        </div>
-
-        <a class="btn"
-        href="https://bakehouse.pk/products/milkyz-food-choco-nuts-real-hazelnut-spread-with-cocoa-900g"
-        target="_blank">
-        Buy Now
-        </a>
-
-    </div>
-
-</div>
-    
 <!-- PRODUCT -->
+
 <div class="card chocolate">
 
-    <div class="badge">10% OFF</div>
+<div class="badge">37% OFF</div>
 
-    <img src="https://bakehouse.pk/cdn/shop/files/Milkyz-Food-Premium-Dark-Chocolate-Compound-1KG-Pack_f6932297-d4ad-43c5-9426-b9628796b8e5.jpg?v=1717397523&width=360">
+<img src="https://bakehouse.pk/cdn/shop/files/choco-cream-post-1_jpg.jpg?v=1776860072&width=823">
 
-    <div class="info">
+<div class="info">
 
-        <div class="title">
-            Milkyz Food Premium Dark Chocolate Compound 1KG Pack
-        </div>
+<div class="title">
+Milkyz Food Choco Cream Chocolate Milk Spread 1KG Bucket
+</div>
 
-        <div class="price">
-            <div class="new">Rs.1521</div>
-            <div class="old">Rs.1690</div>
-        </div>
+<div class="price">
+<div class="new">Rs.1499</div>
+<div class="old">Rs.2400</div>
+</div>
 
-        <a class="btn"
-        href="https://bakehouse.pk/products/bake-house-dark-chocolate-1kg-pack"
-        target="_blank">
-        Buy Now
-        </a>
+<a class="btn"
+href="https://bakehouse.pk/products/choco-cream-chocolate-milk-spread-1kg-bucket"
+target="_blank">
+Buy Now
+</a>
 
-    </div>
-
+</div>
 </div>
 <!-- PRODUCT -->
+
 <div class="card chocolate">
 
-    <div class="badge">10% OFF</div>
+<div class="badge">POPULAR</div>
 
-    <img src="https://bakehouse.pk/cdn/shop/files/Milkyz-Food-Premium-White-Chocolate-Compound-1KG-Pack_c6ca4a4e-18a8-400d-8e39-ac8a1764bae5.jpg?v=1722340706&width=823">
+<img src="https://springs.com.pk/cdn/shop/files/8690632994529.gif?v=1755498783">
 
-    <div class="info">
+<div class="info">
 
-        <div class="title">
-            Milkyz Food Premium White Chocolate Compound 1KG Pack
-        </div>
+<div class="title">
+Nestle Cikolata Findikli Chocolate 60g
+</div>
 
-        <div class="price">
-            <div class="new">Rs.1521</div>
-            <div class="old">Rs.1690</div>
-        </div>
+<div class="price">
+<div class="new">Rs.825</div>
+</div>
 
-        <a class="btn"
-        href="https://bakehouse.pk/products/bake-house-premium-white-chocolate-1kg-pack?pr_prod_strat=jac&pr_rec_id=fe7215950&pr_rec_pid=9270739730739&pr_ref_pid=9270726754611&pr_seq=uniform"
-        target="_blank">
-        Buy Now
-        </a>
-
-    </div>
+<a class="btn"
+href="https://springs.com.pk/products/nestle-cikolata-findikli-chocolate-60g"
+target="_blank">
+Buy Now
+</a>
 
 </div>
+</div>
 <!-- PRODUCT -->
+
 <div class="card chocolate">
 
-    <div class="badge">10% OFF</div>
+<div class="badge">POPULAR</div>
 
-    <img src="https://bakehouse.pk/cdn/shop/files/Milkyz-Food-Premium-Milk-Chocolate-Compound-1KG-Pack_ad688fec-6244-435d-9006-9ac0c5efd9ae.jpg?v=1717398927&width=823">
+<img src="https://springs.com.pk/cdn/shop/files/8690632764290_940x.gif?v=1777719184">
 
-    <div class="info">
+<div class="info">
 
-        <div class="title">
-            Milkyz Food Premium Milk Chocolate Compound 1KG Pack
-        </div>
+<div class="title">
+Nestle Cikolata Bademli Chocolate 60g
+</div>
 
-        <div class="price">
-            <div class="new">Rs.1521</div>
-            <div class="old">Rs.1690</div>
-        </div>
+<div class="price">
+<div class="new">Rs.825</div>
+</div>
 
-        <a class="btn"
-        href="https://bakehouse.pk/products/bake-house-milk-chocolate-1kg-pack?pr_prod_strat=jac&pr_rec_id=a329ff4bb&pr_rec_pid=9270726361395&pr_ref_pid=9270739730739&pr_seq=uniform"
-        target="_blank">
-        Buy Now
-        </a>
-
-    </div>
+<a class="btn"
+href="https://springs.com.pk/products/nestle-cikolata-bademli-chocolate-60g"
+target="_blank">
+Buy Now
+</a>
 
 </div>
+</div>
 <!-- PRODUCT -->
+
 <div class="card biscuits">
 
-    <div class="badge">Price Cut</div>
+<div class="badge">NEW</div>
 
-    <img src="https://www.box.com.pk:4006/assets/product/HuA9nkPBN0IGKLbWqkZne6O2NYSf1WMX_1723010959436.jpg">
+<img src="https://springs.com.pk/cdn/shop/files/8000500359358_940x.gif?v=1754921356">
 
-    <div class="info">
+<div class="info">
 
-        <div class="title">
-            Bisconni Chocolate Chip Cookies 12 Packs Box
-        </div>
+<div class="title">
+Nutella Biscuits 41.4g
+</div>
 
-        <div class="price">
-            <div class="new">Rs.348</div>
-            <div class="old">Rs.360</div>
-        </div>
+<div class="price">
+<div class="new">Rs.540</div>
+<div class="old">Rs.600</div>
+</div>
 
-        <a class="btn"
-        href="https://www.box.com.pk/product/bisconni-chocolate-chip-cookies-12-packs-box"
-        target="_blank">
-        Buy Now
-        </a>
+<a class="btn"
+href="https://springs.com.pk/products/nutella-biscuits-41-4"
+target="_blank">
+Buy Now
+</a>
 
-    </div>
-
+</div>
 </div>
 <!-- PRODUCT -->
+
 <div class="card biscuits">
 
-    <div class="badge">Price Cut</div>
+<div class="badge">HOT</div>
 
-    <img src="https://www.box.com.pk:4006/assets/product/IwogGktbUVqrPyK7cG0Jx5r6ByLH5vVv_1723011430918.jpg">
+<img src="https://springs.com.pk/cdn/shop/files/7622210693303.jpg?v=1769493311">
 
-    <div class="info">
+<div class="info">
 
-        <div class="title">
-            Bisconni Chocolatto Cookies 12 Packs Box
-        </div>
+<div class="title">
+Oreo Choco Brownie Biscuits 154g
+</div>
 
-        <div class="price">
-            <div class="new">Rs.347</div>
-            <div class="old">Rs.360</div>
-        </div>
+<div class="price">
+<div class="new">Rs.2025</div>
+<div class="old">Rs.2250</div>
+</div>
 
-        <a class="btn"
-        href="https://www.box.com.pk/product/bisconni-chocolatto-cookies-12-packs-box"
-        target="_blank">
-        Buy Now
-        </a>
+<a class="btn"
+href="https://springs.com.pk/products/oreo-choco-brownie-biscuits-154g"
+target="_blank">
+Buy Now
+</a>
 
-    </div>
+</div>
+</div>
 
+
+<!-- PRODUCT -->
+
+<div class="card chocolate">
+
+<div class="badge">HOT</div>
+
+<img src="https://www.chocolatechocolate.com/cdn/shop/products/bar_darkseasalt_360x.jpg?v=1630504448">
+
+<div class="info">
+
+<div class="title">
+NO 2 - DARK SEA SALT CARAMEL BAR 3.5 OZ
+</div>
+
+<div class="price">
+<div class="new">$6.50</div>
+</div>
+
+<a class="btn"
+href="https://www.chocolatechocolate.com/products/no-2-dark-sea-salt-caramel-bar-3-5-oz"
+target="_blank">
+Buy Now
+</a>
+
+</div>
+</div>
+
+<!-- PRODUCT -->
+
+<div class="card chocolate">
+
+<div class="badge">LIMITED</div>
+
+<img src="https://www.chocolatechocolate.com/cdn/shop/products/Caramelfudgebrownie_box_web_360x.jpg?v=1682340263">
+
+<div class="info">
+
+<div class="title">
+NO 18 - Milk Caramel Fudge Brownie Bar 3.5 OZ
+</div>
+
+<div class="price">
+<div class="new">$6.50</div>
+</div>
+
+<a class="btn"
+href="https://www.chocolatechocolate.com/products/no-18-milk-caramel-fudge-brownie-bar-3-5-oz"
+target="_blank">
+Buy Now
+</a>
+
+</div>
+</div>
+
+<!-- PRODUCT -->
+
+<div class="card chocolate">
+
+<div class="badge">NEW</div>
+
+<img src="https://www.chocolatechocolate.com/cdn/shop/files/cookiescreme_720x.jpg?v=1734976118">
+
+<div class="info">
+
+<div class="title">
+White Cookies & Creme Ice Cream Parlor Truffles - 6 OZ
+</div>
+
+<div class="price">
+<div class="new">$14.95</div>
+</div>
+
+<a class="btn"
+href="https://www.chocolatechocolate.com/products/white-cookies-creme-ice-cream-truffles-6-oz"
+target="_blank">
+Buy Now
+</a>
+
+</div>
+</div>
+
+<!-- PRODUCT -->
+
+<div class="card chocolate">
+
+<div class="badge">POPULAR</div>
+
+<img src="https://www.chocolatechocolate.com/cdn/shop/files/MilkChocolateIceCream_360x.jpg?v=1734976077">
+
+<div class="info">
+
+<div class="title">
+Milk Chocolate Ice Cream Parlor Truffles - 6 OZ
+</div>
+
+<div class="price">
+<div class="new">$14.95</div>
+</div>
+
+<a class="btn"
+href="https://www.chocolatechocolate.com/products/milk-chocolate-ice-cream-truffles-6-oz"
+target="_blank">
+Buy Now
+</a>
+
+</div>
+</div>
+
+<!-- PRODUCT -->
+
+<div class="card biscuits">
+
+<div class="badge">POPULAR</div>
+
+<img src="https://www.box.com.pk:4006/assets/product/HuA9nkPBN0IGKLbWqkZne6O2NYSf1WMX_1723010959436.jpg">
+
+<div class="info">
+
+<div class="title">
+Bisconni Chocolate Chip Cookies 12 Packs Box
+</div>
+
+<div class="price">
+<div class="new">Rs.348</div>
+<div class="old">Rs.360</div>
+</div>
+
+<a class="btn"
+href="https://www.box.com.pk/product/bisconni-chocolate-chip-cookies-12-packs-box"
+target="_blank">
+Buy Now
+</a>
+
+</div>
+</div>
+
+<!-- PRODUCT -->
+
+<div class="card biscuits">
+
+<div class="badge">SALE</div>
+
+<img src="https://www.box.com.pk:4006/assets/product/IwogGktbUVqrPyK7cG0Jx5r6ByLH5vVv_1723011430918.jpg">
+
+<div class="info">
+
+<div class="title">
+Bisconni Chocolatto Cookies 12 Packs Box
+</div>
+
+<div class="price">
+<div class="new">Rs.347</div>
+<div class="old">Rs.360</div>
+</div>
+
+<a class="btn"
+href="https://www.box.com.pk/product/bisconni-chocolatto-cookies-12-packs-box"
+target="_blank">
+Buy Now
+</a>
+
+</div>
+</div>
+
+<!-- PRODUCT -->
+
+<div class="card biscuits">
+
+<div class="badge">BEST</div>
+
+<img src="https://www.box.com.pk:4006/assets/product/zgUY24DuIZsVJCsCS8msRD9uyaP0oTZw_1723012084488.jpg">
+
+<div class="info">
+
+<div class="title">
+Bisconni Mi Amor Premium Cookies with Rich Chocolate Inside 8 Packs Box
+</div>
+
+<div class="price">
+<div class="new">Rs.308</div>
+<div class="old">Rs.320</div>
+</div>
+
+<a class="btn"
+href="https://www.box.com.pk/product/bisconni-mi-amor-premium-cookies-with-rich-chocolate-inside-8-packs-box"
+target="_blank">
+Buy Now
+</a>
+
+</div>
+</div>
+
+<!-- PRODUCT -->
+
+<div class="card biscuits">
+
+<div class="badge">NEW</div>
+
+<img src="https://media.naheed.pk/catalog/product/cache/57044254b6ba66615c533891fd7cf70f/1/3/1343810-1.jpg">
+
+<div class="info">
+
+<div class="title">
+Flair Kunafa Pistachio Chocolate Brownie Bar 50g
+</div>
+
+<div class="price">
+<div class="new">Rs.480</div>
+</div>
+
+<a class="btn"
+href="https://www.naheed.pk/flair-kunafa-pistachio-chocolate-brownie-bar-50gm"
+target="_blank">
+Buy Now
+</a>
+
+</div>
 </div>
 <!-- PRODUCT -->
-<div class="card biscuits">
 
-    <div class="badge">Price Cut</div>
+<div class="card chocolate">
 
-    <img src="https://www.box.com.pk:4006/assets/product/zgUY24DuIZsVJCsCS8msRD9uyaP0oTZw_1723012084488.jpg">
+<div class="badge">NEW</div>
 
-    <div class="info">
+<img src="https://springs.com.pk/cdn/shop/files/4000417670212_940x.gif?v=1779283605">
 
-        <div class="title">
-            Bisconni Mi Amor Premium Cookies with Rich Chocolate Inside 8 Packs Box
-        </div>
+<div class="info">
 
-        <div class="price">
-            <div class="new">Rs.308</div>
-            <div class="old">Rs.320</div>
-        </div>
+<div class="title">
+Ritter Sport Dunkle Voll-Nuss Chocolate 100g
+</div>
 
-        <a class="btn"
-        href="https://www.box.com.pk/product/bisconni-mi-amor-premium-cookies-with-rich-chocolate-inside-8-packs-box"
-        target="_blank">
-        Buy Now
-        </a>
+<div class="price">
+<div class="new">Rs.1850</div>
+</div>
 
-    </div>
+<a class="btn"
+href="https://springs.com.pk/products/ritter-sport-dunkle-voll-nuss-chocolate-100g"
+target="_blank">
+Buy Now
+</a>
 
+</div>
 </div>
 <!-- PRODUCT -->
-<div class="card biscuits">
 
-    <div class="badge">Price Cut</div>
+<div class="card chocolate">
 
-    <img src="https://www.box.com.pk:4006/assets/product/mf1MRVPDy5U9oDzWhRG4opT58K5wzr8D_1760521495558.jpg">
+<div class="badge">NEW</div>
 
-    <div class="info">
+<img src="https://springs.com.pk/cdn/shop/files/4000417670410.gif?v=1779283759">
 
-        <div class="title">
-            Inovative Frisky Chocolate Rolls 10 Munch Packs Box
-        </div>
+<div class="info">
 
-        <div class="price">
-            <div class="new">Rs.427</div>
-            <div class="old">Rs.500</div>
-        </div>
+<div class="title">
+Ritter Sport Hoing-Salz-Mandel Chocolate 100g
+</div>
 
-        <a class="btn"
-        href="https://www.box.com.pk/product/inovative-frisky-chocolate-rolls-10-munch-packs-box"
-        target="_blank">
-        Buy Now
-        </a>
+<div class="price">
+<div class="new">Rs.1850</div>
+</div>
 
-    </div>
+<a class="btn"
+href="https://springs.com.pk/products/ritter-sport-hoing-salz-mandel-chocolate-100g"
+target="_blank">
+Buy Now
+</a>
 
+</div>
 </div>
 <!-- PRODUCT -->
+
+<div class="card chocolate">
+
+<div class="badge">TRENDING</div>
+
+<img src="https://springs.com.pk/cdn/shop/files/8690632767116.gif?v=1766997893">
+
+<div class="info">
+
+<div class="title">
+Nestle Artizan Isi 22% Findik Fistik Chocolate 60g
+</div>
+
+<div class="price">
+<div class="new">Rs.950</div>
+</div>
+
+<a class="btn"
+href="https://springs.com.pk/products/nestle-artizan-isi-22-findik-fistik-chocolate-60g"
+target="_blank">
+Buy Now
+</a>
+
+</div>
+</div>
+
+
+
+
+
+<!-- PRODUCT -->
+
 <div class="card biscuits">
 
-    <div class="badge">Price Cut</div>
+<div class="badge">SALE</div>
 
-    <img src="https://www.box.com.pk:4006/assets/product/t4fTJFVEACigQ1vzrvEzSTvaxlPTcIbI_1757397357681.jpg">
+<img src="https://www.box.com.pk:4006/assets/product/t4fTJFVEACigQ1vzrvEzSTvaxlPTcIbI_1757397357681.jpg">
 
-    <div class="info">
+<div class="info">
 
-        <div class="title">
-            Bisconni Divine Premium Chocolate Wafers 8 Packs Box
-        </div>
-
-        <div class="price">
-            <div class="new">Rs.308</div>
-            <div class="old">Rs.320</div>
-        </div>
-
-        <a class="btn"
-        href="https://www.box.com.pk/product/bisconni-divine-premium-chocolate-wafers-8-packs-box"
-        target="_blank">
-        Buy Now
-        </a>
-
-    </div>
-
+<div class="title">
+Bisconni Divine Premium Chocolate Wafers 8 Packs Box
 </div>
-    <!-- PRODUCT 7 -->
-    <div class="card biscuits">
 
-        <div class="badge">NEW</div>
+<div class="price">
+<div class="new">Rs.308</div>
+<div class="old">Rs.320</div>
+</div>
 
-        <img src="https://media.naheed.pk/catalog/product/cache/57044254b6ba66615c533891fd7cf70f/1/3/1343810-1.jpg">
-
-        <div class="info">
-
-            <div class="title">
-                Flair Kunafa Pistachio Chocolate Brownie Bar 50g
-            </div>
-
-            <div class="price">
-                <div class="new">Rs.480</div>
-            </div>
-
-            <a class="btn"
-            href="https://www.naheed.pk/flair-kunafa-pistachio-chocolate-brownie-bar-50gm"
-            target="_blank">
-            Buy Now
-            </a>
-
-        </div>
-    </div>
+<a class="btn"
+href="https://www.box.com.pk/product/bisconni-divine-premium-chocolate-wafers-8-packs-box"
+target="_blank">
+Buy Now
+</a>
 
 </div>
 </div>
+
+</div>
+</div>
+
+<!-- FOOTER -->
+
+<footer>
+
+<h3>
+NOVA BAKE STORE
+</h3>
+
+<p>
+Premium online shopping experience for chocolates, cookies and bakery products.
+</p>
+
+</footer>
 
 <script>
 
 /* SEARCH */
+
 function searchProducts(){
 
-    let input = document.getElementById("searchInput")
-    .value.toLowerCase();
+let input = document
+.getElementById("searchInput")
+.value
+.toLowerCase();
 
-    let cards = document.querySelectorAll(".card");
+let cards = document.querySelectorAll(".card");
 
-    cards.forEach(card => {
+cards.forEach(card=>{
 
-        let title = card.querySelector(".title")
-        .innerText.toLowerCase();
+let title = card
+.querySelector(".title")
+.innerText
+.toLowerCase();
 
-        if(title.includes(input)){
-            card.classList.remove("hide");
-        }else{
-            card.classList.add("hide");
-        }
+if(title.includes(input)){
+card.classList.remove("hide");
+}else{
+card.classList.add("hide");
+}
 
-    });
+});
 
 }
 
-/* CATEGORY FILTER */
+/* FILTER */
+
 function filterProducts(category, element){
 
-    let cards = document.querySelectorAll(".card");
-    let cats = document.querySelectorAll(".cat");
+let cards = document.querySelectorAll(".card");
+let cats = document.querySelectorAll(".cat");
 
-    cats.forEach(cat=>{
-        cat.classList.remove("active");
-    });
+cats.forEach(cat=>{
+cat.classList.remove("active");
+});
 
-    element.classList.add("active");
+element.classList.add("active");
 
-    cards.forEach(card=>{
+cards.forEach(card=>{
 
-        if(category === "all"){
-            card.classList.remove("hide");
-        }
+if(category === "all"){
+card.classList.remove("hide");
+}
 
-        else if(card.classList.contains(category)){
-            card.classList.remove("hide");
-        }
+else if(card.classList.contains(category)){
+card.classList.remove("hide");
+}
 
-        else{
-            card.classList.add("hide");
-        }
+else{
+card.classList.add("hide");
+}
 
-    });
+});
 
 }
 
-/* SHOP BUTTON */
+/* SHOP */
+
 function openShop(){
 
-    document.getElementById("shopSection")
-    .scrollIntoView({
-        behavior:"smooth"
-    });
+document.getElementById("shopSection")
+.scrollIntoView({
+behavior:"smooth"
+});
 
 }
-/* HOME BUTTON */
+
+/* HOME */
+
 function goHome(){
-    window.location.href = "index.html";
+window.location.href = "index.html";
 }
 
 </script>

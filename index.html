@@ -39,7 +39,7 @@ gtag('config', 'G-H0T5LZNXR0');
 
 <meta name="description" content="Discover the best AI tools, ChatGPT, Gemini AI, free AI courses, AI news, AI websites, AI image generators, AI video tools and modern artificial intelligence platforms on NOVA AI STUDIO in 2026.">
 
-<link rel="canonical" href="https://probloghub2026-hub.github.io/">
+
 <link rel="canonical" href="https://probloghub2026-hub.github.io/">
 <meta charset="UTF-8">
 <meta name="description"
@@ -132,9 +132,7 @@ border-radius:35px;
 overflow:hidden;
 position:relative;
 box-shadow:0 10px 35px rgba(0,0,0,0.15);
-.hero-box{
 border:1px solid rgba(255,255,255,0.3);
-}
 }
 
 .hero-box img{
@@ -1242,7 +1240,304 @@ box-shadow:0 12px 35px rgba(0,0,0,0.35);
 transform:translateY(-5px) scale(1.04);
 box-shadow:0 18px 45px rgba(124,58,237,0.5);
 }
+.modern-hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:90px 8%;
+background:linear-gradient(135deg,#fff7f1,#ffffff);
+position:relative;
+overflow:hidden;
+gap:70px;
+}
 
+.modern-hero::before{
+content:"";
+position:absolute;
+width:700px;
+height:700px;
+background:#ff6b00;
+opacity:0.08;
+filter:blur(140px);
+right:-250px;
+top:-150px;
+border-radius:50%;
+}
+
+.hero-left{
+flex:1;
+z-index:2;
+}
+
+.top-badge{
+display:inline-block;
+padding:12px 20px;
+background:white;
+border-radius:50px;
+font-size:14px;
+font-weight:700;
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
+margin-bottom:30px;
+}
+
+.hero-left h1{
+font-size:72px;
+line-height:1.05;
+margin-bottom:28px;
+font-weight:900;
+color:#111;
+max-width:720px;
+}
+
+.hero-left h1 span{
+color:#ff6b00;
+}
+
+.hero-left p{
+font-size:20px;
+line-height:1.8;
+color:#666;
+max-width:650px;
+margin-bottom:45px;
+}
+
+.hero-buttons{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+margin-bottom:55px;
+}
+
+.hero-buttons button{
+padding:18px 32px;
+border:none;
+border-radius:18px;
+font-size:16px;
+font-weight:700;
+cursor:pointer;
+transition:0.3s;
+}
+
+.hero-buttons button:first-child{
+background:#ff6b00;
+color:white;
+}
+
+.hero-buttons button:last-child{
+background:white;
+color:#111;
+}
+
+.hero-users{
+display:flex;
+gap:22px;
+flex-wrap:wrap;
+}
+
+.user-box{
+background:white;
+padding:28px;
+border-radius:24px;
+min-width:150px;
+box-shadow:0 12px 30px rgba(0,0,0,0.05);
+}
+
+.user-box h2{
+font-size:40px;
+margin:0;
+color:#ff6b00;
+}
+
+.hero-right{
+flex:1;
+position:relative;
+height:700px;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.main-circle{
+width:380px;
+height:380px;
+background:linear-gradient(135deg,#ff6b00,#ff9d00);
+border-radius:50%;
+box-shadow:0 0 90px rgba(255,107,0,0.35);
+}
+
+.floating-card{
+position:absolute;
+padding:20px 28px;
+background:white;
+border-radius:22px;
+font-weight:800;
+font-size:18px;
+box-shadow:0 15px 40px rgba(0,0,0,0.08);
+}
+
+.card1{
+top:100px;
+left:40px;
+}
+
+.card2{
+top:180px;
+right:50px;
+}
+
+.card3{
+bottom:140px;
+left:60px;
+}
+
+.card4{
+bottom:80px;
+right:80px;
+}
+
+@media(max-width:950px){
+
+.modern-hero{
+flex-direction:column;
+text-align:center;
+padding-top:120px;
+}
+
+.hero-left h1{
+font-size:48px;
+}
+
+.hero-buttons{
+justify-content:center;
+}
+
+.hero-users{
+justify-content:center;
+}
+
+.hero-right{
+height:500px;
+width:100%;
+}
+
+.main-circle{
+width:250px;
+height:250px;
+}
+
+}
+.modern-navbar{
+position:absolute;
+top:25px;
+left:8%;
+right:8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:20;
+}
+
+.modern-logo{
+font-size:30px;
+font-weight:900;
+color:#111;
+}
+
+.modern-logo span{
+color:#ff6b00;
+}
+
+.modern-nav-links{
+display:flex;
+gap:28px;
+}
+
+.modern-nav-links a{
+text-decoration:none;
+font-size:17px;
+font-weight:700;
+color:#444;
+cursor:pointer;
+transition:0.3s;
+}
+
+.modern-nav-links a:hover{
+color:#ff6b00;
+}
+
+@media(max-width:768px){
+
+.modern-navbar{
+flex-direction:column;
+gap:15px;
+top:20px;
+}
+
+.modern-nav-links{
+flex-wrap:wrap;
+justify-content:center;
+gap:18px;
+}
+
+.hero-left{
+margin-top:70px;
+}
+
+}
+/* HERO SEARCH LEFT SIDE */
+
+.hero-search{
+display:flex;
+align-items:center;
+justify-content:flex-start;
+width:100%;
+max-width:420px;
+background:white;
+border-radius:16px;
+padding:8px;
+margin-bottom:35px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.hero-search input{
+flex:1;
+height:48px;
+border:none;
+outline:none;
+padding:0 15px;
+font-size:15px;
+background:transparent;
+color:#111;
+}
+
+.hero-search button{
+width:48px;
+height:48px;
+border:none;
+border-radius:12px;
+background:linear-gradient(135deg,#ff6b00,#ff2d55);
+color:white;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.hero-search button:hover{
+transform:scale(1.05);
+}
+
+/* BUTTONS CENTER */
+
+.main-buttons{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:18px;
+flex-wrap:wrap;
+margin-top:20px;
+padding:0 10px;
+}
 
 
 
@@ -1251,75 +1546,51 @@ box-shadow:0 18px 45px rgba(124,58,237,0.5);
 </head>
 
 <body>
-    <div class="mobile-menu-btn" onclick="toggleMenu()">
-☰ Menu
-</div>
+    <section class="modern-hero">
+<div class="modern-navbar">
 
-<div class="top-buttons" id="mobileMenu">
-
-    <button onclick="openHome()">Home</button>
-
-    <button onclick="openShop()">Shop</button>
-
-    <button onclick="openBlog()">Articles</button>
-
-    <button onclick="openTools()">AI Tools</button>
-
-    <button onclick="openTrending()">Trending</button>
-
-</div>
-    <h2 style="display:none;">
-NOVA AI STUDIO - Best AI Tools Platform In 2026
-</h2>
-<div class="ai-ball ai-ball1"></div>
-<div class="ai-ball ai-ball2"></div>
-<div class="ai-ball ai-ball3"></div>
-<!-- HEADER -->
-<div class="top-line">
-🚀 Explore 500+ AI Tools & Modern Digital Technologies
-</div>
-<header>
-
-<div class="logo">
+<div class="modern-logo">
 NOVA <span>AI STUDIO</span>
 </div>
 
-<nav>
+<div class="modern-nav-links">
 
 <a onclick="showHome()">Home</a>
 <a onclick="showAbout()">About</a>
 <a onclick="showContact()">Contact</a>
 <a onclick="showPrivacy()">Privacy</a>
 
-</nav>
+</div>
 
-</header>
+</div>
+<div class="hero-left">
 
-<!-- HOME -->
-
-<section id="homePage" class="hero">
-
-<div class="hero-box">
-
-<img 
-src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1400&auto=format&fit=crop"
-alt="Nova AI Studio Modern Artificial Intelligence Platform">
-
-<div class="overlay">
+<div class="top-badge">
+🔥 #1 AI Platform 2026
+</div>
 
 <h1>
-Make Your Life Easy
+Discover Powerful <span>AI Tools</span> & Digital Innovation
 </h1>
 
 <p>
-Discover The Future Of Artificial Intelligence, modern digital tools and the smartest AI innovations changing the world in 2026.
+Explore ChatGPT, Gemini, AI image generators, AI video creators, free AI courses, smart business tools and futuristic technology platforms in one modern website.
 </p>
 
-</div>
+<div class="hero-buttons">
+
+<button onclick="openAITools()">
+🚀 Explore AI Tools
+</button>
+
+<button onclick="window.location.href='ai-categories.html'">
+🤖 AI Categories
+</button>
 
 </div>
+<!-- SEARCH BAR -->
 
-<div class="search-area">
+<div class="hero-search">
 
 <input
 type="text"
@@ -1328,45 +1599,106 @@ placeholder="Search ChatGPT, Canva, QR Code, AI Video..."
 >
 
 <button onclick="searchWebsite()">
-Search
+<i class="fa-solid fa-magnifying-glass"></i>
 </button>
 
 </div>
 
+<!-- BUTTONS -->
+
 <div class="main-buttons">
- 
-</button>
+
 <button onclick="openShop()">
-    Shop
+🛒 Shop
 </button>
-</button>
-    <button onclick="openBlog()">
-Blog Posts
+
+<button onclick="openBlog()">
+📰 Blog Posts
 </button>
 
 <button onclick="openNews()">
-AI News
+🔥 AI News
 </button>
+
 <button onclick="window.location.href='courses.html'">
-Free AI Courses
+🎓 Free AI Courses
 </button>
 
 <a href="quizzes.html" class="quiz-btn">
 🎯 Viral Quizzes
 </a>
+
 <button onclick="window.location.href='ai-categories.html'">
 🤖 AI Categories
 </button>
+
 <button onclick="window.location.href='ai-tools.html'">
 🛠 AI Tools
 </button>
 
-<!-- AI TOOLS BUTTON -->
 <button class="ai-tools-btn" onclick="openAITools()">
-🤖 AI Tools For Business
+🚀 AI Tools For Business
 </button>
+
 </div>
+<div class="hero-users">
+
+<div class="user-box">
+<h2>500+</h2>
+<span>AI Tools</span>
+</div>
+
+<div class="user-box">
+<h2>50K+</h2>
+<span>Monthly Users</span>
+</div>
+
+<div class="user-box">
+<h2>100+</h2>
+<span>AI Articles</span>
+</div>
+
+</div>
+
+</div>
+
+<div class="hero-right">
+
+<div class="floating-card card1">
+🤖 ChatGPT
+</div>
+
+<div class="floating-card card2">
+🎨 Canva AI
+</div>
+
+<div class="floating-card card3">
+🎬 AI Video
+</div>
+
+<div class="floating-card card4">
+📈 SEO AI
+</div>
+
+<div class="main-circle"></div>
+
+</div>
+
 </section>
+    
+    <h2 style="display:none;">
+NOVA AI STUDIO - Best AI Tools Platform In 2026
+</h2>
+<div class="ai-ball ai-ball1"></div>
+<div class="ai-ball ai-ball2"></div>
+<div class="ai-ball ai-ball3"></div>
+<!-- HEADER -->
+
+
+
+
+
+
 <section class="premium-stats">
 
 <div class="premium-card">
@@ -1655,7 +1987,58 @@ Modern secure experience with trusted AI resources and reliable technology tools
 
 </section>
 
+<section class="page" id="homePage" style="display:block;">
+</section>
 
+<section class="page" id="aiCategoriesPage">
+
+<h2>AI Categories</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>🤖 Chat AI</h3>
+<p>ChatGPT, Gemini, Claude and smart AI assistants.</p>
+</div>
+
+<div class="card">
+<h3>🎨 Image AI</h3>
+<p>Leonardo AI, Midjourney and AI image generators.</p>
+</div>
+
+<div class="card">
+<h3>🎬 Video AI</h3>
+<p>Runway ML, Pika AI and cinematic AI video tools.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="page" id="aiToolsPage">
+
+<h2>AI Tools</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>QR Generator</h3>
+<p>Create smart QR codes instantly.</p>
+</div>
+
+<div class="card">
+<h3>Resume Builder</h3>
+<p>Build professional resumes using AI.</p>
+</div>
+
+<div class="card">
+<h3>AI Logo Maker</h3>
+<p>Create modern logos with AI.</p>
+</div>
+
+</div>
+
+</section>
 <!-- FOOTER -->
 
 <footer>

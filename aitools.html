@@ -3,7 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Tools Hub</title>
+
+<title>50 Best AI Tools - NOVA AI STUDIO</title>
+
+<meta name="description"
+content="Explore 50 best free AI tools including PDF tools, calculators, image generators, AI writers, video tools, resume builders, logo makers and productivity platforms.">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
 <style>
 
@@ -15,377 +22,351 @@ font-family:Arial,sans-serif;
 }
 
 body{
-background:#0d0d0d;
-color:white;
+background:#f4f7fb;
+color:#111;
 }
+
+/* HEADER */
 
 header{
-background:black;
-padding:25px;
-text-align:center;
-}
-
-header h1{
-font-size:42px;
-margin-bottom:10px;
-}
-
-header p{
-color:#bbb;
-font-size:18px;
-}
-
-.tools-container{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:25px;
-padding:40px;
-}
-
-.tool-card{
-background:#1a1a1a;
-border-radius:18px;
-overflow:hidden;
-transition:0.3s;
-box-shadow:0 0 15px rgba(255,255,255,0.08);
-}
-
-.tool-card:hover{
-transform:translateY(-8px);
-}
-
-.tool-card img{
 width:100%;
-height:220px;
-object-fit:cover;
+padding:20px 8%;
+background:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 5px 20px rgba(0,0,0,0.06);
+position:sticky;
+top:0;
+z-index:1000;
 }
 
-.tool-content{
-padding:20px;
+.logo{
+font-size:30px;
+font-weight:bold;
 }
 
-.tool-content h2{
-font-size:25px;
-margin-bottom:10px;
+.logo span{
+color:#ff6b00;
 }
 
-.tool-content p{
-color:#ccc;
-line-height:1.6;
-margin-bottom:15px;
+.back-btn{
+padding:12px 20px;
+border:none;
+border-radius:12px;
+background:linear-gradient(135deg,#ff6b00,#ff2d55);
+color:white;
+font-weight:bold;
+cursor:pointer;
 }
 
-.visit-btn{
+/* HERO */
+
+.hero{
+padding:80px 8%;
+background:linear-gradient(135deg,#111827,#1e293b);
+text-align:center;
+color:white;
+}
+
+.hero h1{
+font-size:65px;
+margin-bottom:20px;
+}
+
+.hero p{
+max-width:950px;
+margin:auto;
+font-size:20px;
+line-height:1.9;
+color:#d1d5db;
+}
+
+/* SEARCH */
+
+.search-box{
+padding:40px 8%;
+display:flex;
+justify-content:center;
+}
+
+.search-box input{
+width:600px;
+max-width:95%;
+padding:18px 22px;
+border:none;
+border-radius:18px;
+font-size:17px;
+outline:none;
+box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
+
+/* GRID */
+
+.grid{
+padding:10px 8% 90px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+/* CARD */
+
+.card{
+background:white;
+padding:30px;
+border-radius:24px;
+box-shadow:0 10px 30px rgba(0,0,0,0.06);
+border:1px solid #eee;
+transition:0.35s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(0,0,0,0.12);
+}
+
+.card i{
+font-size:45px;
+margin-bottom:18px;
+background:linear-gradient(135deg,#ff6b00,#ff2d55);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.card h3{
+font-size:24px;
+margin-bottom:14px;
+}
+
+.card p{
+font-size:15px;
+line-height:1.8;
+color:#666;
+margin-bottom:22px;
+}
+
+.card a{
 display:inline-block;
-padding:12px 22px;
-background:#ff3c00;
+padding:12px 20px;
+border-radius:12px;
+background:#111827;
 color:white;
 text-decoration:none;
-border-radius:10px;
 font-weight:bold;
 transition:0.3s;
 }
 
-.visit-btn:hover{
-background:#ff6a00;
+.card a:hover{
+background:#ff6b00;
 }
+
+/* FOOTER */
 
 footer{
+background:white;
+padding:30px;
 text-align:center;
-padding:25px;
-color:#999;
-font-size:16px;
-}
-header{
-background:black;
-padding:25px;
-text-align:center;
-position:relative;
-}
-
-.home-btn{
-position:absolute;
-top:25px;
-right:25px;
-padding:10px 20px;
-background:#ff3c00;
-color:white;
-text-decoration:none;
-border-radius:10px;
 font-weight:bold;
-transition:0.3s;
 }
 
-.home-btn:hover{
-background:#ff6a00;
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:42px;
 }
+
+.hero p{
+font-size:17px;
+}
+
+header{
+flex-direction:column;
+gap:15px;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-<a href="index.html" class="home-btn">
 
-Home
+<div class="logo">
+NOVA <span>AI STUDIO</span>
+</div>
 
-</a>
-<h1>AI Tools Hub</h1>
-
+<button class="back-btn"
+onclick="window.location.href='index.html'">
+← Back Home
+</button>
 
 </header>
 
-<div class="tools-container">
+<section class="hero">
 
-<!-- QR CODE -->
-
-<div class="tool-card">
-
-<img src="https://images.unsplash.com/photo-1595079676339-1534801ad6cf?q=80&w=1200&auto=format&fit=crop"
-alt="QR Code">
-
-<div class="tool-content">
-
-<h2>QR Code Generator</h2>
+<h1>50 Best AI Tools</h1>
 
 <p>
-Create custom QR codes for links, websites and business use.
+Discover powerful AI tools for productivity, PDF editing, calculations, image generation, business automation, video creation, resume building and modern digital work.
 </p>
 
-<a class="visit-btn"
-href="https://www.qr-code-generator.com/"
-target="_blank">
+</section>
 
-Visit Now
+<div class="search-box">
 
-</a>
-
-</div>
-</div>
-
-<!-- CURRENCY -->
-
-<div class="tool-card">
-
-<img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=80&w=1200&auto=format&fit=crop"
-alt="Currency Converter">
-
-<div class="tool-content">
-
-<h2>Currency Converter</h2>
-
-<p>
-Convert currencies with real-time exchange rates.
-</p>
-
-<a class="visit-btn"
-href="https://www.xe.com/currencyconverter/"
-target="_blank">
-
-Visit Now
-
-</a>
+<input
+type="text"
+id="searchInput"
+placeholder="Search AI tools..."
+onkeyup="searchTools()"
+>
 
 </div>
-</div>
 
-<!-- PASSWORD -->
+<section class="grid" id="toolGrid">
 
-<div class="tool-card">
 
-<img src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?q=80&w=1200&auto=format&fit=crop"
-alt="Password Generator">
 
-<div class="tool-content">
+<div class="card"><i class="fa-solid fa-image"></i><h3>Background Remover</h3><p>Remove image backgrounds automatically.</p><a href="https://www.remove.bg" target="_blank">Use Tool</a></div>
 
-<h2>Password Generator</h2>
+<div class="card"><i class="fa-solid fa-qrcode"></i><h3>QR Code Generator</h3><p>Create custom QR codes instantly.</p><a href="https://www.qr-code-generator.com" target="_blank">Use Tool</a></div>
 
-<p>
-Generate strong and secure passwords instantly.
-</p>
+<div class="card"><i class="fa-solid fa-file-word"></i><h3>Resume Builder</h3><p>Create professional resumes with AI.</p><a href="https://www.canva.com/resumes" target="_blank">Use Tool</a></div>
 
-<a class="visit-btn"
-href="https://passwordsgenerator.net/"
-target="_blank">
+<div class="card"><i class="fa-solid fa-video"></i><h3>AI Video Generator</h3><p>Create cinematic AI videos online.</p><a href="https://pika.art" target="_blank">Use Tool</a></div>
 
-Visit Now
+<div class="card"><i class="fa-solid fa-music"></i><h3>AI Music Generator</h3><p>Create songs and music with AI.</p><a href="https://suno.ai" target="_blank">Use Tool</a></div>
 
-</a>
+<div class="card"><i class="fa-solid fa-volume-high"></i><h3>Text To Speech</h3><p>Convert text into realistic voice audio.</p><a href="https://ttsmp3.com" target="_blank">Use Tool</a></div>
 
-</div>
-</div>
+<div class="card"><i class="fa-solid fa-microphone"></i><h3>Voice Cloner</h3><p>Create cloned AI voices instantly.</p><a href="https://elevenlabs.io" target="_blank">Use Tool</a></div>
 
-<!-- PDF -->
+<div class="card"><i class="fa-solid fa-paintbrush"></i><h3>AI Image Generator</h3><p>Create realistic AI artwork and graphics.</p><a href="https://www.bing.com/images/create" target="_blank">Use Tool</a></div>
 
-<div class="tool-card">
+<div class="card"><i class="fa-solid fa-lock"></i><h3>Password Generator</h3><p>Create secure passwords instantly.</p><a href="https://passwordsgenerator.net" target="_blank">Use Tool</a></div>
 
-<img src="https://images.unsplash.com/photo-1517842645767-c639042777db?q=80&w=1200&auto=format&fit=crop"
-alt="PDF Tools">
+<div class="card"><i class="fa-solid fa-money-bill-transfer"></i><h3>Currency Converter</h3><p>Convert currencies in real time.</p><a href="https://www.xe.com/currencyconverter" target="_blank">Use Tool</a></div>
 
-<div class="tool-content">
+<div class="card"><i class="fa-solid fa-chart-line"></i><h3>AI Presentation Maker</h3><p>Create business presentations automatically.</p><a href="https://gamma.app" target="_blank">Use Tool</a></div>
 
-<h2>PDF Tools</h2>
+<div class="card"><i class="fa-solid fa-code"></i><h3>AI Code Generator</h3><p>Generate programming code with AI.</p><a href="https://replit.com" target="_blank">Use Tool</a></div>
 
-<p>
-Merge, compress and edit PDF files online.
-</p>
+<div class="card"><i class="fa-solid fa-globe"></i><h3>AI Website Builder</h3><p>Create websites using AI automation.</p><a href="https://framer.com" target="_blank">Use Tool</a></div>
 
-<a class="visit-btn"
-href="https://www.ilovepdf.com/"
-target="_blank">
+<div class="card"><i class="fa-solid fa-envelope"></i><h3>AI Email Writer</h3><p>Generate professional emails instantly.</p><a href="https://writesonic.com" target="_blank">Use Tool</a></div>
 
-Visit Now
+<div class="card"><i class="fa-solid fa-camera"></i><h3>Thumbnail Maker</h3><p>Create YouTube thumbnails online.</p><a href="https://www.canva.com" target="_blank">Use Tool</a></div>
 
-</a>
+<div class="card"><i class="fa-solid fa-face-smile"></i><h3>Face Swap Tool</h3><p>Swap faces in photos using AI.</p><a href="https://faceswapper.ai" target="_blank">Use Tool</a></div>
 
-</div>
-</div>
+<div class="card"><i class="fa-solid fa-closed-captioning"></i><h3>Subtitle Generator</h3><p>Create subtitles for videos automatically.</p><a href="https://veed.io" target="_blank">Use Tool</a></div>
 
-<!-- BACKGROUND REMOVER -->
+<div class="card"><i class="fa-solid fa-file-lines"></i><h3>Chat PDF</h3><p>Talk with PDF documents using AI.</p><a href="https://www.chatpdf.com" target="_blank">Use Tool</a></div>
 
-<div class="tool-card">
+<div class="card"><i class="fa-solid fa-pen"></i><h3>AI Story Writer</h3><p>Write stories and scripts using AI.</p><a href="https://sudowrite.com" target="_blank">Use Tool</a></div>
 
-<img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?q=80&w=1200&auto=format&fit=crop"
-alt="Background Remover">
+<div class="card"><i class="fa-solid fa-briefcase"></i><h3>Business Name Generator</h3><p>Create unique brand names instantly.</p><a href="https://namelix.com" target="_blank">Use Tool</a></div>
 
-<div class="tool-content">
+<div class="card"><i class="fa-solid fa-chart-simple"></i><h3>SEO Writer</h3><p>Create SEO optimized blog content.</p><a href="https://writesonic.com" target="_blank">Use Tool</a></div>
 
-<h2>Background Remover</h2>
+<div class="card"><i class="fa-solid fa-user"></i><h3>AI Avatar Creator</h3><p>Create futuristic profile avatars online.</p><a href="https://www.d-id.com" target="_blank">Use Tool</a></div>
 
-<p>
-Remove image backgrounds automatically using AI.
-</p>
+<div class="card"><i class="fa-solid fa-wand-magic"></i><h3>Logo Maker</h3><p>Create AI generated business logos.</p><a href="https://looka.com" target="_blank">Use Tool</a></div>
 
-<a class="visit-btn"
-href="https://www.remove.bg/"
-target="_blank">
+<div class="card"><i class="fa-solid fa-image-portrait"></i><h3>Photo Enhancer</h3><p>Improve image quality using AI.</p><a href="https://letsenhance.io" target="_blank">Use Tool</a></div>
 
-Visit Now
+<div class="card"><i class="fa-solid fa-film"></i><h3>Animation Generator</h3><p>Create animated videos online.</p><a href="https://www.animaker.com" target="_blank">Use Tool</a></div>
 
-</a>
+<div class="card"><i class="fa-solid fa-comments"></i><h3>Chatbot Builder</h3><p>Create AI chatbots for websites.</p><a href="https://www.chatbase.co" target="_blank">Use Tool</a></div>
 
-</div>
-</div>
+<div class="card"><i class="fa-solid fa-language"></i><h3>Translator Tool</h3><p>Translate text into multiple languages.</p><a href="https://www.deepl.com" target="_blank">Use Tool</a></div>
 
-<!-- RESUME -->
+<div class="card"><i class="fa-solid fa-scissors"></i><h3>Video Cutter</h3><p>Trim and edit videos online quickly.</p><a href="https://clideo.com/cut-video" target="_blank">Use Tool</a></div>
 
-<div class="tool-card">
+<div class="card"><i class="fa-solid fa-compress"></i><h3>Image Compressor</h3><p>Compress image size without quality loss.</p><a href="https://tinyjpg.com" target="_blank">Use Tool</a></div>
 
-<img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?q=80&w=1200&auto=format&fit=crop"
-alt="Resume Builder">
+<div class="card"><i class="fa-solid fa-file-zipper"></i><h3>PDF Compressor</h3><p>Reduce PDF file size online.</p><a href="https://smallpdf.com/compress-pdf" target="_blank">Use Tool</a></div>
 
-<div class="tool-content">
+<div class="card"><i class="fa-solid fa-table"></i><h3>Excel To PDF</h3><p>Convert Excel files into PDF format.</p><a href="https://www.ilovepdf.com/excel_to_pdf" target="_blank">Use Tool</a></div>
 
-<h2>Resume Builder</h2>
+<div class="card"><i class="fa-solid fa-file-export"></i><h3>PDF To Word</h3><p>Convert PDF documents into Word files.</p><a href="https://smallpdf.com/pdf-to-word" target="_blank">Use Tool</a></div>
 
-<p>
-Create professional resumes and CVs online.
-</p>
+<div class="card"><i class="fa-solid fa-file-import"></i><h3>Word To PDF</h3><p>Convert Word files into PDF documents.</p><a href="https://smallpdf.com/word-to-pdf" target="_blank">Use Tool</a></div>
 
-<a class="visit-btn"
-href="https://www.canva.com/resumes/"
-target="_blank">
+<div class="card"><i class="fa-solid fa-cloud-arrow-up"></i><h3>File Converter</h3><p>Convert files into different formats.</p><a href="https://convertio.co" target="_blank">Use Tool</a></div>
 
-Visit Now
+<div class="card"><i class="fa-solid fa-camera-retro"></i><h3>Photo Editor</h3><p>Edit photos online using smart tools.</p><a href="https://pixlr.com" target="_blank">Use Tool</a></div>
 
-</a>
+<div class="card"><i class="fa-solid fa-laptop"></i><h3>Screen Recorder</h3><p>Record desktop screen online easily.</p><a href="https://screenapp.io" target="_blank">Use Tool</a></div>
 
-</div>
-</div>
+<div class="card"><i class="fa-solid fa-clock"></i><h3>Pomodoro Timer</h3><p>Increase productivity with focus timer.</p><a href="https://pomofocus.io" target="_blank">Use Tool</a></div>
 
-<!-- TEXT TO SPEECH -->
+<div class="card"><i class="fa-solid fa-note-sticky"></i><h3>AI Notes Tool</h3><p>Create smart notes and organize tasks.</p><a href="https://www.notion.so/product/ai" target="_blank">Use Tool</a></div>
 
-<div class="tool-card">
+<div class="card"><i class="fa-solid fa-file-audio"></i><h3>Audio Converter</h3><p>Convert audio into multiple formats.</p><a href="https://cloudconvert.com" target="_blank">Use Tool</a></div>
 
-<img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=1200&auto=format&fit=crop"
-alt="Text To Speech">
+<div class="card"><i class="fa-solid fa-brain"></i><h3>Mind Map Generator</h3><p>Create mind maps for brainstorming ideas.</p><a href="https://gitmind.com" target="_blank">Use Tool</a></div>
 
-<div class="tool-content">
+<div class="card"><i class="fa-solid fa-chart-column"></i><h3>Graph Maker</h3><p>Create charts and graphs online.</p><a href="https://www.meta-chart.com" target="_blank">Use Tool</a></div>
 
-<h2>Text To Speech</h2>
+<div class="card"><i class="fa-solid fa-mobile-screen-button"></i><h3>Mockup Generator</h3><p>Create mobile and website mockups.</p><a href="https://smartmockups.com" target="_blank">Use Tool</a></div>
 
-<p>
-Convert text into realistic AI voice online.
-</p>
+<div class="card"><i class="fa-solid fa-key"></i><h3>Password Manager</h3><p>Store and manage passwords securely.</p><a href="https://bitwarden.com" target="_blank">Use Tool</a></div>
 
-<a class="visit-btn"
-href="https://ttsmp3.com/"
-target="_blank">
+<div class="card"><i class="fa-solid fa-cloud"></i><h3>Cloud Storage</h3><p>Store files online securely.</p><a href="https://drive.google.com" target="_blank">Use Tool</a></div>
 
-Visit Now
+<div class="card"><i class="fa-solid fa-file-signature"></i><h3>E Signature Tool</h3><p>Sign documents online digitally.</p><a href="https://www.docusign.com" target="_blank">Use Tool</a></div>
 
-</a>
+<div class="card"><i class="fa-solid fa-user-group"></i><h3>Meeting Assistant</h3><p>AI meeting notes and transcription tool.</p><a href="https://otter.ai" target="_blank">Use Tool</a></div>
 
-</div>
-</div>
+<div class="card"><i class="fa-solid fa-graduation-cap"></i><h3>AI Homework Helper</h3><p>Get educational help using AI.</p><a href="https://www.khanacademy.org/khan-labs" target="_blank">Use Tool</a></div>
 
-<!-- AI CHAT -->
+<div class="card"><i class="fa-solid fa-shop"></i><h3>Invoice Generator</h3><p>Create professional invoices online.</p><a href="https://invoice-generator.com" target="_blank">Use Tool</a></div>
 
-<div class="tool-card">
+<div class="card"><i class="fa-solid fa-rocket"></i><h3>Landing Page Builder</h3><p>Create modern landing pages instantly.</p><a href="https://carrd.co" target="_blank">Use Tool</a></div>
+<div class="card"><i class="fa-solid fa-calculator"></i><h3>BMI Calculator</h3><p>Calculate body mass index instantly online.</p><a href="https://www.calculator.net/bmi-calculator.html" target="_blank">Use Tool</a></div>
 
-<img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop"
-alt="AI Chat">
-
-<div class="tool-content">
-
-<h2>AI Chat</h2>
-
-<p>
-Use powerful AI chat assistants for smart answers.
-</p>
-
-<a class="visit-btn"
-href="https://chat.openai.com/"
-target="_blank">
-
-Visit Now
-
-</a>
-
-</div>
-</div>
-
-<!-- AI IMAGE GENERATOR -->
-
-<div class="tool-card">
-
-<img
-src="https://picsum.photos/600/400?random=12"
-alt="AI Image Generator"
-style="
-width:100%;
-height:220px;
-object-fit:cover;
-display:block;
-">
-
-<div class="tool-content">
-
-<h2>AI Image Generator</h2>
-
-<p>
-Generate stunning AI images and artwork online.
-</p>
-
-<a class="visit-btn"
-href="https://www.canva.com/ai-image-generator/"
-target="_blank">
-
-Visit Now
-
-</a>
-
-</div>
-</div>
-
-
-</div>
+<div class="card"><i class="fa-solid fa-file-pdf"></i><h3>PDF Editor</h3><p>Edit PDF documents easily online.</p><a href="https://www.ilovepdf.com" target="_blank">Use Tool</a></div>
+</section>
 
 <footer>
-
-© 2026 AI Tools Hub — All Rights Reserved
-
+© 2026 NOVA AI STUDIO — All Rights Reserved
 </footer>
+
+<script>
+
+function searchTools(){
+
+let input =
+document.getElementById("searchInput")
+.value.toLowerCase();
+
+let cards =
+document.querySelectorAll(".card");
+
+cards.forEach(function(card){
+
+let text =
+card.innerText.toLowerCase();
+
+if(text.includes(input)){
+card.style.display="block";
+}
+
+else{
+card.style.display="none";
+}
+
+});
+
+}
+
+</script>
 
 </body>
 </html>

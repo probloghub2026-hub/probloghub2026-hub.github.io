@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="canonical" href="https://probloghub2026-hub.github.io/course.html">
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Free AI Courses</title>
+<title>Free AI Courses | NOVA AI STUDIO</title>
+
+<meta name="description"
+content="Learn Artificial Intelligence free with the best online AI courses including ChatGPT, Prompt Engineering, Python AI, Machine Learning, Generative AI, AI Video Editing and more.">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
 <style>
 
@@ -18,330 +22,492 @@ font-family:Arial,sans-serif;
 }
 
 body{
-background:#f5f5f5;
-color:#111;
+background:#f5f7fb;
+color:#111827;
 }
 
 /* HEADER */
 
 header{
-background:white;
+width:100%;
 padding:20px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-box-shadow:0 2px 10px rgba(0,0,0,0.08);
+background:white;
 position:sticky;
 top:0;
+z-index:1000;
+box-shadow:0 5px 20px rgba(0,0,0,0.06);
 }
 
 .logo{
 font-size:30px;
-font-weight:bold;
+font-weight:900;
+color:#111;
 }
 
 .logo span{
 color:#ff6b00;
 }
 
-.home-btn{
-padding:12px 22px;
-background:#111;
-color:white;
+nav a{
 text-decoration:none;
-border-radius:12px;
+margin-left:25px;
+color:#111;
 font-weight:bold;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#ff6b00;
 }
 
 /* HERO */
 
 .hero{
-padding:70px 8%;
+padding:90px 8% 60px;
 text-align:center;
+background:
+linear-gradient(135deg,#0f172a,#111827,#1e293b);
+color:white;
+}
+
+.hero-badge{
+display:inline-block;
+padding:12px 22px;
+background:rgba(255,255,255,0.1);
+border-radius:50px;
+font-size:14px;
+margin-bottom:25px;
 }
 
 .hero h1{
-font-size:60px;
-margin-bottom:20px;
+font-size:65px;
+max-width:950px;
+margin:auto;
+line-height:1.2;
+margin-bottom:25px;
 }
 
 .hero p{
-font-size:20px;
-color:#555;
 max-width:900px;
 margin:auto;
-line-height:1.8;
+font-size:20px;
+line-height:1.9;
+color:#d1d5db;
+}
+
+/* COURSE SECTION */
+
+.course-section{
+padding:80px 8%;
+}
+
+.section-title{
+text-align:center;
+font-size:50px;
+margin-bottom:20px;
+}
+
+.section-text{
+text-align:center;
+max-width:850px;
+margin:auto;
+font-size:18px;
+line-height:1.9;
+color:#555;
+margin-bottom:60px;
 }
 
 /* GRID */
 
-.grid{
+.course-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-padding:20px 8% 80px;
+gap:28px;
 }
 
 /* CARD */
 
-.card{
+.course-card{
 background:white;
-padding:30px;
-border-radius:20px;
-box-shadow:0 5px 20px rgba(0,0,0,0.08);
-transition:0.3s;
+padding:35px;
+border-radius:24px;
+box-shadow:0 10px 35px rgba(0,0,0,0.06);
+transition:0.35s;
+border:1px solid #eeeeee;
 }
 
-.card:hover{
+.course-card:hover{
 transform:translateY(-8px);
+box-shadow:0 15px 40px rgba(255,107,0,0.15);
 }
 
-.level{
-display:inline-block;
-padding:8px 14px;
-background:#ffefe5;
-color:#ff6b00;
-border-radius:30px;
-font-size:14px;
-font-weight:bold;
+.course-icon{
+width:70px;
+height:70px;
+border-radius:18px;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:30px;
+margin-bottom:25px;
+background:linear-gradient(135deg,#ff6b00,#ff2d55);
+color:white;
+}
+
+.course-card h3{
+font-size:26px;
 margin-bottom:15px;
 }
 
-.card h2{
-font-size:28px;
-margin-bottom:15px;
-}
-
-.card p{
+.course-card p{
 font-size:16px;
-line-height:1.8;
+line-height:1.9;
 color:#555;
-margin-bottom:20px;
+margin-bottom:25px;
 }
 
-.duration{
-font-weight:bold;
-margin-bottom:20px;
-}
-
-/* BUTTON */
-
-.watch-btn{
+.course-btn{
 display:inline-block;
-padding:14px 22px;
+padding:14px 24px;
+border-radius:14px;
 background:linear-gradient(135deg,#ff6b00,#ff2d55);
 color:white;
 text-decoration:none;
-border-radius:14px;
 font-weight:bold;
 transition:0.3s;
 }
 
-.watch-btn:hover{
+.course-btn:hover{
 transform:scale(1.05);
 }
 
 /* FOOTER */
 
 footer{
-background:white;
-padding:30px;
+background:#111827;
+color:white;
 text-align:center;
-font-weight:bold;
+padding:30px;
+margin-top:40px;
+font-size:15px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:40px;
+}
+
+.hero p{
+font-size:17px;
+}
+
+.section-title{
+font-size:36px;
+}
+
+header{
+flex-direction:column;
+}
+
+nav{
+margin-top:15px;
+}
+
+nav a{
+margin:8px;
+display:inline-block;
+}
+
 }
 
 </style>
-
 </head>
 
 <body>
 
+<!-- HEADER -->
+
 <header>
 
 <div class="logo">
-Nova <span>AI</span>
+NOVA <span>AI STUDIO</span>
 </div>
 
-<a href="index.html" class="home-btn">
-Home
-</a>
+<nav>
+<a href="index.html">Home</a>
+<a href="shop.html">Shop</a>
+<a href="blog.html">Blog</a>
+<a href="news.html">News</a>
+</nav>
 
 </header>
 
+<!-- HERO -->
+
 <section class="hero">
 
+<div class="hero-badge">
+🚀 100% Free AI Learning Resources
+</div>
+
 <h1>
-Free AI Courses
+Learn The Best AI Skills Online For Free
 </h1>
 
 <p>
-Learn ChatGPT, Canva, AI Coding, AI Business, Automation, AI Video Editing and modern AI skills completely free through high quality tutorials and courses.
+Explore the most popular free AI courses available on trusted legal websites including Google, Microsoft, IBM, DeepLearning.AI and more.
 </p>
 
 </section>
 
-<div class="grid">
+<!-- COURSES -->
 
-<div class="card">
+<section class="course-section">
 
-<div class="level">
-Beginner
-</div>
-
-<h2>
-Free ChatGPT Course
+<h2 class="section-title">
+Top Free AI Courses
 </h2>
 
-<p>
-Learn prompts, AI productivity, automation, blogging, YouTube scripting and content creation using ChatGPT.
+<p class="section-text">
+These are real free online AI courses people search daily for learning ChatGPT, AI automation, machine learning, prompt engineering and modern AI technologies.
 </p>
 
-<div class="duration">
-Duration: 3 Hours
+<div class="course-grid">
+
+<!-- 1 -->
+
+<div class="course-card">
+
+<div class="course-icon">
+<i class="fa-solid fa-robot"></i>
 </div>
 
-<a href="https://www.youtube.com/results?search_query=chatgpt+course+2026"
-target="_blank"
-class="watch-btn">
-Watch Course
+<h3>Google AI Essentials</h3>
+
+<p>
+Beginner friendly AI course by Google teaching AI basics, prompting, productivity and smart AI workflows for daily work.
+</p>
+
+<a class="course-btn"
+href="https://www.coursera.org/learn/google-ai-essentials"
+target="_blank">
+Open Course
 </a>
 
 </div>
 
-<div class="card">
+<!-- 2 -->
 
-<div class="level">
-Beginner
+<div class="course-card">
+
+<div class="course-icon">
+<i class="fa-solid fa-brain"></i>
 </div>
 
-<h2>
-Canva AI Masterclass
-</h2>
+<h3>ChatGPT Prompt Engineering</h3>
 
 <p>
-Create thumbnails, social media posts, branding, resumes and AI graphic designs using Canva AI.
+Learn prompt engineering techniques for ChatGPT and generative AI tools using practical real-world examples.
 </p>
 
-<div class="duration">
-Duration: 2 Hours
-</div>
-
-<a href="https://www.youtube.com/results?search_query=canva+ai+course"
-target="_blank"
-class="watch-btn">
-Watch Course
+<a class="course-btn"
+href="https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/"
+target="_blank">
+Open Course
 </a>
 
 </div>
 
-<div class="card">
+<!-- 3 -->
 
-<div class="level">
-Advanced
+<div class="course-card">
+
+<div class="course-icon">
+<i class="fa-solid fa-code"></i>
 </div>
 
-<h2>
-AI Coding Course
-</h2>
+<h3>AI Python For Beginners</h3>
 
 <p>
-Build websites, apps and automation systems using AI coding assistants and modern workflows.
+Learn Python programming for artificial intelligence, automation and machine learning projects from Microsoft.
 </p>
 
-<div class="duration">
-Duration: 5 Hours
-</div>
-
-<a href="https://www.youtube.com/results?search_query=ai+coding+course"
-target="_blank"
-class="watch-btn">
-Watch Course
+<a class="course-btn"
+href="https://www.microsoft.com/en-us/learn/paths/python-first-steps/"
+target="_blank">
+Open Course
 </a>
 
 </div>
 
-<div class="card">
+<!-- 4 -->
 
-<div class="level">
-Intermediate
+<div class="course-card">
+
+<div class="course-icon">
+<i class="fa-solid fa-microchip"></i>
 </div>
 
-<h2>
-AI Business Course
-</h2>
+<h3>Machine Learning Basics</h3>
 
 <p>
-Learn freelancing, AI automation, online earning and modern AI business systems for 2026.
+Understand machine learning models, AI systems and smart data training concepts with beginner lessons.
 </p>
 
-<div class="duration">
-Duration: 4 Hours
-</div>
-
-<a href="https://www.youtube.com/results?search_query=ai+business+course"
-target="_blank"
-class="watch-btn">
-Watch Course
+<a class="course-btn"
+href="https://www.coursera.org/learn/machine-learning"
+target="_blank">
+Open Course
 </a>
 
 </div>
 
-<div class="card">
+<!-- 5 -->
 
-<div class="level">
-Advanced
+<div class="course-card">
+
+<div class="course-icon">
+<i class="fa-solid fa-image"></i>
 </div>
 
-<h2>
-Runway AI Video Editing
-</h2>
+<h3>Generative AI Course</h3>
 
 <p>
-Create cinematic AI videos, visual effects and animations using Runway ML and AI tools.
+Learn AI image generation, text generation and modern generative AI technologies used worldwide.
 </p>
 
-<div class="duration">
-Duration: 2.5 Hours
-</div>
-
-<a href="https://www.youtube.com/results?search_query=runway+ai+tutorial"
-target="_blank"
-class="watch-btn">
-Watch Course
+<a class="course-btn"
+href="https://www.cloudskillsboost.google/paths/118"
+target="_blank">
+Open Course
 </a>
 
 </div>
 
-<div class="card">
+<!-- 6 -->
 
-<div class="level">
-Beginner
+<div class="course-card">
+
+<div class="course-icon">
+<i class="fa-solid fa-video"></i>
 </div>
 
-<h2>
-AI Automation With Zapier
-</h2>
+<h3>AI Video Creation</h3>
 
 <p>
-Automate websites, apps, emails and business workflows using Zapier AI automation.
+Learn AI video editing, cinematic AI generation and modern content creation workflows online.
 </p>
 
-<div class="duration">
-Duration: 1.5 Hours
+<a class="course-btn"
+href="https://academy.runwayml.com/"
+target="_blank">
+Open Course
+</a>
+
 </div>
 
-<a href="https://www.youtube.com/results?search_query=zapier+ai+automation+tutorial"
-target="_blank"
-class="watch-btn">
-Watch Course
+<!-- 7 -->
+
+<div class="course-card">
+
+<div class="course-icon">
+<i class="fa-solid fa-chart-line"></i>
+</div>
+
+<h3>AI For Marketing</h3>
+
+<p>
+Learn how businesses use AI for marketing automation, social media content and digital growth.
+</p>
+
+<a class="course-btn"
+href="https://skillshop.withgoogle.com/"
+target="_blank">
+Open Course
+</a>
+
+</div>
+
+<!-- 8 -->
+
+<div class="course-card">
+
+<div class="course-icon">
+<i class="fa-solid fa-shield-halved"></i>
+</div>
+
+<h3>Cybersecurity AI</h3>
+
+<p>
+Explore how artificial intelligence improves cybersecurity, protection systems and online security.
+</p>
+
+<a class="course-btn"
+href="https://skillsbuild.org/"
+target="_blank">
+Open Course
+</a>
+
+</div>
+
+<!-- 9 -->
+
+<div class="course-card">
+
+<div class="course-icon">
+<i class="fa-solid fa-graduation-cap"></i>
+</div>
+
+<h3>AI For Students</h3>
+
+<p>
+Learn smart AI tools for research, writing, presentations and modern education productivity.
+</p>
+
+<a class="course-btn"
+href="https://www.khanacademy.org/college-careers-more/ai-for-education"
+target="_blank">
+Open Course
+</a>
+
+</div>
+
+<!-- 10 -->
+
+<div class="course-card">
+
+<div class="course-icon">
+<i class="fa-solid fa-globe"></i>
+</div>
+
+<h3>AI Web Development</h3>
+
+<p>
+Learn how AI tools help developers build modern websites, apps and digital products faster.
+</p>
+
+<a class="course-btn"
+href="https://www.freecodecamp.org/learn/"
+target="_blank">
+Open Course
 </a>
 
 </div>
 
 </div>
+
+</section>
+
+<!-- FOOTER -->
 
 <footer>
-Nova AI Studio © 2026
+© 2026 NOVA AI STUDIO — Free AI Courses Platform
 </footer>
 
 </body>

@@ -72,9 +72,8 @@ scroll-behavior:smooth;
 }
 
 body{
-background:
-linear-gradient(135deg,#020617,#0f172a,#111827);
-color:white;
+background:white;
+color:#111;
 overflow-x:hidden;
 }
 
@@ -1352,16 +1351,16 @@ AI News
 <button onclick="window.location.href='courses.html'">
 Free AI Courses
 </button>
-<button onclick="showAICategories()">
-AI Categories
-</button>
+
 <a href="quizzes.html" class="quiz-btn">
 🎯 Viral Quizzes
 </a>
-<button onclick="showAITools()">
-AI Tools
+<button onclick="window.location.href='ai-categories.html'">
+🤖 AI Categories
 </button>
-
+<button onclick="window.location.href='ai-tools.html'">
+🛠 AI Tools
+</button>
 
 <!-- AI TOOLS BUTTON -->
 <button class="ai-tools-btn" onclick="openAITools()">
@@ -1392,188 +1391,7 @@ AI Tools
 </div>
 
 </section>
-<!-- AI CATEGORIES -->
 
-<section class="page" id="aiCategoriesPage">
-
-<h2>AI Categories</h2>
-<div class="ai-search-box">
-<input type="text" id="aiSearchInput" placeholder="Search AI tools like ChatGPT, Gemini, Canva AI..." onkeyup="searchAICards()">
-</div>
-<div class="grid">
-
-<div class="card"><h3>ChatGPT</h3><p>Smart AI assistant for writing and productivity.</p><a href="https://chat.openai.com" target="_blank">Open AI</a></div>
-
-<div class="card"><h3>Gemini</h3><p>Google AI assistant for research and creativity.</p><a href="https://gemini.google.com" target="_blank">Open AI</a></div>
-
-<div class="card"><h3>Claude</h3><p>Advanced AI for natural conversations and coding.</p><a href="https://claude.ai" target="_blank">Open AI</a></div>
-
-<div class="card"><h3>Canva AI</h3><p>Create modern designs using artificial intelligence.</p><a href="https://www.canva.com" target="_blank">Open AI</a></div>
-
-<div class="card"><h3>Leonardo AI</h3><p>Generate realistic AI art and creative images.</p><a href="https://leonardo.ai" target="_blank">Open AI</a></div>
-
-<div class="card"><h3>Midjourney</h3><p>Create cinematic AI images from prompts.</p><a href="https://www.midjourney.com" target="_blank">Open AI</a></div>
-
-<div class="card"><h3>Perplexity</h3><p>AI search engine with smart answers.</p><a href="https://www.perplexity.ai" target="_blank">Open AI</a></div>
-
-<div class="card"><h3>Runway ML</h3><p>AI video generation and editing platform.</p><a href="https://runwayml.com" target="_blank">Open AI</a></div>
-
-<div class="card"><h3>HeyGen</h3><p>Create AI avatars and talking videos online.</p><a href="https://www.heygen.com" target="_blank">Open AI</a></div>
-
-<div class="card"><h3>Sora AI</h3><p>AI text to realistic video generator.</p><a href="https://openai.com/sora" target="_blank">Open AI</a></div>
-
-<div class="card"><h3>DeepSeek</h3><p>Powerful AI chatbot and coding assistant.</p><a href="https://www.deepseek.com" target="_blank">Open AI</a></div>
-
-<div class="card"><h3>Copilot</h3><p>Microsoft AI productivity and coding assistant.</p><a href="https://copilot.microsoft.com" target="_blank">Open AI</a></div>
-
-<div class="card"><h3>Notion AI</h3><p>AI writing and organization workspace.</p><a href="https://www.notion.so/product/ai" target="_blank">Open AI</a></div>
-
-<div class="card"><h3>ElevenLabs</h3><p>Realistic AI voice generation technology.</p><a href="https://elevenlabs.io" target="_blank">Open AI</a></div>
-
-<div class="card"><h3>CapCut AI</h3><p>Modern AI video editing platform.</p><a href="https://www.capcut.com" target="_blank">Open AI</a></div>
-
-<div class="card"><h3>Firefly</h3><p>Adobe AI image and graphics generator.</p><a href="https://firefly.adobe.com" target="_blank">Open AI</a></div>
-
-<div class="card"><h3>Grammarly AI</h3><p>Improve writing using smart AI correction.</p><a href="https://www.grammarly.com" target="_blank">Open AI</a></div>
-
-<div class="card"><h3>QuillBot</h3><p>Rewrite and improve text instantly.</p><a href="https://quillbot.com" target="_blank">Open AI</a></div>
-
-<div class="card"><h3>Character AI</h3><p>Talk with intelligent AI characters online.</p><a href="https://character.ai" target="_blank">Open AI</a></div>
-
-<div class="card"><h3>Replit AI</h3><p>AI coding and app development assistant.</p><a href="https://replit.com" target="_blank">Open AI</a></div>
-<div class="card"><h3>Jasper AI</h3><p>AI content writing and marketing assistant for businesses.</p><a href="https://www.jasper.ai" target="_blank">Open AI</a></div>
-
-<div class="card"><h3>Pika AI</h3><p>Create cinematic AI videos and animations instantly.</p><a href="https://pika.art" target="_blank">Open AI</a></div>
-
-<div class="card"><h3>Gamma AI</h3><p>Create beautiful AI presentations and documents easily.</p><a href="https://gamma.app" target="_blank">Open AI</a></div>
-
-<div class="card"><h3>Kaiber AI</h3><p>Generate artistic AI videos and visual effects online.</p><a href="https://kaiber.ai" target="_blank">Open AI</a></div>
-
-<div class="card"><h3>Suno AI</h3><p>Create realistic AI music and songs from text prompts.</p><a href="https://suno.ai" target="_blank">Open AI</a></div>
-
-<div class="card"><h3>Cursor AI</h3><p>Modern AI coding editor for developers and programmers.</p><a href="https://cursor.com" target="_blank">Open AI</a></div>
-<div class="card"><h3>Grok AI</h3><p>Smart conversational AI assistant for questions, ideas and research.</p><a href="https://grok.x.ai" target="_blank">Open AI</a></div>
-
-<div class="card"><h3>Adobe Express AI</h3><p>Create graphics, thumbnails and social media content using AI.</p><a href="https://www.adobe.com/express" target="_blank">Open AI</a></div>
-
-<div class="card"><h3>InVideo AI</h3><p>Create professional AI videos from simple text prompts instantly.</p><a href="https://invideo.io" target="_blank">Open AI</a></div>
-
-<div class="card"><h3>Writesonic</h3><p>Generate articles, ads and marketing content using AI tools.</p><a href="https://writesonic.com" target="_blank">Open AI</a></div>
-
-<div class="card"><h3>Beautiful AI</h3><p>Create premium presentations automatically with smart AI design.</p><a href="https://www.beautiful.ai" target="_blank">Open AI</a></div>
-
-<div class="card"><h3>Synthesia AI</h3><p>Create realistic talking avatar videos using artificial intelligence.</p><a href="https://www.synthesia.io" target="_blank">Open AI</a></div>
-
-<div class="card"><h3>Luma AI</h3><p>Create realistic 3D visuals, scenes and AI-generated videos.</p><a href="https://lumalabs.ai" target="_blank">Open AI</a></div>
-
-<div class="card"><h3>Otter AI</h3><p>AI meeting notes, voice transcription and smart summaries.</p><a href="https://otter.ai" target="_blank">Open AI</a></div>
-
-
-</div>
-
-</section>
-
-<!-- AI TOOLS -->
-
-<section class="page" id="aiToolsPage">
-
-<h2>AI Tools</h2>
-<div class="ai-search-box">
-<input type="text" id="toolSearchInput" placeholder="Search AI tools like Video Generator, PDF, Logo Maker..." onkeyup="searchAITools()">
-</div>
-
-
-<div class="grid">
-
-<div class="card"><h3>QR Code Generator</h3><p>Create custom QR codes online instantly.</p><a href="https://www.qr-code-generator.com" target="_blank">Use Tool</a></div>
-
-<div class="card"><h3>Background Remover</h3><p>Remove image backgrounds automatically.</p><a href="https://www.remove.bg" target="_blank">Use Tool</a></div>
-
-<div class="card"><h3>AI Image Generator</h3><p>Create AI artwork and realistic images.</p><a href="https://www.bing.com/images/create" target="_blank">Use Tool</a></div>
-
-<div class="card"><h3>Resume Builder</h3><p>Create professional resumes online.</p><a href="https://www.canva.com/resumes" target="_blank">Use Tool</a></div>
-
-<div class="card"><h3>Text To Speech</h3><p>Convert text into realistic AI voices.</p><a href="https://ttsmp3.com" target="_blank">Use Tool</a></div>
-
-<div class="card"><h3>PDF Editor</h3><p>Edit and manage PDF files online.</p><a href="https://www.ilovepdf.com" target="_blank">Use Tool</a></div>
-
-<div class="card"><h3>Password Generator</h3><p>Create secure passwords instantly.</p><a href="https://passwordsgenerator.net" target="_blank">Use Tool</a></div>
-
-<div class="card"><h3>Currency Converter</h3><p>Convert world currencies in real-time.</p><a href="https://www.xe.com/currencyconverter" target="_blank">Use Tool</a></div>
-
-<div class="card"><h3>AI Video Generator</h3><p>Create cinematic AI videos online.</p><a href="https://pika.art" target="_blank">Use Tool</a></div>
-
-<div class="card"><h3>Voice Cloner</h3><p>Create realistic cloned AI voices.</p><a href="https://elevenlabs.io" target="_blank">Use Tool</a></div>
-
-<div class="card"><h3>AI Logo Maker</h3><p>Generate logos using AI technology.</p><a href="https://looka.com" target="_blank">Use Tool</a></div>
-
-<div class="card"><h3>Image Upscaler</h3><p>Increase image quality using AI.</p><a href="https://letsenhance.io" target="_blank">Use Tool</a></div>
-
-<div class="card"><h3>AI Story Writer</h3><p>Write stories using artificial intelligence.</p><a href="https://sudowrite.com" target="_blank">Use Tool</a></div>
-
-<div class="card"><h3>AI Music Generator</h3><p>Create songs and music with AI.</p><a href="https://suno.ai" target="_blank">Use Tool</a></div>
-
-<div class="card"><h3>AI Presentation Maker</h3><p>Create modern presentations instantly.</p><a href="https://gamma.app" target="_blank">Use Tool</a></div>
-
-<div class="card"><h3>AI Website Builder</h3><p>Build websites using AI automation.</p><a href="https://framer.com" target="_blank">Use Tool</a></div>
-
-<div class="card"><h3>Face Swap Tool</h3><p>Swap faces in photos using AI.</p><a href="https://faceswapper.ai" target="_blank">Use Tool</a></div>
-
-<div class="card"><h3>AI Subtitle Generator</h3><p>Create subtitles automatically for videos.</p><a href="https://veed.io" target="_blank">Use Tool</a></div>
-
-<div class="card"><h3>Chat PDF</h3><p>Ask questions from PDF documents.</p><a href="https://www.chatpdf.com" target="_blank">Use Tool</a></div>
-
-<div class="card"><h3>AI Email Writer</h3><p>Generate professional emails instantly.</p><a href="https://writesonic.com" target="_blank">Use Tool</a></div>
-<div class="card">
-<h3>Free AI Video Generator</h3>
-<p>Create professional AI videos, animations and cinematic scenes instantly online.</p>
-<a href="https://pika.art" target="_blank">Use Tool</a>
-</div>
-
-<div class="card">
-<h3>Free AI Image Generator</h3>
-<p>Generate realistic AI art, wallpapers and creative digital images easily.</p>
-<a href="https://www.bing.com/images/create" target="_blank">Use Tool</a>
-</div>
-
-<div class="card">
-<h3>Free AI Voice Cloner</h3>
-<p>Clone voices and create realistic AI speech with advanced voice technology.</p>
-<a href="https://elevenlabs.io" target="_blank">Use Tool</a>
-</div>
-
-<div class="card">
-<h3>Free AI Resume Builder</h3>
-<p>Create modern professional resumes and CV designs using AI tools.</p>
-<a href="https://www.canva.com/resumes" target="_blank">Use Tool</a>
-</div>
-<div class="card"><h3>AI Thumbnail Maker</h3><p>Create YouTube thumbnails instantly using AI design tools.</p><a href="https://www.canva.com" target="_blank">Use Tool</a></div>
-
-<div class="card"><h3>AI Code Generator</h3><p>Generate coding projects and programming solutions with AI.</p><a href="https://replit.com" target="_blank">Use Tool</a></div>
-
-<div class="card"><h3>AI Chatbot Builder</h3><p>Create intelligent AI chatbots for websites and businesses.</p><a href="https://www.chatbase.co" target="_blank">Use Tool</a></div>
-
-<div class="card"><h3>AI Photo Enhancer</h3><p>Improve photo quality and resolution automatically using AI.</p><a href="https://letsenhance.io" target="_blank">Use Tool</a></div>
-
-<div class="card"><h3>AI Animation Generator</h3><p>Create animated videos and motion graphics with AI.</p><a href="https://www.animaker.com" target="_blank">Use Tool</a></div>
-
-<div class="card"><h3>AI Script Writer</h3><p>Generate movie scripts, stories and video content ideas instantly.</p><a href="https://sudowrite.com" target="_blank">Use Tool</a></div>
-
-<div class="card"><h3>AI Voice Generator</h3><p>Create realistic voices and narrations using AI technology.</p><a href="https://elevenlabs.io" target="_blank">Use Tool</a></div>
-
-<div class="card"><h3>AI Business Name Generator</h3><p>Generate unique business and brand names instantly.</p><a href="https://namelix.com" target="_blank">Use Tool</a></div>
-
-<div class="card"><h3>AI SEO Writer</h3><p>Create SEO optimized articles and blog content automatically.</p><a href="https://writesonic.com" target="_blank">Use Tool</a></div>
-
-<div class="card"><h3>AI Avatar Creator</h3><p>Create futuristic AI avatars and profile pictures online.</p><a href="https://www.d-id.com" target="_blank">Use Tool</a></div>
-<div class="card">
-<h3>Free AI Website Builder</h3>
-<p>Build modern websites and landing pages automatically with AI.</p>
-<a href="https://framer.com" target="_blank">Use Tool</a>
-</div>
-</div>
-
-</section>
 <!-- TRENDING TODAY SECTION -->
 <div class="trending-section">
 

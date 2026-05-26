@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AI Categories - NOVA AI STUDIO</title>
+
+<meta name="description"
+content="Explore the best AI categories including chatbots, image generators, AI video tools, coding assistants, voice AI, productivity tools and modern artificial intelligence platforms.">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f5f7fb;
+color:#111;
+overflow-x:hidden;
+}
+
+/* HEADER */
+
+header{
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:white;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+}
+
+.logo{
+font-size:30px;
+font-weight:bold;
+}
+
+.logo span{
+color:#ff6b00;
+}
+
+.back-btn{
+padding:12px 22px;
+border:none;
+border-radius:12px;
+background:linear-gradient(135deg,#ff6b00,#ff2d55);
+color:white;
+font-weight:bold;
+cursor:pointer;
+font-size:15px;
+}
+
+/* HERO */
+
+.hero{
+padding:80px 8% 50px;
+text-align:center;
+background:linear-gradient(135deg,#111827,#1e293b);
+color:white;
+}
+
+.hero h1{
+font-size:65px;
+margin-bottom:20px;
+}
+
+.hero p{
+max-width:950px;
+margin:auto;
+font-size:21px;
+line-height:1.9;
+color:#d1d5db;
+}
+
+/* SEARCH */
+
+.search-box{
+padding:40px 8%;
+display:flex;
+justify-content:center;
+}
+
+.search-box input{
+width:600px;
+max-width:95%;
+padding:18px 22px;
+border:none;
+border-radius:18px;
+font-size:17px;
+outline:none;
+background:white;
+box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
+
+/* GRID */
+
+.grid{
+padding:20px 8% 90px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+/* CARD */
+
+.card{
+background:white;
+padding:30px;
+border-radius:24px;
+box-shadow:0 10px 30px rgba(0,0,0,0.06);
+transition:0.35s;
+border:1px solid #eee;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(0,0,0,0.12);
+}
+
+.card i{
+font-size:45px;
+margin-bottom:20px;
+background:linear-gradient(135deg,#ff6b00,#ff2d55);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.card h3{
+font-size:24px;
+margin-bottom:14px;
+}
+
+.card p{
+font-size:15px;
+line-height:1.8;
+color:#666;
+margin-bottom:22px;
+}
+
+.card a{
+display:inline-block;
+padding:12px 20px;
+border-radius:12px;
+background:#111827;
+color:white;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
+
+.card a:hover{
+background:#ff6b00;
+}
+
+/* FOOTER */
+
+footer{
+background:white;
+padding:30px;
+text-align:center;
+font-weight:bold;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:42px;
+}
+
+.hero p{
+font-size:17px;
+}
+
+header{
+flex-direction:column;
+gap:15px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+NOVA <span>AI STUDIO</span>
+</div>
+
+<button class="back-btn"
+onclick="window.location.href='index.html'">
+← Back Home
+</button>
+
+</header>
+
+<section class="hero">
+
+<h1>40 Best AI Categories</h1>
+
+<p>
+Discover the world's most powerful AI platforms including chatbots, image generators, AI video creators, productivity tools, coding assistants, automation systems and futuristic artificial intelligence technologies.
+</p>
+
+</section>
+
+<div class="search-box">
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search AI categories..."
+onkeyup="searchCards()"
+>
+
+</div>
+
+<section class="grid" id="cardContainer">
+
+<div class="card"><i class="fa-solid fa-robot"></i><h3>ChatGPT</h3><p>AI chatbot for writing, coding and productivity.</p><a href="https://chat.openai.com" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-brain"></i><h3>Gemini AI</h3><p>Google AI assistant for research and smart tasks.</p><a href="https://gemini.google.com" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-comments"></i><h3>Claude AI</h3><p>Advanced AI assistant for long conversations.</p><a href="https://claude.ai" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-image"></i><h3>Leonardo AI</h3><p>Create realistic AI artwork and images.</p><a href="https://leonardo.ai" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-palette"></i><h3>Canva AI</h3><p>AI design platform for social media graphics.</p><a href="https://www.canva.com" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-video"></i><h3>Runway ML</h3><p>AI video editing and cinematic generation.</p><a href="https://runwayml.com" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-film"></i><h3>Pika AI</h3><p>Create AI videos using text prompts.</p><a href="https://pika.art" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-music"></i><h3>Suno AI</h3><p>Generate AI songs and music instantly.</p><a href="https://suno.ai" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-code"></i><h3>Cursor AI</h3><p>Modern AI coding assistant for developers.</p><a href="https://cursor.com" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-microphone"></i><h3>ElevenLabs</h3><p>Realistic AI voice and speech generation.</p><a href="https://elevenlabs.io" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-pen"></i><h3>Jasper AI</h3><p>AI content writing and marketing assistant.</p><a href="https://www.jasper.ai" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-book"></i><h3>Notion AI</h3><p>AI productivity and smart note organization.</p><a href="https://www.notion.so/product/ai" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-lightbulb"></i><h3>Gamma AI</h3><p>Create AI presentations and documents.</p><a href="https://gamma.app" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-camera"></i><h3>Midjourney</h3><p>Generate cinematic AI images and art.</p><a href="https://www.midjourney.com" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-search"></i><h3>Perplexity AI</h3><p>AI powered smart search engine.</p><a href="https://www.perplexity.ai" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-globe"></i><h3>Copilot AI</h3><p>Microsoft AI assistant for productivity.</p><a href="https://copilot.microsoft.com" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-photo-film"></i><h3>Adobe Firefly</h3><p>Create AI graphics and visual effects.</p><a href="https://firefly.adobe.com" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-rectangle-ad"></i><h3>Writesonic</h3><p>AI article and marketing content generator.</p><a href="https://writesonic.com" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-video"></i><h3>HeyGen</h3><p>Create AI avatars and talking videos.</p><a href="https://www.heygen.com" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-user"></i><h3>Character AI</h3><p>Talk with intelligent AI personalities.</p><a href="https://character.ai" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-terminal"></i><h3>Replit AI</h3><p>AI app development and coding platform.</p><a href="https://replit.com" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-language"></i><h3>DeepL AI</h3><p>Professional AI translation technology.</p><a href="https://www.deepl.com" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-file"></i><h3>QuillBot</h3><p>Rewrite and improve writing using AI.</p><a href="https://quillbot.com" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-shield"></i><h3>Grammarly AI</h3><p>AI grammar and writing correction platform.</p><a href="https://www.grammarly.com" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-clapperboard"></i><h3>InVideo AI</h3><p>Create professional AI videos online.</p><a href="https://invideo.io" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-chart-line"></i><h3>Beautiful AI</h3><p>Automatic AI presentation creator.</p><a href="https://www.beautiful.ai" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-building"></i><h3>Framer AI</h3><p>AI website and landing page builder.</p><a href="https://framer.com" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-face-smile"></i><h3>D-ID AI</h3><p>Create talking avatars with AI.</p><a href="https://www.d-id.com" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-volume-high"></i><h3>Murf AI</h3><p>Professional AI voiceover generator.</p><a href="https://murf.ai" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-file-video"></i><h3>Synthesia AI</h3><p>Create AI presenter videos instantly.</p><a href="https://www.synthesia.io" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-cube"></i><h3>Luma AI</h3><p>Create AI 3D scenes and videos.</p><a href="https://lumalabs.ai" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-headphones"></i><h3>Otter AI</h3><p>AI meeting notes and voice transcription.</p><a href="https://otter.ai" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-wand-magic"></i><h3>Kaiber AI</h3><p>Generate artistic AI videos and effects.</p><a href="https://kaiber.ai" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-laptop-code"></i><h3>DeepSeek AI</h3><p>Advanced AI coding and chatbot system.</p><a href="https://www.deepseek.com" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-star"></i><h3>Grok AI</h3><p>Modern conversational AI assistant.</p><a href="https://grok.x.ai" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-paintbrush"></i><h3>Adobe Express AI</h3><p>Create graphics and thumbnails using AI.</p><a href="https://www.adobe.com/express" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-file-lines"></i><h3>ChatPDF</h3><p>Talk with PDF documents using AI.</p><a href="https://www.chatpdf.com" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-robot"></i><h3>Chatbase AI</h3><p>Create AI chatbots for websites.</p><a href="https://www.chatbase.co" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-image-portrait"></i><h3>Remove.bg</h3><p>AI background remover for images.</p><a href="https://www.remove.bg" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-arrow-up-right-dots"></i><h3>LetsEnhance</h3><p>AI image quality enhancement platform.</p><a href="https://letsenhance.io" target="_blank">Visit</a></div>
+<div class="card"><i class="fa-solid fa-gamepad"></i><h3>Scenario AI</h3><p>Create AI game assets, textures and creative gaming artwork.</p><a href="https://www.scenario.com" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-cart-shopping"></i><h3>Looka AI</h3><p>Generate business logos and brand identity designs using AI.</p><a href="https://looka.com" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-file-audio"></i><h3>Descript AI</h3><p>Edit audio and videos with powerful AI voice tools.</p><a href="https://www.descript.com" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-graduation-cap"></i><h3>Khanmigo AI</h3><p>AI learning assistant created for students and education.</p><a href="https://www.khanacademy.org/khan-labs" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-chart-pie"></i><h3>Tome AI</h3><p>Create AI storytelling presentations and business slides instantly.</p><a href="https://tome.app" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-keyboard"></i><h3>Sudowrite</h3><p>Creative AI writing assistant for stories and novels.</p><a href="https://www.sudowrite.com" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-user-secret"></i><h3>Reface AI</h3><p>Create AI face swaps and realistic avatar videos online.</p><a href="https://reface.ai" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-magnifying-glass-chart"></i><h3>Consensus AI</h3><p>AI search engine for scientific research and academic studies.</p><a href="https://consensus.app" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-bullhorn"></i><h3>AdCreative AI</h3><p>Create AI advertising banners and social media ad designs.</p><a href="https://www.adcreative.ai" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-mobile-screen"></i><h3>Uizard AI</h3><p>Generate mobile app and website UI designs automatically.</p><a href="https://uizard.io" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-envelope-open-text"></i><h3>Copy AI</h3><p>Create marketing copy, emails and business content using AI.</p><a href="https://www.copy.ai" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-video-slash"></i><h3>Veed AI</h3><p>AI video editing platform with subtitles and voice tools.</p><a href="https://www.veed.io" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-brush"></i><h3>NightCafe AI</h3><p>Create artistic AI paintings and fantasy digital artwork.</p><a href="https://creator.nightcafe.studio" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-headset"></i><h3>Krisp AI</h3><p>Remove background noise and improve online meeting audio.</p><a href="https://krisp.ai" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-database"></i><h3>Airtable AI</h3><p>AI powered database and workflow automation platform.</p><a href="https://www.airtable.com" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-newspaper"></i><h3>Wordtune AI</h3><p>Rewrite and improve sentences using smart AI writing.</p><a href="https://www.wordtune.com" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-language"></i><h3>Lingvanex AI</h3><p>AI translation and multilingual communication platform.</p><a href="https://lingvanex.com" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-user-astronaut"></i><h3>Ready Player Me</h3><p>Create futuristic AI avatars for games and metaverse apps.</p><a href="https://readyplayer.me" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-cloud"></i><h3>Zapier AI</h3><p>Automate online workflows and business systems using AI.</p><a href="https://zapier.com/ai" target="_blank">Visit</a></div>
+
+<div class="card"><i class="fa-solid fa-rocket"></i><h3>Durable AI</h3><p>Create professional AI business websites within seconds.</p><a href="https://durable.co" target="_blank">Visit</a></div>
+</section>
+
+<footer>
+© 2026 NOVA AI STUDIO — All Rights Reserved
+</footer>
+
+<script>
+
+function searchCards(){
+
+let input =
+document.getElementById("searchInput")
+.value.toLowerCase();
+
+let cards =
+document.querySelectorAll(".card");
+
+cards.forEach(function(card){
+
+let text =
+card.innerText.toLowerCase();
+
+if(text.includes(input)){
+card.style.display="block";
+}
+
+else{
+card.style.display="none";
+}
+
+});
+
+}
+
+</script>
+
+</body>
+</html>

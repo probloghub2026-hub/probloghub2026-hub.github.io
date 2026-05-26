@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AI Tools For Business | NOVA AI STUDIO</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:
+    radial-gradient(circle at top left,#312e81 0%,transparent 25%),
+    radial-gradient(circle at top right,#0f766e 0%,transparent 25%),
+    radial-gradient(circle at bottom,#7c3aed 0%,transparent 20%),
+    #020617;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:linear-gradient(#7c3aed,#06b6d4);
+    border-radius:20px;
+}
+
+/* HEADER */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(2,6,23,0.8);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(255,255,255,0.08);
+    padding:18px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:800;
+    background:linear-gradient(90deg,#38bdf8,#8b5cf6,#06b6d4);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.header-btn{
+    padding:14px 26px;
+    border-radius:16px;
+    background:linear-gradient(135deg,#8b5cf6,#2563eb);
+    color:white;
+    text-decoration:none;
+    font-weight:700;
+    transition:0.3s;
+}
+
+.header-btn:hover{
+    transform:translateY(-4px);
+}
+
+/* HERO */
+
+.hero{
+    padding:120px 7% 90px;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:72px;
+    line-height:1.1;
+    margin-bottom:25px;
+}
+
+.hero h1 span{
+    background:linear-gradient(90deg,#38bdf8,#8b5cf6);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+    max-width:900px;
+    margin:auto;
+    font-size:20px;
+    line-height:1.9;
+    color:#cbd5e1;
+}
+
+/* SEARCH */
+
+.search-area{
+    padding:0 7%;
+    margin-top:-30px;
+}
+
+.search-box{
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.12);
+    backdrop-filter:blur(20px);
+    border-radius:24px;
+    padding:22px 28px;
+    box-shadow:0 20px 50px rgba(0,0,0,0.45);
+}
+
+.search-box input{
+    width:100%;
+    border:none;
+    outline:none;
+    background:transparent;
+    color:white;
+    font-size:18px;
+    font-family:Poppins;
+}
+
+.search-box input::placeholder{
+    color:#cbd5e1;
+}
+
+/* GRID */
+
+.container{
+    padding:70px 7% 100px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(290px,1fr));
+    gap:30px;
+}
+
+/* CARD */
+
+.card{
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.08);
+    backdrop-filter:blur(18px);
+    border-radius:30px;
+    overflow:hidden;
+    transition:0.4s;
+    position:relative;
+}
+
+.card:hover{
+    transform:translateY(-12px);
+    border-color:#38bdf8;
+    box-shadow:0 25px 60px rgba(0,0,0,0.45);
+}
+
+.card-top{
+    padding:30px;
+}
+
+.icon{
+    width:78px;
+    height:78px;
+    border-radius:22px;
+    background:linear-gradient(135deg,#06b6d4,#8b5cf6);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:34px;
+    margin-bottom:22px;
+}
+
+.card h3{
+    font-size:25px;
+    margin-bottom:12px;
+}
+
+.card p{
+    color:#cbd5e1;
+    line-height:1.8;
+    font-size:15px;
+    min-height:100px;
+}
+
+.tag{
+    display:inline-block;
+    margin-top:18px;
+    background:rgba(255,255,255,0.08);
+    color:#38bdf8;
+    padding:8px 16px;
+    border-radius:999px;
+    font-size:12px;
+    font-weight:700;
+}
+
+.visit-btn{
+    display:block;
+    margin:0 30px 30px;
+    text-align:center;
+    padding:15px;
+    border-radius:18px;
+    text-decoration:none;
+    color:white;
+    font-weight:700;
+    background:linear-gradient(135deg,#8b5cf6,#2563eb);
+    transition:0.3s;
+}
+
+.visit-btn:hover{
+    transform:scale(1.04);
+}
+
+/* FOOTER */
+
+footer{
+    padding:45px 20px;
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,0.08);
+    color:#94a3b8;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:44px;
+}
+
+header{
+    flex-direction:column;
+    gap:18px;
+}
+
+.grid{
+    grid-template-columns:1fr;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+NOVA AI STUDIO
+</div>
+
+<a href="index.html" class="header-btn">
+Back To Store
+</a>
+
+</header>
+
+<section class="hero">
+
+<h1>
+50 Powerful <span>AI Tools</span><br>
+For Business & Students
+</h1>
+
+<p>
+Discover modern AI tools for writing, design, coding, studying, presentations, automation, health, business growth and productivity.
+</p>
+
+</section>
+
+<div class="search-area">
+
+<div class="search-box">
+
+<input type="text"
+id="searchInput"
+placeholder="Search AI tools..."
+onkeyup="searchTools()">
+
+</div>
+
+</div>
+
+<div class="container">
+
+<div class="grid" id="toolsGrid">
+
+<!-- 50 TOOLS -->
+
+<script>
+
+const tools = [
+
+["🤖","ChatGPT","AI chatbot for writing, coding and business.","https://chatgpt.com","AI Assistant"],
+["🎨","Canva AI","AI graphic design and presentation creator.","https://www.canva.com","Design"],
+["📈","Jasper AI","Marketing and business writing AI.","https://www.jasper.ai","Marketing"],
+["🎬","Runway ML","AI video editing platform.","https://runwayml.com","Video AI"],
+["🧠","Notion AI","Smart notes and productivity workspace.","https://www.notion.so","Productivity"],
+["💻","GitHub Copilot","AI coding assistant for developers.","https://github.com/features/copilot","Coding"],
+["📊","Tome AI","AI presentation maker.","https://tome.app","Presentation"],
+["🎤","ElevenLabs","Realistic AI voice generator.","https://elevenlabs.io","Voice AI"],
+["📷","Adobe Firefly","AI image generation tool.","https://firefly.adobe.com","Image AI"],
+["📝","Grammarly","Writing and grammar improvement AI.","https://www.grammarly.com","Writing"],
+["📹","Pictory","Convert blogs into videos.","https://pictory.ai","Video"],
+["📚","QuillBot","Paraphrasing and rewriting tool.","https://quillbot.com","Students"],
+["🖼️","Midjourney","AI artwork generator.","https://www.midjourney.com","Art AI"],
+["⚡","Zapier AI","Business workflow automation.","https://zapier.com","Automation"],
+["📱","Copy.ai","AI captions and ad copy writer.","https://www.copy.ai","Marketing"],
+["🧾","Beautiful.ai","AI business presentations.","https://www.beautiful.ai","Business"],
+["🎧","Descript","Podcast and video editor.","https://www.descript.com","Editing"],
+["🔍","Perplexity AI","AI research engine.","https://www.perplexity.ai","Research"],
+["🛒","Shopify Magic","AI ecommerce assistant.","https://www.shopify.com/magic","Ecommerce"],
+["📧","Mailchimp AI","AI email marketing tools.","https://mailchimp.com","Email"],
+["🌐","Durable AI","AI website builder.","https://durable.co","Website"],
+["📑","SlidesAI","Automatic slide generator.","https://www.slidesai.io","Slides"],
+["🎓","Gamma AI","AI docs and presentations.","https://gamma.app","Students"],
+["📹","Synthesia","AI avatar videos.","https://www.synthesia.io","AI Avatar"],
+["📊","Looka","AI logo maker.","https://looka.com","Branding"],
+["📐","BMI Calculator","Calculate body mass index.","https://www.calculator.net/bmi-calculator.html","Health"],
+["🧮","Calculator.net","Advanced online calculator.","https://www.calculator.net","Calculator"],
+["💰","Currency Converter","Convert world currencies.","https://www.xe.com","Finance"],
+["📅","Time Calculator","Date and time calculations.","https://www.timeanddate.com","Time"],
+["📈","SEO Analyzer","Website SEO checker.","https://neilpatel.com/seo-analyzer","SEO"],
+["🎨","Remove.bg","AI background remover.","https://www.remove.bg","Editing"],
+["📸","Pixlr","Online AI photo editor.","https://pixlr.com","Photo"],
+["🎵","Soundraw","AI music generator.","https://soundraw.io","Music"],
+["📹","VEED AI","AI video editor online.","https://www.veed.io","Video"],
+["🧠","DeepL","AI translator tool.","https://www.deepl.com","Translator"],
+["📖","Scholarcy","AI study summaries.","https://www.scholarcy.com","Students"],
+["📊","Otter AI","Meeting transcription tool.","https://otter.ai","Meetings"],
+["📂","SmallPDF","PDF editing tools.","https://smallpdf.com","PDF"],
+["📄","ILovePDF","PDF converter and merger.","https://www.ilovepdf.com","PDF"],
+["🔒","Password Generator","Secure password creator.","https://passwordsgenerator.net","Security"],
+["🌎","Google Trends","Trending search analysis.","https://trends.google.com","Trends"],
+["📧","Hunter.io","Find business emails.","https://hunter.io","Business"],
+["💡","AnswerThePublic","Content research platform.","https://answerthepublic.com","SEO"],
+["🎯","HubSpot AI","Business CRM and AI tools.","https://www.hubspot.com","CRM"],
+["🧾","Invoice Generator","Free invoice creator.","https://invoice-generator.com","Business"],
+["📊","Trello","Project management platform.","https://trello.com","Management"],
+["📌","ClickUp","Task management workspace.","https://clickup.com","Productivity"],
+["📚","Coursera","Online learning platform.","https://www.coursera.org","Education"],
+["🧪","Google AI Studio","AI development platform.","https://aistudio.google.com","Development"],
+["🚀","Leonardo AI","AI image creator.","https://leonardo.ai","Image AI"]
+
+];
+
+let grid = document.getElementById("toolsGrid");
+
+tools.forEach(tool=>{
+
+grid.innerHTML += `
+
+<div class="card">
+
+<div class="card-top">
+
+<div class="icon">${tool[0]}</div>
+
+<h3>${tool[1]}</h3>
+
+<p>${tool[2]}</p>
+
+<div class="tag">${tool[4]}</div>
+
+</div>
+
+<a href="${tool[3]}" target="_blank" class="visit-btn">
+Visit Tool
+</a>
+
+</div>
+
+`;
+
+});
+
+function searchTools(){
+
+let input = document.getElementById("searchInput").value.toLowerCase();
+
+let cards = document.querySelectorAll(".card");
+
+cards.forEach(card=>{
+
+let text = card.innerText.toLowerCase();
+
+if(text.includes(input)){
+card.style.display = "block";
+}
+else{
+card.style.display = "none";
+}
+
+});
+
+}
+
+</script>
+
+</div>
+
+</div>
+
+<footer>
+
+© 2026 NOVA AI STUDIO — Modern AI Tools Directory
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Viral Quizzes | NOVA IQ TEST</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:
+radial-gradient(circle at top left,#7c3aed 0%,transparent 25%),
+radial-gradient(circle at top right,#06b6d4 0%,transparent 25%),
+radial-gradient(circle at bottom,#ec4899 0%,transparent 20%),
+#020617;
+color:white;
+overflow-x:hidden;
+}
+
+/* HEADER */
+
+header{
+position:sticky;
+top:0;
+z-index:1000;
+padding:20px 7%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(2,6,23,0.8);
+backdrop-filter:blur(14px);
+border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.logo{
+font-size:30px;
+font-weight:800;
+background:linear-gradient(90deg,#06b6d4,#ec4899);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.home-btn{
+padding:14px 24px;
+border-radius:16px;
+text-decoration:none;
+font-weight:700;
+background:linear-gradient(135deg,#ec4899,#7c3aed);
+color:white;
+transition:0.3s;
+}
+
+.home-btn:hover{
+transform:translateY(-4px);
+}
+
+/* HERO */
+
+.hero{
+padding:100px 7% 70px;
+text-align:center;
+}
+
+.hero h1{
+font-size:72px;
+line-height:1.1;
+margin-bottom:22px;
+}
+
+.hero h1 span{
+background:linear-gradient(90deg,#06b6d4,#ec4899);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero p{
+max-width:850px;
+margin:auto;
+font-size:19px;
+line-height:1.9;
+color:#cbd5e1;
+}
+
+/* GRID */
+
+.container{
+padding:20px 7% 100px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(290px,1fr));
+gap:30px;
+}
+
+/* CARD */
+
+.card{
+background:rgba(255,255,255,0.06);
+border:1px solid rgba(255,255,255,0.08);
+backdrop-filter:blur(18px);
+border-radius:30px;
+overflow:hidden;
+transition:0.4s;
+position:relative;
+}
+
+.card:hover{
+transform:translateY(-12px) scale(1.02);
+box-shadow:0 25px 60px rgba(0,0,0,0.45);
+border-color:#ec4899;
+}
+
+.card::before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:5px;
+background:linear-gradient(90deg,#06b6d4,#ec4899,#7c3aed);
+}
+
+.card-top{
+padding:34px 30px 20px;
+}
+
+.icon{
+width:85px;
+height:85px;
+border-radius:24px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:40px;
+margin-bottom:24px;
+background:linear-gradient(135deg,#06b6d4,#ec4899);
+box-shadow:0 10px 30px rgba(0,0,0,0.35);
+}
+
+.card h3{
+font-size:30px;
+margin-bottom:15px;
+}
+
+.card p{
+font-size:15px;
+line-height:1.8;
+color:#cbd5e1;
+margin-bottom:22px;
+}
+
+.tag{
+display:inline-block;
+padding:9px 18px;
+border-radius:999px;
+background:rgba(255,255,255,0.08);
+font-size:12px;
+font-weight:700;
+color:#06b6d4;
+}
+
+/* BUTTON */
+
+.quiz-btn{
+display:block;
+margin:0 30px 30px;
+padding:16px;
+text-align:center;
+border-radius:18px;
+text-decoration:none;
+font-weight:700;
+font-size:16px;
+background:linear-gradient(135deg,#ec4899,#7c3aed);
+color:white;
+transition:0.35s;
+}
+
+.quiz-btn:hover{
+transform:scale(1.04);
+}
+
+/* FOOTER */
+
+footer{
+padding:40px 20px;
+text-align:center;
+border-top:1px solid rgba(255,255,255,0.08);
+color:#94a3b8;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:45px;
+}
+
+header{
+flex-direction:column;
+gap:15px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+NOVA IQ TEST
+</div>
+
+<a href="index.html" class="home-btn">
+Back To Home
+</a>
+
+</header>
+
+<section class="hero">
+
+<h1>
+🎯 <span>Viral Quizzes</span>
+</h1>
+
+<p>
+Play fun viral quizzes including IQ tests, anime quizzes, gaming quizzes, logo quizzes and more in a futuristic modern experience.
+</p>
+
+</section>
+
+<div class="container">
+
+<div class="grid">
+
+<!-- QUIZ 1 -->
+
+<div class="card">
+
+<div class="card-top">
+
+<div class="icon">🧠</div>
+
+<h3>IQ Test</h3>
+
+<p>
+Test your intelligence level with brain challenges and smart puzzles.
+</p>
+
+<div class="tag">
+Brain Quiz
+</div>
+
+</div>
+
+<a href="https://www.arealme.com/iq/en/" target="_blank" class="quiz-btn">
+Start Quiz
+</a>
+
+</div>
+
+<!-- QUIZ 2 -->
+
+<div class="card">
+
+<div class="card-top">
+
+<div class="icon">🚗</div>
+
+<h3>Car Quiz</h3>
+
+<p>
+Guess famous luxury cars, sports cars and global car brands.
+</p>
+
+<div class="tag">
+Cars
+</div>
+
+</div>
+
+<a href="https://www.sporcle.com/games/g/carlogos" target="_blank" class="quiz-btn">
+Play Now
+</a>
+
+</div>
+
+<!-- QUIZ 3 -->
+
+<div class="card">
+
+<div class="card-top">
+
+<div class="icon">🎌</div>
+
+<h3>Anime Quiz</h3>
+
+<p>
+Guess anime characters, powers and famous anime series.
+</p>
+
+<div class="tag">
+Anime
+</div>
+
+</div>
+
+<a href="https://www.crunchyroll.com/news/quizzes" target="_blank" class="quiz-btn">
+Start Anime Quiz
+</a>
+
+</div>
+
+<!-- QUIZ 4 -->
+
+<div class="card">
+
+<div class="card-top">
+
+<div class="icon">🇵🇰</div>
+
+<h3>Pakistan Quiz</h3>
+
+<p>
+Test your Pakistan history, cities and culture knowledge.
+</p>
+
+<div class="tag">
+Pakistan
+</div>
+
+</div>
+
+<a href="https://www.funtrivia.com/quizzes/world/asia/pakistan.html" target="_blank" class="quiz-btn">
+Play Quiz
+</a>
+
+</div>
+
+<!-- QUIZ 5 -->
+
+<div class="card">
+
+<div class="card-top">
+
+<div class="icon">🏆</div>
+
+<h3>Logo Quiz</h3>
+
+<p>
+Guess famous company logos and worldwide brands.
+</p>
+
+<div class="tag">
+Brands
+</div>
+
+</div>
+
+<a href="https://www.sporcle.com/games/g/logos" target="_blank" class="quiz-btn">
+Start Logo Quiz
+</a>
+
+</div>
+
+<!-- QUIZ 6 -->
+
+<div class="card">
+
+<div class="card-top">
+
+<div class="icon">🎮</div>
+
+<h3>Gaming Quiz</h3>
+
+<p>
+Quiz challenges for gamers, streamers and esports fans.
+</p>
+
+<div class="tag">
+Gaming
+</div>
+
+</div>
+
+<a href="https://www.proprofs.com/quiz-school/topic/video-games" target="_blank" class="quiz-btn">
+Play Gaming Quiz
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+© 2026 Pro Blog Hub
+
+</footer>
+
+</body>
+</html>

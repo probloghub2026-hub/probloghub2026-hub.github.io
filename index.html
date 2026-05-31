@@ -1588,7 +1588,25 @@ transform:translateX(-50%) translateY(0);
 }
 
 }
+.article-btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:18px 35px;
+background:#ff6b35;
+color:#fff;
+text-decoration:none;
+font-weight:700;
+border-radius:16px;
+font-size:18px;
+transition:0.3s;
+box-shadow:0 10px 25px rgba(255,107,53,.25);
+}
 
+.article-btn:hover{
+transform:translateY(-4px);
+box-shadow:0 15px 35px rgba(255,107,53,.35);
+}
 
 
 </style>
@@ -1643,11 +1661,11 @@ Explore ChatGPT, Gemini, AI image generators, AI video creators, free AI courses
 <div class="hero-buttons">
 
 <button onclick="openAITools()">
-🚀 Explore AI Tools
+ Explore AI Tools
 </button>
 
 <button onclick="window.location.href='ai-categories.html'">
-🤖 AI Categories
+ AI Categories
 </button>
 
 </div>
@@ -1674,28 +1692,30 @@ placeholder="Search ChatGPT, Canva, QR Code, AI Video..."
 
 
 <button onclick="openBlog()">
-📰 Blog Posts
+ Blog Posts
 </button>
-
+<a href="articles.html" class="article-btn">
+     Articles
+</a>
 <button onclick="openNews()">
-🔥 AI News
+ AI News
 </button>
 
 <button onclick="window.location.href='courses.html'">
-🎓 Free AI Courses
+ Free AI Courses
 </button>
 
 
 <button onclick="window.location.href='ai-categories.html'">
-🤖 AI Categories
+ AI Categories
 </button>
 
 <button onclick="window.location.href='ai-tools.html'">
-🛠 AI Tools
+ AI Tools
 </button>
 
 <button class="ai-tools-btn" onclick="openAITools()">
-🚀 AI Tools For Business
+ AI Tools For Business
 </button>
 
 </div>

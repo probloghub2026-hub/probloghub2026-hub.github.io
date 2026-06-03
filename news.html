@@ -3,796 +3,415 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nova AI News - Latest AI Updates</title>
+
+<title>AI News Hub | Nova AI Studio</title>
+
+<meta name="description" content="Latest Artificial Intelligence News, AI Tools Updates, Technology Trends and Future Innovations.">
 
 <style>
-body{
+
+*{
 margin:0;
-font-family:system-ui;
-background:#f6f2ec;
-color:#111;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
 }
 
+body{
+background:linear-gradient(135deg,#fffdf7,#f8f4ea,#f5efe2);
+color:#1e293b;
+min-height:100vh;
+overflow-x:hidden;
+}
 header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:18px 8%;
-background:white;
-position:sticky;
-top:0;
-box-shadow:0 10px 25px rgba(0,0,0,0.06);
+padding:70px 20px;
+text-align:center;
+background:#ffffff;
+border-bottom:1px solid #e5e7eb;
 }
 
-.logo{
-font-size:26px;
-font-weight:800;
+header h1{
+font-size:55px;
+background:linear-gradient(90deg,#ff6b00,#ffb300);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
-.logo span{color:#ff6b00;}
 
-.back{
-padding:10px 18px;
-background:#111;
-color:white;
-border-radius:10px;
+header p{
+margin-top:15px;
+color:#94a3b8;
+font-size:18px;
+}
+
+.home-btn{
+display:inline-block;
+margin-top:25px;
+padding:14px 30px;
+background:linear-gradient(90deg,#ff6b00,#ffb300);
+color:#1e293b;
 text-decoration:none;
+border-radius:50px;
+font-weight:600;
+}
+
+.search-box{
+max-width:800px;
+margin:40px auto;
+padding:0 20px;
+}
+
+.search-box input{
+    width:100%;
+    padding:20px 30px;
+    background:#ffffff;
+    color:#111827;
+    border:2px solid #d1d5db;
+    outline:none;
+    border-radius:60px;
+    font-size:17px;
+    font-weight:500;
+}
+
+.search-box input::placeholder{
+    color:#6b7280;
+}
+
+.search-box input:focus{
+border-color:#ff8c00;
 }
 
 .container{
-max-width:900px;
+max-width:1300px;
 margin:auto;
-padding:60px 20px;
+padding:20px;
 }
 
-.news{
-background:white;
-padding:35px;
+.news-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+gap:25px;
+}
+
+.news-card{
+background:#ffffff;
+backdrop-filter:blur(20px);
+padding:25px;
 border-radius:20px;
-margin-bottom:30px;
-box-shadow:0 10px 30px rgba(0,0,0,0.05);
+border:1px solid rgba(255,255,255,.08);
+transition:.4s;
 }
 
-.news h1{
-font-size:30px;
+.news-card:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 40px rgba(255,140,0,.25);
+}
+
+.news-date{
+color:#ffb300;
+font-size:14px;
 margin-bottom:10px;
 }
 
-.meta{
-color:#888;
-font-size:14px;
-margin-bottom:20px;
-}
-
-.news p{
-line-height:1.9;
-font-size:17px;
-color:#444;
+.news-card h2{
 margin-bottom:15px;
+font-size:24px;
 }
 
-.tag{
-display:inline-block;
-padding:6px 12px;
-background:#ff6b00;
-color:white;
-border-radius:20px;
-font-size:12px;
+.news-card p{
+line-height:1.8;
+color:#475569;
 }
+
+footer{
+margin-top:80px;
+padding:30px;
+text-align:center;
+color:#94a3b8;
+border-top:1px solid rgba(255,255,255,.08);
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-<div class="logo">NOVA <span>AI</span></div>
-<a class="back" href="index.html">Back</a>
+<h1>AI News Hub</h1>
+<p>Latest Artificial Intelligence News, Trends & Technology Updates</p>
+<a href="index.html" class="home-btn">🏠 Back Home</a>
 </header>
 
+<div class="search-box">
+<input type="text" id="searchInput" placeholder="Search AI News...">
+</div>
+
 <div class="container">
-<div class="news">
-<h1>AI Robots Are Entering Daily Life In 2026</h1>
-<div class="meta">Trending • Robotics</div>
 
+<div class="news-grid">
+
+<div class="news-card">
+<div class="news-date">June 2026</div>
+<h2>AI Assistants Becoming More Advanced</h2>
 <p>
-AI-powered robots are now being used in homes, hospitals, and factories. These robots can clean, assist doctors, and even support elderly people in daily tasks.
+Modern AI assistants are becoming smarter, faster and more capable than ever.
+Businesses use them for customer support, content creation, coding assistance,
+research and workflow automation. Experts predict AI assistants will become
+essential tools across nearly every industry.
 </p>
-
-<p>
-Companies are investing heavily in robotics combined with artificial intelligence. This is making automation more practical and affordable than ever before.
-</p>
-
-<p>
-Experts believe that in the next 5 years, AI robots will become common in households worldwide.
-</p>
-
-<span class="tag">Robotics</span>
-</div>
-<div class="news">
-<h1>AI Search Engines Are Replacing Traditional Google Searches</h1>
-<div class="meta">AI Search • Innovation</div>
-
-<p>
-New AI search engines like Perplexity-style systems are changing how users find information online. Instead of links, users now get direct answers.
-</p>
-
-<p>
-This shift is forcing websites to improve content quality because only valuable information gets ranked or summarized by AI systems.
-</p>
-
-<span class="tag">Search AI</span>
-</div>
-<div class="news">
-<h1>AI Content Creation Is Changing YouTube Industry</h1>
-<div class="meta">Content • YouTube</div>
-
-<p>
-AI tools are now generating scripts, thumbnails, and even full videos for YouTube creators. This is reducing production time significantly.
-</p>
-
-<p>
-Many creators are growing faster because AI helps them publish content more consistently and professionally.
-</p>
-
-<span class="tag">YouTube AI</span>
 </div>
 
-<div class="news">
-<h1>AI Video Tools Are Growing Fast In 2026</h1>
-<div class="meta">Breaking News • AI Industry</div>
-
+<div class="news-card">
+<div class="news-date">June 2026</div>
+<h2>AI Video Generation Industry Growing Rapidly</h2>
 <p>
-AI video generation platforms are becoming one of the fastest growing technologies in the digital world. Tools like Pika, Runway, and Sora-style systems allow users to create cinematic videos using only text prompts.
+AI video creation platforms are helping creators generate professional videos
+within minutes. Companies are investing heavily in AI-powered editing tools,
+virtual avatars and automated production systems.
 </p>
-
-<p>
-This technology is changing content creation, marketing, and entertainment industries. Businesses are saving time and money by replacing traditional video production methods with AI automation tools.
-</p>
-
-<p>
-Experts predict that AI video tools will dominate social media content creation in the next few years.
-</p>
-
-<span class="tag">Hot News</span>
 </div>
 
-<div class="news">
-<h1>Google AI Search Updates Changing SEO</h1>
-<div class="meta">Update • Google AI</div>
-
+<div class="news-card">
+<div class="news-date">June 2026</div>
+<h2>Machine Learning Demand Continues to Rise</h2>
 <p>
-Google is improving its AI-powered search system, making results more intelligent and personalized. Websites now need high-quality content and strong SEO structure to rank in search results.
+Organizations worldwide are hiring machine learning engineers and AI specialists.
+The demand for data-driven decision making continues to increase across healthcare,
+finance, education and technology sectors.
 </p>
-<div class="news">
-<h1>ChatGPT Voice Features Becoming More Human</h1>
-<div class="meta">AI Voice • OpenAI</div>
-<p>
-Modern AI voice systems now sound more realistic and emotional than ever before. Users can talk naturally with AI assistants.
-</p>
-<p>
-Experts believe voice-based AI will soon replace many traditional mobile app interactions.
-</p>
-<span class="tag">Voice AI</span>
 </div>
 
-<div class="news">
-<h1>AI Image Generators Dominating Social Media</h1>
-<div class="meta">Design • AI Art</div>
+<div class="news-card">
+<div class="news-date">June 2026</div>
+<h2>AI in Healthcare Expands Globally</h2>
 <p>
-Millions of creators now use AI image tools for posters, wallpapers and viral social media graphics.
+Hospitals are adopting AI systems to assist doctors in diagnosis, treatment planning
+and medical research. AI tools are helping improve efficiency and patient outcomes.
 </p>
-<p>
-Businesses are also using AI-generated visuals for marketing campaigns and branding.
-</p>
-<span class="tag">AI Art</span>
 </div>
 
-<div class="news">
-<h1>AI Coding Assistants Helping Developers</h1>
-<div class="meta">Programming • Technology</div>
+<div class="news-card">
+<div class="news-date">June 2026</div>
+<h2>Future of Robotics Looks Promising</h2>
 <p>
-AI coding tools are helping developers write software faster and reduce coding errors.
+Robotics and AI are becoming closely connected. Smart robots are now used in
+manufacturing, logistics, healthcare and research environments around the world.
 </p>
-<p>
-Platforms like coding copilots are becoming essential in software companies.
-</p>
-<span class="tag">Coding AI</span>
 </div>
 
-<div class="news">
-<h1>AI Music Creation Is Trending Worldwide</h1>
-<div class="meta">Music • Creativity</div>
+<div class="news-card">
+<div class="news-date">June 2026</div>
+<h2>Businesses Investing More in AI Tools</h2>
 <p>
-AI music platforms can now generate full songs using only text prompts and simple ideas.
+Companies are increasing investment in AI solutions to automate tasks, reduce
+costs and improve customer experiences. AI adoption continues to accelerate
+globally.
 </p>
-<p>
-Independent creators are producing music faster without expensive studios.
-</p>
-<span class="tag">AI Music</span>
 </div>
 
-<div class="news">
-<h1>AI Website Builders Growing Fast</h1>
-<div class="meta">Web Design • AI</div>
+<div class="news-card">
+<div class="news-date">June 2026</div>
+<h2>AI Education Platforms Expanding</h2>
 <p>
-Modern AI website builders help beginners create professional websites within minutes.
+Online learning platforms are integrating AI tutors and personalized learning
+systems to improve student engagement and educational outcomes.
 </p>
-<p>
-This technology is making web development easier for startups and freelancers.
-</p>
-<span class="tag">Website AI</span>
 </div>
 
-<div class="news">
-<h1>AI Is Improving Online Education</h1>
-<div class="meta">Education • Learning</div>
+<div class="news-card">
+<div class="news-date">June 2026</div>
+<h2>Cybersecurity Enhanced Through AI</h2>
 <p>
-Students now use AI tutors and smart learning systems for homework and online courses.
+AI-powered security systems are helping organizations detect threats faster,
+analyze risks and improve protection against cyber attacks.
 </p>
-<p>
-AI education tools personalize lessons according to each student’s learning speed.
-</p>
-<span class="tag">Education AI</span>
+</div>
+<div class="news-card">
+    <span class="news-tag">ChatGPT</span>
+    <h2>ChatGPT Launches New Voice Feature</h2>
+    <p>
+        OpenAI has introduced a powerful new voice feature for ChatGPT.
+        Users can now interact with AI in a more natural and human-like
+        conversation style. The update improves speech quality, response
+        speed and multilingual support.
+    </p>
 </div>
 
-<div class="news">
-<h1>AI Cybersecurity Systems Becoming Stronger</h1>
-<div class="meta">Security • Protection</div>
-<p>
-Companies are using AI to detect cyber attacks and suspicious online activity automatically.
-</p>
-<p>
-AI security systems can identify threats faster than traditional monitoring systems.
-</p>
-<span class="tag">Cyber AI</span>
+<div class="news-card">
+    <span class="news-tag">Gemini</span>
+    <h2>Google Gemini Receives Major Upgrade</h2>
+    <p>
+        Google has announced a major Gemini update with improved reasoning,
+        coding assistance and faster performance. The new version aims to
+        compete directly with the latest AI models available in 2026.
+    </p>
 </div>
 
-<div class="news">
-<h1>AI Chatbots Replacing Customer Support</h1>
-<div class="meta">Business • Automation</div>
-<p>
-Businesses now use intelligent AI chatbots for customer support and online assistance.
-</p>
-<p>
-These systems answer users instantly and reduce company support costs.
-</p>
-<span class="tag">Chatbot</span>
+<div class="news-card">
+    <span class="news-tag">AI Tools</span>
+    <h2>Top 5 New AI Tools Released This Week</h2>
+    <p>
+        Several innovative AI tools were launched this week for content
+        creation, image generation, productivity and automation. These
+        platforms are helping businesses and creators save time and improve
+        efficiency.
+    </p>
 </div>
 
-<div class="news">
-<h1>AI Video Editing Tools Saving Time</h1>
-<div class="meta">Video • Editing</div>
-<p>
-Creators are editing videos faster using AI-powered automation tools.
-</p>
-<p>
-AI systems now generate subtitles, transitions and effects automatically.
-</p>
-<span class="tag">Video AI</span>
+<div class="news-card">
+    <span class="news-tag">AI Debate</span>
+    <h2>Can AI Replace Programmers? Experts Respond</h2>
+    <p>
+        Technology experts continue to debate whether AI can fully replace
+        software developers. While AI can generate code and automate tasks,
+        most experts believe human creativity and problem solving remain
+        essential.
+    </p>
 </div>
 
-<div class="news">
-<h1>AI Startups Receiving Huge Investments</h1>
-<div class="meta">Finance • Startups</div>
-<p>
-Investors are funding AI companies heavily because artificial intelligence demand is growing rapidly.
-</p>
-<p>
-Many new startups are building futuristic AI productivity tools.
-</p>
-<span class="tag">AI Startup</span>
+<div class="news-card">
+    <span class="news-tag">AI Video</span>
+    <h2>AI Video Generators Becoming More Powerful</h2>
+    <p>
+        New AI video generation platforms are producing realistic videos
+        from simple text prompts. Businesses, marketers and content creators
+        are rapidly adopting these tools for faster content production.
+    </p>
+</div>
+<div class="news-card">
+    <span class="news-tag">Claude</span>
+    <h2>Claude AI Gets Smarter Coding Features</h2>
+    <p>
+        Anthropic has upgraded Claude with improved coding abilities,
+        allowing developers to generate cleaner code, debug errors faster
+        and build projects more efficiently than before.
+    </p>
 </div>
 
-<div class="news">
-<h1>AI In Healthcare Improving Patient Care</h1>
-<div class="meta">Healthcare • Medical</div>
-<p>
-Doctors are using AI systems to analyze medical reports and improve diagnosis speed.
-</p>
-<p>
-Hospitals are adopting AI technology for better patient management.
-</p>
-<span class="tag">Medical AI</span>
+<div class="news-card">
+    <span class="news-tag">AI Jobs</span>
+    <h2>AI Skills Creating New Job Opportunities</h2>
+    <p>
+        Companies worldwide are hiring professionals with AI knowledge.
+        Skills in prompt engineering, automation and AI-assisted content
+        creation are becoming increasingly valuable in the job market.
+    </p>
 </div>
 
-<div class="news">
-<h1>AI Voice Cloning Becoming Popular</h1>
-<div class="meta">Audio • Innovation</div>
-<p>
-Voice cloning systems can now copy voices with incredible realism.
-</p>
-<p>
-Content creators use these tools for narration and storytelling projects.
-</p>
-<span class="tag">Voice Clone</span>
+<div class="news-card">
+    <span class="news-tag">Image AI</span>
+    <h2>AI Image Generators Reach New Level of Realism</h2>
+    <p>
+        New image generation models can create highly realistic photos,
+        artwork and marketing materials from simple text prompts within
+        seconds, attracting millions of users worldwide.
+    </p>
 </div>
 
-<div class="news">
-<h1>AI Gaming Technology Advancing Fast</h1>
-<div class="meta">Gaming • AI</div>
-<p>
-Video games are now using AI for realistic NPC behavior and smarter gameplay experiences.
-</p>
-<p>
-AI-generated game worlds are also becoming more detailed and dynamic.
-</p>
-<span class="tag">Gaming AI</span>
+<div class="news-card">
+    <span class="news-tag">Technology</span>
+    <h2>Major Tech Companies Increase AI Investment</h2>
+    <p>
+        Leading technology companies are investing billions of dollars
+        into AI infrastructure, research and development to maintain
+        competitiveness in the rapidly growing AI industry.
+    </p>
 </div>
 
-<div class="news">
-<h1>AI Translation Tools Breaking Language Barriers</h1>
-<div class="meta">Translation • Global</div>
-<p>
-AI translation systems help people communicate instantly across different languages.
-</p>
-<p>
-Businesses are expanding globally using real-time translation technology.
-</p>
-<span class="tag">Translation</span>
+<div class="news-card">
+    <span class="news-tag">Business</span>
+    <h2>Small Businesses Benefit From AI Automation</h2>
+    <p>
+        Affordable AI tools are helping small businesses automate customer
+        support, marketing and content creation, reducing costs and
+        improving productivity.
+    </p>
 </div>
 
-<div class="news">
-<h1>AI Automation Changing Office Work</h1>
-<div class="meta">Productivity • Office</div>
-<p>
-Office employees are automating repetitive tasks using AI workflow systems.
-</p>
-<p>
-This allows companies to focus more on creativity and innovation.
-</p>
-<span class="tag">Automation</span>
+<div class="news-card">
+    <span class="news-tag">Education</span>
+    <h2>Universities Introduce AI Learning Programs</h2>
+    <p>
+        Educational institutions are launching specialized AI courses to
+        prepare students for future careers in machine learning, robotics,
+        data science and automation technologies.
+    </p>
 </div>
 
-<div class="news">
-<h1>AI In Ecommerce Boosting Sales</h1>
-<div class="meta">Shopping • Ecommerce</div>
-<p>
-Online stores are using AI recommendation systems to increase product sales.
-</p>
-<p>
-Customers now receive personalized shopping suggestions automatically.
-</p>
-<span class="tag">Ecommerce</span>
+<div class="news-card">
+    <span class="news-tag">Robotics</span>
+    <h2>AI Robots Becoming More Advanced</h2>
+    <p>
+        Researchers have developed new AI-powered robots capable of
+        performing complex physical tasks with greater precision and
+        adaptability than previous generations.
+    </p>
 </div>
 
-<div class="news">
-<h1>AI Resume Builders Helping Job Seekers</h1>
-<div class="meta">Jobs • Career</div>
-<p>
-AI resume platforms help users create professional resumes quickly.
-</p>
-<p>
-Recruiters are also using AI systems for applicant screening.
-</p>
-<span class="tag">Career AI</span>
+<div class="news-card">
+    <span class="news-tag">Cybersecurity</span>
+    <h2>AI Helps Detect Cyber Threats Faster</h2>
+    <p>
+        Advanced AI systems are being used to identify cyberattacks,
+        unusual network activity and security vulnerabilities before
+        significant damage can occur.
+    </p>
 </div>
 
-<div class="news">
-<h1>AI In Photography Creating Stunning Images</h1>
-<div class="meta">Photography • Creative</div>
-<p>
-Photographers use AI tools for editing, enhancing and restoring photos automatically.
-</p>
-<p>
-AI technology is improving image quality with one click solutions.
-</p>
-<span class="tag">Photo AI</span>
+<div class="news-card">
+    <span class="news-tag">Startups</span>
+    <h2>AI Startups Receive Record Funding</h2>
+    <p>
+        Investors continue to support AI-focused startups as demand for
+        innovative solutions grows across industries including healthcare,
+        finance and e-commerce.
+    </p>
 </div>
 
-<div class="news">
-<h1>AI Smart Homes Becoming More Common</h1>
-<div class="meta">Smart Home • Future</div>
-<p>
-Modern homes now use AI-powered devices for lighting, security and voice control.
-</p>
-<p>
-Experts predict smart homes will become mainstream in the next decade.
-</p>
-<span class="tag">Smart Home</span>
+<div class="news-card">
+    <span class="news-tag">Future AI</span>
+    <h2>Experts Predict Massive AI Growth by 2030</h2>
+    <p>
+        Industry analysts expect AI adoption to increase dramatically
+        during the next decade, transforming business operations,
+        education, healthcare and everyday life.
+    </p>
 </div>
 
-<div class="news">
-<h1>AI In Banking Improving Security</h1>
-<div class="meta">Finance • Banking</div>
-<p>
-Banks are using AI systems to detect fraud and suspicious transactions instantly.
-</p>
-<p>
-Customers benefit from safer and faster digital banking services.
-</p>
-<span class="tag">Banking AI</span>
-</div>
 
-<div class="news">
-<h1>AI Assistants Becoming More Personalized</h1>
-<div class="meta">Assistant • Technology</div>
-<p>
-Modern AI assistants learn user habits and provide more accurate responses.
-</p>
-<p>
-This creates a smarter and more personalized digital experience.
-</p>
-<span class="tag">Assistant AI</span>
-</div>
 
-<div class="news">
-<h1>AI In Fashion Industry Growing Rapidly</h1>
-<div class="meta">Fashion • Design</div>
-<p>
-Fashion brands are using AI for clothing design and trend prediction.
-</p>
-<p>
-AI-generated fashion concepts are becoming highly popular online.
-</p>
-<span class="tag">Fashion AI</span>
-</div>
 
-<div class="news">
-<h1>AI Tools Helping Small Businesses</h1>
-<div class="meta">Business • Startup</div>
-<p>
-Small businesses are adopting AI for marketing, customer support and automation.
-</p>
-<p>
-Affordable AI tools are helping startups grow faster online.
-</p>
-<span class="tag">Business AI</span>
-</div>
-
-<div class="news">
-<h1>AI In Transportation Improving Traffic Systems</h1>
-<div class="meta">Transport • Smart Cities</div>
-<p>
-Cities are using AI to reduce traffic congestion and improve road safety.
-</p>
-<p>
-Smart transportation systems analyze traffic in real-time.
-</p>
-<span class="tag">Transport AI</span>
-</div>
-
-<div class="news">
-<h1>AI Social Media Tools Helping Creators</h1>
-<div class="meta">Social Media • Creator</div>
-<p>
-Creators now use AI tools for captions, hashtags and content planning.
-</p>
-<p>
-This helps influencers grow faster across social platforms.
-</p>
-<span class="tag">Social AI</span>
-</div>
-
-<div class="news">
-<h1>AI Weather Prediction Becoming Smarter</h1>
-<div class="meta">Weather • Science</div>
-<p>
-AI systems can now predict weather patterns more accurately than before.
-</p>
-<p>
-Governments are using AI for disaster prevention and climate analysis.
-</p>
-<span class="tag">Weather AI</span>
-</div>
-
-<div class="news">
-<h1>AI In Sports Analytics Expanding</h1>
-<div class="meta">Sports • Analytics</div>
-<p>
-Sports teams use AI to analyze player performance and game strategies.
-</p>
-<p>
-AI insights help coaches improve training and match planning.
-</p>
-<span class="tag">Sports AI</span>
-</div>
-
-<div class="news">
-<h1>AI Book Writing Platforms Becoming Popular</h1>
-<div class="meta">Writing • Publishing</div>
-<p>
-Writers now use AI systems for generating ideas and improving storytelling.
-</p>
-<p>
-AI-assisted publishing is growing rapidly among online authors.
-</p>
-<span class="tag">Writing AI</span>
-</div>
-
-<div class="news">
-<h1>AI In Agriculture Improving Farming</h1>
-<div class="meta">Agriculture • Farming</div>
-<p>
-Farmers are using AI systems for crop monitoring and smart irrigation.
-</p>
-<p>
-This technology improves food production and reduces waste.
-</p>
-<span class="tag">Agriculture</span>
-</div>
-
-<div class="news">
-<h1>AI Digital Marketing Tools Growing</h1>
-<div class="meta">Marketing • Advertising</div>
-<p>
-AI advertising systems can now create targeted campaigns automatically.
-</p>
-<p>
-Businesses achieve higher engagement using smart AI analytics.
-</p>
-<span class="tag">Marketing AI</span>
-</div>
-
-<div class="news">
-<h1>AI Virtual Influencers Trending Online</h1>
-<div class="meta">Influencers • AI</div>
-<p>
-Virtual AI influencers are gaining millions of followers on social media platforms.
-</p>
-<p>
-Brands are partnering with digital AI personalities for promotions.
-</p>
-<span class="tag">Virtual AI</span>
-</div>
-
-<div class="news">
-<h1>AI In Movie Production Saving Costs</h1>
-<div class="meta">Movies • Entertainment</div>
-<p>
-Film studios now use AI for editing, effects and script assistance.
-</p>
-<p>
-AI production tools reduce time and budget requirements significantly.
-</p>
-<span class="tag">Movie AI</span>
-</div>
-
-<div class="news">
-<h1>AI Search Optimization Becoming Important</h1>
-<div class="meta">SEO • Search</div>
-<p>
-Websites are optimizing content for AI-powered search engines and assistants.
-</p>
-<p>
-High-quality structured information is becoming essential for ranking.
-</p>
-<span class="tag">AI SEO</span>
-</div>
-
-<div class="news">
-<h1>AI In Real Estate Helping Buyers</h1>
-<div class="meta">Real Estate • Property</div>
-<p>
-Property companies use AI to recommend homes and analyze market trends.
-</p>
-<p>
-Buyers receive smarter property suggestions based on preferences.
-</p>
-<span class="tag">Real Estate</span>
-</div>
-
-<div class="news">
-<h1>AI Productivity Apps Becoming Essential</h1>
-<div class="meta">Productivity • Apps</div>
-<p>
-AI productivity apps help users organize work and automate daily tasks.
-</p>
-<p>
-Freelancers and teams are adopting AI workflows rapidly.
-</p>
-<span class="tag">Productivity</span>
-</div>
-
-<div class="news">
-<h1>AI In Science Accelerating Research</h1>
-<div class="meta">Science • Research</div>
-<p>
-Scientists are using AI systems to analyze huge datasets and discover patterns.
-</p>
-<p>
-Research speed has improved dramatically with artificial intelligence tools.
-</p>
-<span class="tag">Science AI</span>
-</div>
-
-<div class="news">
-<h1>AI Travel Planning Tools Trending</h1>
-<div class="meta">Travel • Tourism</div>
-<p>
-Travel apps now use AI for hotel suggestions and smart itinerary planning.
-</p>
-<p>
-Tourists enjoy more personalized travel experiences.
-</p>
-<span class="tag">Travel AI</span>
-</div>
-
-<div class="news">
-<h1>AI Smart Cameras Improving Security</h1>
-<div class="meta">Security • Cameras</div>
-<p>
-AI-powered cameras can recognize faces and detect suspicious activity instantly.
-</p>
-<p>
-Smart surveillance systems are becoming common worldwide.
-</p>
-<span class="tag">Smart Camera</span>
-</div>
-
-<div class="news">
-<h1>AI Cloud Platforms Expanding Rapidly</h1>
-<div class="meta">Cloud • Technology</div>
-<p>
-Cloud companies are integrating AI services into online business platforms.
-</p>
-<p>
-Developers can now access powerful AI systems through cloud technology.
-</p>
-<span class="tag">Cloud AI</span>
-</div>
-
-<div class="news">
-<h1>AI Podcasts Becoming Popular</h1>
-<div class="meta">Podcast • Audio</div>
-<p>
-AI-generated podcasts and narration systems are growing fast online.
-</p>
-<p>
-Content creators use AI voices for audio storytelling and education.
-</p>
-<span class="tag">Podcast AI</span>
-</div>
-
-<div class="news">
-<h1>AI In Retail Stores Improving Shopping</h1>
-<div class="meta">Retail • Shopping</div>
-<p>
-Retail stores use AI systems for smart checkout and customer analysis.
-</p>
-<p>
-Shopping experiences are becoming faster and more personalized.
-</p>
-<span class="tag">Retail AI</span>
-</div>
-
-<div class="news">
-<h1>AI Animation Platforms Helping Creators</h1>
-<div class="meta">Animation • Video</div>
-<p>
-Animators now create professional animations faster using AI-powered tools.
-</p>
-<p>
-AI automation reduces production time dramatically.
-</p>
-<span class="tag">Animation</span>
-</div>
-
-<div class="news">
-<h1>AI Fitness Apps Tracking Health</h1>
-<div class="meta">Fitness • Health</div>
-<p>
-Fitness applications use AI to provide workout plans and health insights.
-</p>
-<p>
-Users receive personalized fitness guidance through smart systems.
-</p>
-<span class="tag">Fitness AI</span>
-</div>
-
-<div class="news">
-<h1>AI In Logistics Improving Delivery Speed</h1>
-<div class="meta">Logistics • Delivery</div>
-<p>
-Delivery companies are using AI to optimize routes and reduce shipping delays.
-</p>
-<p>
-AI logistics systems improve efficiency and customer satisfaction.
-</p>
-<span class="tag">Logistics</span>
-</div>
-
-<div class="news">
-<h1>AI Smart Watches Becoming More Advanced</h1>
-<div class="meta">Wearables • Technology</div>
-<p>
-AI smart watches now track health, sleep and fitness more accurately.
-</p>
-<p>
-Wearable AI devices are becoming an important part of daily life.
-</p>
-<span class="tag">Wearable AI</span>
-</div>
-
-<div class="news">
-<h1>AI In Journalism Transforming News Writing</h1>
-<div class="meta">Journalism • Media</div>
-<p>
-News companies are using AI tools for article summaries and fast reporting.
-</p>
-<p>
-AI-assisted journalism is helping media organizations publish faster.
-</p>
-<span class="tag">News AI</span>
-</div>
-
-<div class="news">
-<h1>AI Document Tools Improving Office Work</h1>
-<div class="meta">Documents • Productivity</div>
-<p>
-AI systems now summarize PDFs, create reports and organize office files automatically.
-</p>
-<p>
-Businesses are saving time with smart document automation.
-</p>
-<span class="tag">PDF AI</span>
-</div>
-
-<div class="news">
-<h1>AI Smart Assistants Entering Cars</h1>
-<div class="meta">Cars • Automotive</div>
-<p>
-Modern vehicles now include AI assistants for navigation and voice controls.
-</p>
-<p>
-Car companies are investing heavily in AI driving technology.
-</p>
-<span class="tag">Automotive</span>
-</div>
-
-<div class="news">
-<h1>AI Avatar Technology Going Viral</h1>
-<div class="meta">Avatar • Social Media</div>
-<p>
-AI avatar generators help users create digital identities and virtual personalities.
-</p>
-<p>
-These avatars are becoming popular in videos and live streams.
-</p>
-<span class="tag">Avatar AI</span>
-</div>
-
-<div class="news">
-<h1>AI Smart Glasses Could Replace Smartphones</h1>
-<div class="meta">Future Tech • Devices</div>
-<p>
-Technology companies are building AI-powered smart glasses with advanced digital features.
-</p>
-<p>
-Experts predict wearable AI devices could become the future of computing.
-</p>
-<span class="tag">Future Tech</span>
-</div>
-
-<div class="news">
-<h1>AI In Online Freelancing Creating Opportunities</h1>
-<div class="meta">Freelancing • Online Work</div>
-<p>
-Freelancers now use AI tools for writing, designing and automation services.
-</p>
-<p>
-AI skills are becoming highly valuable in online marketplaces.
-</p>
-<span class="tag">Freelance AI</span>
-</div>
-
-<div class="news">
-<h1>AI Personal Finance Apps Managing Budgets</h1>
-<div class="meta">Finance • Budgeting</div>
-<p>
-AI finance apps help users track spending and manage savings automatically.
-</p>
-<p>
-Smart budgeting systems are improving personal financial planning.
-</p>
-<span class="tag">Finance AI</span>
-</div>
-<p>
-Thin content is no longer effective. Websites with detailed, useful and structured articles are more likely to appear in top rankings.
-</p>
-
-<span class="tag">SEO</span>
 </div>
 
 </div>
 
+<footer>
+© 2026 Nova AI Studio | AI News Hub
+</footer>
+
+<script>
+window.onload = function() {
+
+    var search = document.getElementById("searchInput");
+
+    search.onkeyup = function() {
+
+        var value = search.value.toLowerCase();
+
+        var cards = document.getElementsByClassName("news-card");
+
+        for(var i = 0; i < cards.length; i++) {
+
+            var txt = cards[i].textContent.toLowerCase();
+
+            if(txt.indexOf(value) > -1) {
+                cards[i].style.display = "block";
+            } else {
+                cards[i].style.display = "none";
+            }
+
+        }
+    };
+};
+</script>
 </body>
 </html>
